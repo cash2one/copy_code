@@ -1,0 +1,160 @@
+*{
+    margin:0;padding:0;list-style: none;
+}
+.videoBox{
+    width:100%;height:auto;background: #000;display: none;
+}
+.imgPlay{
+    width:100%;height:auto;position: relative;
+}
+.video_img{
+    width: 100%;
+}
+.video_play{
+    width:92px;height:92px;position: absolute;left:50%;margin-left:-46px;top:50%;margin-top:-46px;
+}
+.videoTitle{
+    width: 92%;height:auto;margin:12px auto;font-size: 19px;color: #333;line-height: 25px;
+}
+.xiangguanVideo{
+    width: 92%;height:auto;margin:30px auto 0 auto;display:none;
+}
+.elte-commentbox{
+    width: 92%;height:auto;margin:30px auto 0 auto;display: none;
+}
+.xiangguanVideoword{
+    width:100%;height:auto;border-bottom: 1px solid #e4e4e4;padding-bottom:7px ;
+}
+.xiangguanVideoword>span{
+    font-size: 15px;color: #999;border-bottom: 1px solid #e99b5e;padding-bottom:7px ;
+}
+.videoCardbox{
+    width:100%;height:auto;
+}
+.videoCard{
+    width: 100%;height:auto;padding:18px 0 16px 0;border-bottom: 1px solid #e4e4e4;overflow: hidden;
+}
+.videoWord{
+    width: 58.7%;height:auto;float: left;
+}
+.videoDes{
+    width: 100%;height: 66px;font-size: 16px;color: #333;line-height: 22px;overflow: hidden;
+}
+.videoFrom{
+    width: 100%;height: auto;margin-top:25px;font-size:12px;color: #999;
+}
+.videoPlay{
+    width: 33.3%;height:auto;float: left;margin-left:8%;position: relative;
+}
+.videoPlay img{
+    width: 100%;height: 100%;
+}
+.bgPlay{
+    width:100%;height:auto;position: absolute;bottom:0;overflow: hidden;padding: 5px 0;background: url("../img/bgPlay.png");
+}
+.time{
+    width: auto;height: auto;font-size: 12px;color: #fff;float: right;margin-right:3px;line-height: 15px;
+}
+.video_playSmall{
+    width: 10px;height:12px;background: url("../img/video_playSmall.png");float: right;margin-right: 3px;background-size: cover;
+}
+/*评论*/
+.comments{
+    margin-top:12px;
+}
+.comment{
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    border-top:1px solid #e0e0e0;
+    overflow: hidden;
+}
+.comment:first-child{
+    border:0;
+}
+.comment-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+.comment-img img{
+    height: 100%;
+}
+.comment-info{
+    width:-moz-calc(92% - 30px);
+    width:-webkit-calc(92% - 30px);
+    width: calc(92% - 30px);
+    float: left;
+    margin-left: 10px;
+    margin-top:2px;
+    padding-bottom: 16px;
+}
+.user-info .user-name{
+    font-size: 14px;
+    color: #47494c;
+    line-height: 18px;
+}
+.user-info .user-time{
+    font-size: 12px;
+    color: #999;
+    line-height: 22px;
+}
+.user-info .floatR{
+    line-height: 23px;
+    font-size: 14px;
+    color:#8d8d8d;
+}
+.user-info .floatR span{
+    font-size:12px;
+    color: #999;
+    /*vertical-align: middle;*/
+}
+.user-info .floatR img{
+    height: 17px;
+    margin-left: 4px;
+    /*vertical-align: middle;*/
+}
+.comment-text{
+    font-size: 14px;
+    color: #47404c;
+    margin-top: 7px;
+    line-height:25px;
+}
+.loadMord{
+    width: 92%;height:44px;background: #f5f5f5;font-size: 14px;color:#9b9b9b;text-align: center;line-height: 44px;margin: 0 auto;
+}
+#download{
+    display:block;width:auto;height:100%;font-size: 20px;color: #fff;text-decoration: none;
+}
+.comments-more{
+    width:90%;
+    margin:0 auto;
+    height: auto;
+    background: #fb7a12;
+    border-radius: 47px;
+    line-height: 20px;
+    font-size: 1.5rem;
+    color:#fff;
+    padding: 13px 12%;
+    text-align: center;
+    overflow: hidden;
+    /*background: red;*/
+}
+.qidianMore{
+    width:8%;height:auto;display: inline-block;vertical-align: middle;
+}
+.qidianMore>img{
+    width:100%;
+}
+.reping{
+    width:auto;font-size: 1.5rem;color: #ffffff;line-height: 18px;display: inline-block;
+}
+.qidianGo{
+    width:3.1%;height:auto;display: inline-block;vertical-align: middle;
+}
+.qidianGo>img{
+    width:100%;
+}

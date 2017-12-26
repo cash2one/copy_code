@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black" /> -->
+    <meta name="description" content='aaa'>
+    <!-- <meta itemprop="image" content="img/logoS.png"> -->
+    <title>奇点资讯</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/ex.css"/>
+    <link rel="stylesheet" href="css/news.css"/>
+    <script src="js/note.js"></script>
+    <script src="js/iscroll-probe.js"></script>
+    <script src="js/ex6.js"></script>
+</head>
+<script>
+    $(function(){
+
+
+        $('body').on("touchstart", function(e) {
+//        e.preventDefault();
+            startX = e.originalEvent.changedTouches[0].pageX;
+            startY = e.originalEvent.changedTouches[0].pageY;
+        });
+        $("body").on("touchmove", function(e) {
+//    e.preventDefault();
+            moveEndX = e.originalEvent.changedTouches[0].pageX;
+            moveEndY = e.originalEvent.changedTouches[0].pageY;
+            X = moveEndX - startX;
+            Y = moveEndY - startY;
+            if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+                $(".footer").css("display","block")
+            }
+            else if( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+                $(".footer").css("display","none")
+            }
+        })
+
+    });
+
+</script>
+<style>
+    #wrapper1{
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        /*height: auto;*/
+    }
+
+    #scroller1{
+        position: absolute;left: 0;top: 0;
+        z-index: 3;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        width: 100%;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-touch-callout: none;
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;/
+    user-select: text;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -o-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+    #scroller-pullUp1{
+        position: absolute;
+        bottom: -43px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: black;
+    }
+    body{
+        background-color: #f6f6f6;
+    }
+</style>
+<script>
+
+    $(function(){
+
+    })
+</script>
+<body>
+<div id="wrapper1">
+    <div id="scroller1">
+
+        <!--<div class="qidianTop">-->
+        <!--<div class="qidianlogo"><img src="img/qiDian.png"></div>-->
+        <!--<div class="qidianCirle"><div></div></div>-->
+        <!--<div class="qidianWord">读奇点 阅天下</div>-->
+        <!--</div>-->
+        <div class="banner" style="top:25px">
+            <div class="yingdao">
+                <img src="img/tishi.png">
+            </div>
+            <div class="bannerzhe">
+                <span class="bannertitle"></span>
+                <div class="bannertime">
+                    <span class="date"></span>
+                    <span class="time"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--banner end-->
+        <div class="cardbox" style="padding-top: 20px;">
+        </div>
+        <!-- 精选评论 start -->
+        <div class="elte-comments">
+            <div class="comments-title">精选评论</div>
+            <div class="comments">
+                <!--<div class="comment clearfix">-->
+                <!--<div class="comment-img"> <img src="http://photocdn.sohu.com/20160315/mp63444225_1457989131470_1.jpeg"> </div>-->
+                <!--<div class="comment-info">-->
+                <!--<div class="user-info clearfix">-->
+                <!--<div class="floatL">-->
+                <!--<div class="user-name">火星网友</div>-->
+                <!--&lt;!&ndash;<div class="user-time">2016-12-12 12:12:00</div>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="floatR">回复-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="comment-text">-->
+                <!--蔡依林做手表蛋糕让妈妈开心，网友大赞蔡依林为。-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="comment clearfix">-->
+                <!--<div class="comment-img"> <img src="http://photocdn.sohu.com/20160315/mp63444225_1457989131470_1.jpeg"> </div>-->
+                <!--<div class="comment-info">-->
+                <!--<div class="user-info clearfix">-->
+                <!--<div class="floatL">-->
+                <!--<div class="user-name">火星网友</div>-->
+                <!--<div class="user-time">2016-12-12 12:12:00</div>-->
+                <!--</div>-->
+                <!--<div class="floatR">-->
+                <!--<img src="branch/icon/heart_s.jpg"> 1276赞-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="comment-text">-->
+                <!--蔡依林做手表蛋糕让妈妈开心，网友大赞蔡依林为。-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="comment clearfix">-->
+                <!--<div class="comment-img"> <img src="http://photocdn.sohu.com/20160315/mp63444225_1457989131470_1.jpeg"> </div>-->
+                <!--<div class="comment-info">-->
+                <!--<div class="user-info clearfix">-->
+                <!--<div class="floatL">-->
+                <!--<div class="user-name">火星网友</div>-->
+                <!--<div class="user-time">2016-12-12 12:12:00</div>-->
+                <!--</div>-->
+                <!--<div class="floatR">-->
+                <!--<img src="branch/icon/heart_k.jpg"> 1276赞-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="comment-text">-->
+                <!--蔡依林做手表蛋糕让妈妈开心，网友大赞蔡依林为。-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+            <a href="" id="download">
+                <div class="comments-more" style="text-align: center">
+                    <!--<div style="width: auto;height:auto;display: inline-block;overflow: hidden">-->
+                    <div class="qidianMore"><img src="img/qidianMore.png"></div>
+                    <div class="reping">打开奇点资讯，看全部热评</div>
+                    <div class="qidianGo"><img src="img/qidianGo.png"></div>
+                    <!--</div>-->
+                </div>
+            </a>
+        </div>
+
+        <div id = "scroller-pullUp1">
+            <!--<span id = "up-icon" class = "icon-double-angle-up pull-up-icon">↑↑</span>-->
+            <!--<span id = "pullUp-msg" class = "pull-up-msg">上拉加载更多</span>-->
+        </div>
+    </div>
+</div>
+
+<div class="zhezhao">
+    <div class="zhezhaodownload">
+        <!--<span>请下载我们的应用立即体验</span>-->
+        <div class="logodownload">
+            <img src="img/lgo.png">
+        </div>
+        <div class="down">
+            <a href=""><img src="img/download.png"></a>
+        </div>
+        <div class="closeB">
+            <img src="img/closeB.png">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="branch/js/public.js"></script>
+
+</body>
+</html>
+
+
+

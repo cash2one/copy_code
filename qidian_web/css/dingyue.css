@@ -1,0 +1,39 @@
+*{margin:0;padding: 0;list-style: none}
+.imgs{width:60px;height:60px;border-radius: 50%;margin:47px auto 0 auto}
+.imgs>img{width:100%}
+.none{display: none}
+.Tword{font-size: 20px;color:#333;display: block;text-align: center;margin:10px auto 6px auto}
+.Stitle{width:92%;height:auto;margin:16px auto 0 auto;border-top:1px solid #e4e4e4;padding-top:13px;font-size: 15px;color:#999}
+.Jsword{width:92%;height:auto;margin:16px auto 0 auto;font-size: 18px;color:#333}
+.Jsword{
+    display: none;
+}
+.footer{
+    width: 100%;height:auto;background:#fff;padding:15px 17px;position:fixed;bottom:0px;z-index:99;border-top:1px solid #e4e4e4 ;overflow: hidden;
+}
+/*.footertu{*/
+/*width: 16%;height: 69%;float:left;*/
+/*}*/
+.footertu{
+    width:30px;height:auto;float:left;
+}
+.footertu img{
+    width: 100%;
+}
+/*.footerword{*/
+/*width: 26%;height:69%;float:left;margin-left:5%;*/
+/*}*/
+.footerword{
+    width:auto;height:auto;float:left;margin-left:15px;
+}
+.sword{
+    width:150%;height:auto;font-size:12px;margin-top:5px;color:#999;
+}
+.bigword{font-size: 14px;color:#1a1a1a;}
+#download{
+    width:67px;height:25px;border:1px solid #1a1a1a;border-radius:5px;font-size: 14px;color:#1a1a1a;text-align: center;line-height: 25px;float: right;margin-right:34px;
+}
+.yingdao{
+    width: 40%;height: auto;position: fixed;top:0px;right:5%;display:none;z-index: 99;
+}
+.yingdao img{width: 100%}

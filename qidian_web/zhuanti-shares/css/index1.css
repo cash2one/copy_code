@@ -1,0 +1,134 @@
+*{
+    margin: 0;padding: 0;list-style: none;box-sizing: border-box;
+}
+a{
+    text-decoration: none;color: #fff;
+}
+.topImg{
+    width:100%;height:90px;overflow: hidden;
+}
+.topImg>img{
+    width: 100%;
+}
+/*摘要*/
+.absBox{
+    width: 100%;height:auto;padding:13px 3.2%;border-bottom: 1px solid #e4e4e4;background: #f6f6f6;display: none;
+}
+.abs{
+    font-size:12px;color: #e94220;border: 1px solid #e94220;padding: 1px;
+}
+.absWord{
+    font-size: 15px;color: #333;margin-left: 1.4%;line-height: 25px;
+}
+/*专题部分*/
+.mainBox{
+    width:100%;height:auto;margin-bottom: 74px;
+}
+.mainData{
+    width:100%;height:auto;margin-top:9px;border-top:1px solid #e4e4e4;border-bottom: 1px solid #e4e4e4;background: #f6f6f6;
+}
+.titleData{
+    width: 100%;height:auto;padding: 12px 0;border-bottom: 1px solid #e4e4e4;overflow: hidden;
+}
+.colorBox{
+    width: 4px;height:15px;background: #fb7a12;float: left;
+}
+.titleName{
+    font-size: 15px;color: #666;float: left;margin-left:8px;
+}
+.fenleiCard{
+    width: 93.6%;height:auto;overflow: hidden;margin:0 auto;border-bottom: 1px solid #e4e4e4;padding: 15px 0;display: block;
+}
+.fenleiWordnoimg{
+    width:100%;height:auto;float: left;
+
+}
+.fenleiWord{
+    width:calc(95.7% - 115px);height:auto;float: left;
+}
+.wordData{
+    width: 100%;height:auto;font-size: 18px;color: #333;line-height: 24px;
+}
+.formData{
+    width: 100%;height:auto;margin-top:18px;overflow: hidden;
+}
+.form{
+    font-size: 12px;color: #999;float: left;
+}
+.num{
+    font-size: 12px;color: #999;float: right;
+}
+.fenleiImg{
+    width: 115px;height: auto;float: left;margin-left: 4.3%;
+}
+.fenleiImg>img{
+    width: 100%;
+}
+.imgData{
+    width: 100%;height:auto;margin-top:16px;overflow: hidden;
+}
+.imgData>img{
+    width: 32%;float: left;margin-left: 2%;
+}
+.imgData>img:nth-child(1){
+    margin-left: 0;
+}
+/*下载*/
+.download{
+    width:100%;height:75px;background: #f6f6f6;position: fixed;bottom:0;box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);padding:0 3.2%;
+}
+.downleft{
+    width:auto;height:100%;
+    float: left;
+}
+.download>img{
+    width: 55px;vertical-align: middle;display: inline-block;
+    float: left;margin-top:10px;
+}
+.wordBox{
+    width: auto;height:auto;float: left;margin-top:18px;margin-left:18px;
+}
+.wordBox>span{
+    font-size:18px;color:#fb7a12;vertical-align: middle;display: inline-block;line-height: 18px;
+}
+.word{
+    font-size: 14px;color:#787878;margin-top:5px;line-height: 14px;
+}
+.downbtn{
+    padding: 11px 21px;font-size: 16px;color: #fff;border-radius: 4px;background: rgba(251,122,18,0.7);float: right;margin-top:18px;line-height: 16px;
+}
+.yingdao {
+    width: 45.6%;
+    height: auto;
+    position: fixed;
+    top: 2px;
+    right: 3.3%;
+    display: none;
+    z-index: 99;
+}
+.yingdao>img{
+    width: 100%;
+}
+.yingdao>span{
+    font-size:14px;color:#fff;position: absolute;top:45.7%;left:0;width:100%;text-align: center;line-height: 15px;
+}
+.load{
+    width:100%;height:auto;text-align:center;margin-top:30%;
+}
+.loadImg{
+    width: 20px;vertical-align: middle;
+}
+.loadWord{
+    font-size: 12px;vertical-align: middle;margin-left:5px;
+}
+.error{
+    width:100%;height:auto;text-align: center;margin-top:20%;display: none;
+}
+.error>img{
+    width:30%;
+}
+@media screen and (max-width: 640px){
+    .yingdao>span{
+        line-height: 14px;
+    }
+}

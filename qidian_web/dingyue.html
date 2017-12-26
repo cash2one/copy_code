@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>订阅</title>
+    <link rel="stylesheet" href="css/dingyue.css"/>
+    <link rel="stylesheet" href="css/indexQidian.css"/>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/note.js"></script>
+    <script src="js/dingyue.js"></script>
+</head>
+<script>
+    $(function(){
+        $('body').on("touchstart", function(e) {
+//        e.preventDefault();
+            startX = e.originalEvent.changedTouches[0].pageX;
+            startY = e.originalEvent.changedTouches[0].pageY;
+        });
+        $("body").on("touchmove", function(e) {
+//    e.preventDefault();
+            moveEndX = e.originalEvent.changedTouches[0].pageX;
+            moveEndY = e.originalEvent.changedTouches[0].pageY;
+            X = moveEndX - startX;
+            Y = moveEndY - startY;
+            if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+                $(".footer").css("display","block")
+            }
+            else if( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+                $(".footer").css("display","none")
+            }
+        })
+
+    });
+
+</script>
+<body style="background:#f6f6f6">
+<div class="imgs"><img src=""></div>
+<span class="Tword">住宅产业</span>
+<div class="Stitle none">介绍</div>
+<div class="Jsword">关注农村住宅产业关注农村住宅产业</div>
+<div class="Stitle">介绍</div>
+<div class="yingdao">
+    <img src="img/tishi.png">
+</div>
+<ul class="mainBox">
+    <!--<span class="load">正在加载...</span>-->
+    <!--<a href=""><li>-->
+    <!--<div class="imgbox">-->
+    <!--<img src="">-->
+    <!--</div>-->
+    <!--<div class="wordBox">-->
+    <!--<p class="titleWord">这组图让你看清中国企业的真是实力</p>-->
+    <!--<div class="fromBox">-->
+    <!--<span class="from">摩尔金融</span>-->
+    <!--&lt;!&ndash;<span class="time">2小时前</span>&ndash;&gt;-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</li></a>-->
+
+
+    <!--<a href=""><li>-->
+    <!--<p class="titleWord">这组图让你看清中国企业的真是实力</p>-->
+    <!--<div class="fromBox">-->
+    <!--<span class="from">摩尔金融</span>-->
+    <!--&lt;!&ndash;<span class="time">2小时前</span>&ndash;&gt;-->
+    <!--</div>-->
+    <!--</li></a>-->
+
+
+    <!--<a href=""><li>-->
+    <!--<p class="titleWord">这组图让你看清中国企业的真是实力</p>-->
+    <!--<div class="imgboxs">-->
+    <!--<div><img src=""></div>-->
+    <!--<div><img src=""></div>-->
+    <!--<div><img src=""></div>-->
+    <!--</div>-->
+    <!--<div class="fromBox">-->
+    <!--<span class="from">摩尔金融</span>-->
+    <!--&lt;!&ndash;<span class="time">2小时前</span>&ndash;&gt;-->
+    <!--</div>-->
+    <!--</li></a>-->
+    <!--<a href=""><li>-->
+    <!--<p class="titleWord">这组图让你看清中国企业的真是实力</p>-->
+    <!--<div class="bigImg"><img src=""></div>-->
+    <!--<div class="fromBox">-->
+    <!--<span class="from">摩尔金融</span>-->
+    <!--&lt;!&ndash;<span class="time">2小时前</span>&ndash;&gt;-->
+    <!--</div>-->
+    <!--</li></a>-->
+</ul>
+<div class="footer">
+<div class="footertu">
+<img src="img/favicon.png">
+</div>
+<div class="footerword">
+<div class="bigword">静静一览</div>
+<div class="sword">想静静不如看静静</div>
+</div>
+<!--<a href="javascript:;" id="download">-->
+<a id="download" target="_blank">
+下载App
+</a>
+<!--</a>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="description" content="读奇点 阅天下"/>
+    <title>静静一览</title>
+    <link rel="stylesheet" href="css/indexQidian.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/indexQidian5.js"></script>
+    <script src="js/note.js"></script>
+     <script src="js/iscroll-probe.js"></script>
+     <script src="js/jquery.cookie.js"></script>
+    <script src="js/weixin.js"></script>
+</head>
+<script>
+    $(function(){
+        var mm=true;
+        $("#wrapper1").css("margin-top",$(".navBox").height()+51);
+        $(".jiantou").click(function(){
+            if($(this).attr("id")=="true"){
+                $(".navBox").css("height","auto");
+                $(".jiantou").attr("id","false");
+            }else{
+                $(".navBox").css("height","40px");
+                $(".jiantou").attr("id","true");
+            }
+        });
+        $('body').on("touchstart", function(e) {
+//        e.preventDefault();
+            startX = e.originalEvent.changedTouches[0].pageX;
+                    startY = e.originalEvent.changedTouches[0].pageY;
+        });
+        $("body").on("touchmove", function(e) {
+//    e.preventDefault();
+            moveEndX = e.originalEvent.changedTouches[0].pageX;
+                    moveEndY = e.originalEvent.changedTouches[0].pageY;
+                    X = moveEndX - startX;
+                    Y = moveEndY - startY;
+            if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+//                $(".footer").css("display","block")
+            }
+            else if( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+                $(".navBox").css("height","40px");
+                mm=true;
+            }
+        })
+    })
+</script>
+<style>
+    #wrapper1{
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        /*height: auto;*/
+    }
+
+    #scroller1{
+        position: absolute;left: 0;top: 0;
+        z-index: 3;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        width: 100%;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -o-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+    #scroller-pullUp{
+        display: none;
+    }
+</style>
+<script>
+    var is=0;
+    var myScroll1,bb, y,num;
+    $(function(){
+        if (myScroll1 == undefined || myScroll1 == '') {
+            myScroll1 = new IScroll('#wrapper1', {
+                scrollbars: true,
+                probeType: 3,//probeType属性，表明此插件，可以监听scroll事件
+                mouseWheel: true,
+                interactiveScrollbars: true,
+                shrinkScrollbars: 'scale',
+                fadeScrollbars: true,
+                preventDefault: false
+            });
+
+            var myScroll,
+                    upIcon = $("#up-icon"),
+                    downIcon = $("#down-icon");
+
+            myScroll1.on("scroll", function () {
+                //scroll事件，可以用来控制上拉和下拉之后显示的模块中，
+                //样式和内容展示的部分的改变。
+                $(".navBox").css("height","40px");
+                $(".jiantou").attr("id","true");
+                y = this.y,
+                        maxY = this.maxScrollY - y,
+                        downHasClass = downIcon.hasClass("reverse_icon"),
+                        upHasClass = upIcon.hasClass("reverse_icon");
+                num=$(".num:first").html();
+                if (y >= 40) {
+//                    alert(">40")
+
+                    !downHasClass && downIcon.addClass("reverse_icon");
+                    return "";
+                } else if (y < 40 && y > -10) {
+//                    alert(2)
+
+                    downHasClass && downIcon.removeClass("reverse_icon");
+                    return "";
+                }
+//
+
+                if (maxY >= 40) {
+//alert(1)
+                    !upHasClass && upIcon.addClass("reverse_icon");
+                    return "";
+                } else if (maxY < 40 && maxY >= 0) {
+
+
+                    upHasClass && upIcon.removeClass("reverse_icon");
+                    return "";
+                }
+            });
+
+            myScroll1.on("slideDown", function () {
+                //当下拉，使得边界超出时，如果手指从屏幕移开，则会触发该事件
+                if (this.y > 40) {
+                    //获取内容于屏幕拉开的距离
+                    //可以在该部分中，修改样式，并且仅限ajax或者其他的一些操作
+                    //此时只是为了能演示该功能，只添加了一个alert功能。
+                    //并且，由于alert会阻塞后续的动画效果，所以，
+                    //添加了后面的一行代码，移除之前添加上的一个样式
+                    // alert("slideDown");
+                    upIcon.removeClass("reverse_icon");
+                }
+            });
+
+            myScroll1.on("slideUp", function () {
+                if (this.maxScrollY - this.y > 40) {
+                     // $("#scroller-pullUp").css("top",$(".mainBox").height()+43);
+                   
+                    upIcon.removeClass("reverse_icon")
+                }
+            });
+            myScroll1.on("scrollEnd",function(){
+                if(this.maxScrollY - this.y ==0){
+                    var ids=$(".border").attr("id");
+                    var last=$(".last").html();
+                    $(".last").remove();
+                    var title,pubTime,pubName,nid,nowTime,imgLists,style,rtype,dataDiv='',timeCha;
+                    nowTime=getNowFormatDate();
+                    $.ajax({
+                        url:"http://bdp.deeporiginalx.com/v2/ns/fed/ln?cid="+ids+"&tcr="+transdate(last)+'&tmk=0&t=0'+'&uid='+ $.cookie('uid'),
+                        type:"get",
+                        dataType:"json",
+                        beforeSend:function(request){
+                            request.setRequestHeader("Authorization",$.cookie('Authorizations'));
+                        },
+                        success:function(e){
+                            console.log(e);
+                            var data=e['data'];
+                            $("<span class='last'></span>").css("display","none").html(data[data.length-1].ptime).appendTo("body");
+                            for(var i=0;i<data.length;i++){
+                                is++;
+                                title=data[i].title;
+                                pubTime=data[i].ptime;
+                                timeCha=timeDifference(nowTime,pubTime);
+                                pubName=data[i].pname;
+                                nid=data[i].nid;
+                                style=data[i].style;
+                                rtype=data[i].rtype;
+                                var icon=data[i].icon;
+//                                var aUrl=del_html_tags(base64encode(urls),"=","");
+                                if(rtype==6){
+                                    var thumbnail=data[i].thumbnail;
+                                    var time=data[i].duration;
+                                    if(time<60){
+                                        time="00:"+((time%60)<10?'0'+(time%60):(time%60));
+                                    }else{
+                                        time=(parseInt(time/60)<10?'0'+parseInt(time/60):parseInt(time/60))+":"+((time%60)<10?'0'+(time%60):(time%60));
+                                    }
+                                    dataDiv+='<div class="videoCard"><a href="news.html?nid='+nid+'"><div class="videoWord">';
+                                    dataDiv+='<div class="videoDes">'+title+'</div><div class="videoFrom">'+pubName+'</div></div>';
+                                    dataDiv+='<div class="videoPlay"><img src="'+thumbnail+'" alt="">';
+                                    dataDiv+='<div class="bgPlay"><div class="time">'+time+'</div><div class="video_playSmall">';
+                                    dataDiv+='</div></div></div></a></div>';
+
+                                }else if(rtype==8){
+                                    dataDiv+='<a href="news.html?type=0&nid='+nid+'" target="_blank"><li>';
+                                    dataDiv+='<div class="duanziIcon"><img src="'+(icon==undefined?"img/duanzi/ic_user_comment_default.png":icon)+'" alt=""/><span>'+pubName+'</span></div>';
+                                    dataDiv+='<div class="duanziWord">'+title+'</div>';
+                                    dataDiv+='<div class="duanziZan"><div class="dian"><img src="img/duanzi/up_normal_duanzi_day@3x.png" alt=""/><span>'+data[i].concern+'</span></div>';
+                                    dataDiv+='<div class="dao"><img src="img/duanzi/down_normal_duanzi_day@3x.png" alt=""/><span>'+data[i].un_concern+'</span></div>';
+                                    dataDiv+='<div class="comment"><img src="img/duanzi/comment_duanzi_day.png" alt=""/><span>'+data[i].comment+'</span></div></div>';
+                                    dataDiv+='</li></a>';
+                                }else{
+                                    if(style==0){
+                                        dataDiv+='<a href="news.html?type=0&nid='+nid+'" target="_blank"><li>';
+                                        dataDiv+='<p class="titleWord">'+title+'</p>';
+                                        dataDiv+='<div class="fromBox"><div class="from">'+pubName+'</div><div class="time">'+timeCha+'</div></div></li></a>';
+                                    }else{
+                                        imgLists=data[i].imgs;
+                                        if(style!=0&&style!=3){
+                                            dataDiv+='<a href="news.html?type=0&nid='+nid+'" target="_blank"><li>';
+                                            dataDiv+='<div class="imgbox"><img src="'+imgLists[0]+'"></div>';
+                                            dataDiv+='<div class="wordBox"><p class="titleWord">'+title+'</p>';
+                                            dataDiv+='<div class="fromBox"><div class="from">'+pubName+'</div><div class="time">'+timeCha+'</div></div></div></li></a>';
+                                        }else if(style==3){
+                                            //alert(1)
+                                            dataDiv+='<a href="news.html?type=0&nid='+nid+'" target="_blank"><li>';
+                                            dataDiv+='<p class="titleWord">'+title+'</p><div class="imgboxs">';
+                                            for(var j=0;j<imgLists.length;j++){
+                                                dataDiv+='<div><img src="'+imgLists[j]+'"></div> ';
+                                            }
+                                            dataDiv+='</div><div class="fromBox"><div class="from">'+pubName+'</div><div class="time">'+timeCha+'</div></div></li></a>';
+                                        }
+                                    }
+                                }
+                            }
+                            $('.mainBox').append(dataDiv);
+                            $('.videoPlay').css('height',($('.videoPlay').width())/1.5);
+                            $("img").load(function(){
+                                setTimeout(function () {
+                                    myScroll1.refresh();
+                                }, 100);
+                            })
+
+                        }
+
+                    })
+                }
+            })
+
+        } else {
+            setTimeout(function () {
+                myScroll1.refresh();
+            }, 100);
+        }
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        }, false);
+//        dates();
+        dates2();
+        // $(".border").trigger("click");
+
+
+    })
+</script>
+<body>
+<div style="display: none"><img src="img/350.png"></div>
+<div class="topBox">
+    <div class="top">
+        <div class="title">
+            <!--<img src="img/titleQidian.png">-->
+            静静一览
+        </div>
+        <a href="search.html"><div class="search">
+            <img src="img/searchQidian.png">
+        </div></a>
+    </div>
+</div>
+
+<ul class="navBox">
+    <div class="jiantou" id="true"><img src="img/qiDianjiantou.png"></div>
+    <li class="border channel" id="1"><a>推荐</a></li>
+    <li class="channel" id="4"><a>科技</a></li>
+    <li class="channel" id="26"><a>美女</a></li>
+    <li class="channel" id="44"><a >视频</a></li>
+    <li class="channel" id="16"><a >育儿</a></li>
+    <li class="channel" id="2"><a >社会</a></li>
+    <li class="channel" id="45"><a >段子</a></li>
+    <li class="channel" id="7"><a >财经</a></li>
+    <li class="channel" id="6"><a >体育</a></li>
+    <li class="channel" id="5"><a >汽车</a></li>
+    <li class="channel" id="9"><a >国际</a></li>
+    <li class="channel" id="10"><a >时尚</a></li>
+    <li class="channel" id="14"><a >探索</a></li>
+    <li class="channel" id="25"><a >科学</a></li>
+    <li class="channel" id="3"><a >娱乐</a></li>
+    <li class="channel" id="23"><a >趣图</a></li>
+    <li class="channel" id="21"><a >搞笑</a></li>
+    <li class="channel" id="17"><a >养生</a></li>
+    <li class="channel" id="11"><a >游戏</a></li>
+    <li class="channel" id="22"><a >互联网</a></li>
+    <li class="channel" id="20"><a >股票</a></li>
+    <li class="channel" id="8"><a >军事</a></li>
+    <li class="channel" id="13"><a >历史</a></li>
+    <li class="channel" id="18"><a >故事</a></li>
+    <li class="channel" id="12"><a >旅游</a></li>
+    <li class="channel" id="19"><a >美文</a></li>
+    <li class="channel" id="15"><a >美食</a></li>
+    <!-- <li class="channel" id="29"><a >外媒</a></li> -->
+    <li class="channel" id="30"><a >影视</a></li>
+    <li class="channel" id="31"><a >奇闻</a></li>
+    <li class="channel" id="32"><a >萌宠</a></li>
+    <li class="channel" id="35"><a >App</a></li>
+    <li class="channel" id="36"><a >自媒体</a></li>
+    <li class="channel" id="39"><a >帅哥</a></li>
+    <li class="channel" id="37"><a >风水玄学</a></li>
+    <li class="channel" id="24"><a >健康</a></li>
+</ul>
+<div id="wrapper1">
+    <div id="scroller1">
+        <!--<div id = "scroller-pullDown" style="position: fixed;top: -43px;left: 0;width: 100%">-->
+            <!--&lt;!&ndash;<span id = "up-icon" class = "icon-double-angle-up pull-up-icon">↑↑</span>&ndash;&gt;-->
+            <!--<span id = "pullDown-msg" class = "pull-up-msg" style="display:block;text-align: center;width: 100%;">下拉加载更多</span>-->
+        <!--</div>-->
+        <!--<div class="refresh">-->
+            <!--<img src="img/load.gif">-->
+            <!--<span>正在刷新更多数据...</span>-->
+        <!--</div>-->
+        <ul class="mainBox">
+            <span class="load">正在加载...</span>
+            <!--<a href="news.html?type=0&nid=dsdsds" target='_blank'><li>-->
+                <!--<div class="imgbox">-->
+                    <!--<img src="">-->
+                <!--</div>-->
+                <!--<div class="wordBox">-->
+                    <!--<p class="titleWord">这组图让你看清中国企业的真是实力</p>-->
+
+                    <!--<div class="fromBox">-->
+                        <!--<div class="from">摩尔金融</div>-->
+                        <!--<div class="time">2小时前</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li></a>-->
+            <!-- 一张图-->
+            <!--<a href=""><li>-->
+            <!--<p class="titleWord">这组图让你看清中国企业的真是实力</p>-->
+
+            <!--<div class="fromBox">-->
+            <!--<span class="from">摩尔金融</span>-->
+            <!--<span class="time">2小时前</span>-->
+            <!--</div>-->
+            <!--</li></a>-->
+            <!-- 无图-->
+            <!--<a href="news.html?type=0&nid=dsdsds" target="_blank"><li>-->
+            <!--<p class="titleWord">这组图让你看清中国企业的真是实力</p>-->
+            <!--<div class="imgboxs">-->
+            <!--<div><img src=""></div>-->
+            <!--<div><img src=""></div>-->
+            <!--<div><img src=""></div>-->
+            <!--</div>-->
+            <!--<div class="fromBox">-->
+            <!--<div class="from">摩尔金融</div>-->
+            <!--<div class="time">2小时前</div>-->
+            <!--</div>-->
+            <!--</li></a>-->
+            <!-- 三张图-->
+            <!--<a href=""><li>-->
+            <!--<p class="titleWord">这组图让你看清中国企业的真是实力</p>-->
+            <!--<div class="bigImg"><img src=""></div>-->
+            <!--<div class="fromBox">-->
+            <!--<span class="from">摩尔金融</span>-->
+            <!--<span class="time">2小时前</span>-->
+            <!--</div>-->
+            <!--</li></a>-->
+            <!-- 大图-->
+            <!--<a href="">-->
+                <!--<li>-->
+                    <!--<div class="duanziIcon">-->
+                        <!--<img src="img/350.png" alt=""/>-->
+                        <!--<span>sdsd</span>-->
+                    <!--</div>-->
+                    <!--<div class="duanziWord"></div>-->
+                    <!--<div class="duanziZan">-->
+                        <!--<div class="dian">-->
+                            <!--<img src="img/duanzi/up_normal_duanzi_day@3x.png" alt=""/>-->
+                            <!--<span>11</span>-->
+                        <!--</div>-->
+                        <!--<div class="dao">-->
+                            <!--<img src="img/duanzi/down_normal_duanzi_day@3x.png" alt=""/>-->
+                            <!--<span>11</span>-->
+                        <!--</div>-->
+                        <!--<div class="comment">-->
+                            <!--<img src="img/duanzi/comment_duanzi_day.png" alt=""/>-->
+                            <!--<span>11</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</a>-->
+            <!-- 段子列表-->
+        </ul>
+         <div class="loadMord">正在加载更多新闻...</div>
+        <div id = "scroller-pullUp" style="position: absolute;bottom: -43px;left: 0;width: 100%">
+            <!--<span id = "up-icon" class = "icon-double-angle-up pull-up-icon">↑↑</span>-->
+            <!--<span id = "pullUp-msg" class = "pull-up-msg" style="display:block;text-align: center;width: 100%;">上拉加载更多</span>-->
+        </div>
+    </div>
+</div>
+<script>
+    var imgUrl = 'img/350.png';  // 分享后展示的一张图片
+    var lineLink = '#'; // 点击分享后跳转的页面地址
+    var descContent = "你懂得";  // 分享后的描述信息
+    var shareTitle = '我不懂';  // 分享后的标题
+    var appid = '';  // 应用id,如果有可以填，没有就留空
+
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            //_report('send_msg', res.err_msg);  // 这是回调函数，必须注释掉
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            //_report('timeline', res.err_msg); // 这是回调函数，必须注释掉
+        });
+    }
+//    function shareWeibo() {
+//        WeixinJSBridge.invoke('shareWeibo',{
+//            "content": descContent,
+//            "url": lineLink,
+//        }, function(res) {
+//            //_report('weibo', res.err_msg);
+//        });
+//    }
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+            console.log(descContent);
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+        });
+        // 分享到微博
+//        WeixinJSBridge.on('menu:share:weibo', function(argv){
+//            shareWeibo();
+//        });
+    }, false);
+</script>
+</body>
+</html>

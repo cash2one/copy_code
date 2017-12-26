@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="description" content="读奇点 阅天下"/>
+    <title>奇点资讯</title>
+    <!--<link rel="stylesheet" href="css/indexQidian.css"/>-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!--<script src="js/indexQidian3.js"></script>-->
+    <script src="js/base.js"></script>
+    <script src="js/iscroll-probe.js"></script>
+    <script src="js/index.js"></script>
+    <!--<script src="js/weixin.js"></script>-->
+
+<script>
+    $(function(){
+        var mm=true;
+        $("#wrapper1").css("margin-top",$(".navBox").height()+51);
+        $(".jiantou").click(function(){
+            if(mm){
+                $(".navBox").css("height","auto");
+                mm=false;
+            }else{
+                $(".navBox").css("height","50px");
+                mm=true;
+            }
+
+        })
+        $('body').on("touchstart", function(e) {
+//        e.preventDefault();
+            startX = e.originalEvent.changedTouches[0].pageX,
+                    startY = e.originalEvent.changedTouches[0].pageY;
+        });
+        $("body").on("touchmove", function(e) {
+//    e.preventDefault();
+            moveEndX = e.originalEvent.changedTouches[0].pageX,
+                    moveEndY = e.originalEvent.changedTouches[0].pageY,
+                    X = moveEndX - startX,
+                    Y = moveEndY - startY;
+            if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+//                $(".footer").css("display","block")
+            }
+            else if( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+                $(".navBox").css("height","50px");
+            }
+        })
+
+
+
+    })
+</script>
+<style>
+    #wrapper1{
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        /*height: auto;*/
+    }
+
+    #scroller1{
+        position: absolute;left: 0;top: 0;
+        z-index: 3;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        width: 100%;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -o-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+    #scroller-pullUp{
+        display: none;
+    }
+</style>
+<script>
+    var is=0;
+    var myScroll1,bb, y,num;
+    $(function(){
+        if (myScroll1 == undefined || myScroll1 == '') {
+            myScroll1 = new IScroll('#wrapper1', {
+                scrollbars: true,
+                probeType: 3,//probeType属性，表明此插件，可以监听scroll事件
+                mouseWheel: true,
+                interactiveScrollbars: true,
+                shrinkScrollbars: 'scale',
+                fadeScrollbars: true,
+                preventDefault: false
+            });
+
+            var myScroll,
+                    upIcon = $("#up-icon"),
+                    downIcon = $("#down-icon");
+
+            myScroll1.on("scroll", function () {
+                //scroll事件，可以用来控制上拉和下拉之后显示的模块中，
+                //样式和内容展示的部分的改变。
+                y = this.y,
+                        maxY = this.maxScrollY - y,
+                        downHasClass = downIcon.hasClass("reverse_icon"),
+                        upHasClass = upIcon.hasClass("reverse_icon");
+                num=$(".num:first").html();
+                if (y >= 40) {
+//                    alert(">40")
+
+                    !downHasClass && downIcon.addClass("reverse_icon");
+                    return "";
+                } else if (y < 40 && y > -10) {
+//                    alert(2)
+
+                    downHasClass && downIcon.removeClass("reverse_icon");
+                    return "";
+                }
+//
+
+                if (maxY >= 40) {
+//alert(1)
+                    !upHasClass && upIcon.addClass("reverse_icon");
+                    return "";
+                } else if (maxY < 40 && maxY >= 0) {
+
+
+                    upHasClass && upIcon.removeClass("reverse_icon");
+                    return "";
+                }
+            });
+
+            myScroll1.on("slideDown", function () {
+
+                //当下拉，使得边界超出时，如果手指从屏幕移开，则会触发该事件
+                if (this.y > 40) {
+                    //获取内容于屏幕拉开的距离
+                    //可以在该部分中，修改样式，并且仅限ajax或者其他的一些操作
+                    //此时只是为了能演示该功能，只添加了一个alert功能。
+                    //并且，由于alert会阻塞后续的动画效果，所以，
+                    //添加了后面的一行代码，移除之前添加上的一个样式
+                    // alert("slideDown");
+
+                    upIcon.removeClass("reverse_icon");
+                }
+            });
+
+            myScroll1.on("slideUp", function () {
+                if (this.maxScrollY - this.y > 40) {
+                    // $("#scroller-pullUp").css("top",$(".mainBox").height()+43);
+
+                    upIcon.removeClass("reverse_icon")
+                }
+            });
+            myScroll1.on("scrollEnd",function(){
+                if(this.maxScrollY - this.y ==0){
+
+                }
+            })
+
+        } else {
+            setTimeout(function () {
+                myScroll1.refresh();
+            }, 100);
+        }
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        }, false);
+//        dates();
+//        dates2();
+        // $(".border").trigger("click");
+
+
+    })
+</script>
+</head>
+<body>
+<div style="display: none"><img src="img/350.png"></div>
+
+<div id="wrapper1">
+    <div id="scroller1">
+        <div class="imgPlay"><img src="http://wsacdn2.miaopai.com/stream/BQ~96GzOm3oyTlia~UBygg___tmp_11_825_.jpg" alt="" class="video_img"/><img
+                src="img/video_play.png" alt="" class="video_play"/></div>
+        <iframe src="" frameborder="0" class="videoBox"></iframe>
+        <div class="videoTitle">此前，在疑似赫子铭求助情感电台的新闻中，该男子曾透露，他与妻子婚后购买了三处房产，北京两套，美国一套。</div>
+
+        <!--评论-->
+        <div class="xiangguanVideo">
+            <div class="xiangguanVideoword">
+                <span>热门评论</span>
+            </div>
+            <div class="comments">
+                <div class="comment clearfix">
+                    <div class="comment-img"> <img src="http://photocdn.sohu.com/20160315/mp63444225_1457989131470_1.jpeg"> </div>
+                    <div class="comment-info">
+                        <div class="user-info clearfix">
+                            <div class="floatL">
+                                <div class="user-name">火星网友</div>
+                                <!--<div class="user-time">2016-12-12 12:12:00</div>-->
+                            </div>
+                            <!--<div class="floatR">回复-->
+                            <!--</div>-->
+                        </div>
+                        <div class="comment-text">
+                            蔡依林做手表蛋糕让妈妈开心，网友大赞蔡依林为。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="xiangguanVideo">
+            <div class="xiangguanVideoword">
+                <span>相关观点</span>
+            </div>
+            <div class="videoCardbox">
+                <div class="videoCard">
+                    <a href="">
+                        <div class="videoWord">
+                            <div class="videoDes">xdssseffe</div>
+                            <div class="videoFrom">sdfsf</div>
+                        </div>
+                        <div class="videoPlay"></div>
+                    </a>
+                </div>
+                <div class="videoCard">
+                    <a href="">
+                        <div class="videoWord">
+                            <div class="videoDes">xdssseffe</div>
+                            <div class="videoFrom">sdfsf</div>
+                        </div>
+                        <div class="videoPlay"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="loadMord">正在加载更多新闻...</div>
+        <div id = "scroller-pullUp" style="position: absolute;bottom: -43px;left: 0;width: 100%">
+            <!--<span id = "up-icon" class = "icon-double-angle-up pull-up-icon">↑↑</span>-->
+            <!--<span id = "pullUp-msg" class = "pull-up-msg" style="display:block;text-align: center;width: 100%;">上拉加载更多</span>-->
+        </div>
+    </div>
+</div>
+<script>
+    var imgUrl = 'img/350.png';  // 分享后展示的一张图片
+    var lineLink = '#'; // 点击分享后跳转的页面地址
+    var descContent = "你懂得";  // 分享后的描述信息
+    var shareTitle = '我不懂';  // 分享后的标题
+    var appid = '';  // 应用id,如果有可以填，没有就留空
+
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            //_report('send_msg', res.err_msg);  // 这是回调函数，必须注释掉
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            //_report('timeline', res.err_msg); // 这是回调函数，必须注释掉
+        });
+    }
+    //    function shareWeibo() {
+    //        WeixinJSBridge.invoke('shareWeibo',{
+    //            "content": descContent,
+    //            "url": lineLink,
+    //        }, function(res) {
+    //            //_report('weibo', res.err_msg);
+    //        });
+    //    }
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+            console.log(descContent);
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+        });
+        // 分享到微博
+//        WeixinJSBridge.on('menu:share:weibo', function(argv){
+//            shareWeibo();
+//        });
+    }, false);
+</script>
+</body>
+</html>

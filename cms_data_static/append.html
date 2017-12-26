@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META SECTION -->
+    <title>数据展示</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- END META SECTION -->
+
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+    <!--<link rel="stylesheet" href="css/daterangepicker-bs3.css"/>-->
+    <!-- EOF CSS INCLUDE -->
+</head>
+<body>
+<!-- START PAGE CONTAINER -->
+<div class="page-container">
+
+    <!-- START PAGE SIDEBAR -->
+    <!--#include virtual="left.html"-->
+    <!-- END PAGE SIDEBAR -->
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content">
+
+        <!-- START X-NAVIGATION VERTICAL -->
+        <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+            <!-- TOGGLE NAVIGATION -->
+            <li class="xn-icon-button">
+                <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+            </li>
+            <!-- END TOGGLE NAVIGATION -->
+            <!-- SEARCH -->
+            <!--<li class="xn-search">-->
+            <!--<form role="form">-->
+            <!--<input type="text" name="search" placeholder="Search..."/>-->
+            <!--</form>-->
+            <!--</li>   -->
+            <!-- END SEARCH -->
+            <!-- SIGN OUT -->
+            <li class="xn-icon-button pull-right">
+                <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>
+            </li>
+            <!-- END SIGN OUT -->
+
+        </ul>
+        <!-- END X-NAVIGATION VERTICAL -->
+
+        <!-- START BREADCRUMB -->
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">Dashboard</li>
+        </ul>
+        <!-- END BREADCRUMB -->
+
+        <!-- PAGE CONTENT WRAPPER -->
+        <div class="page-content-wrap">
+            <div class="block">
+                <h4> 添加渠道</h4>
+                <form id="ctype" role="form" class="form-horizontal" action="javascript:alert('Form #validate submited');">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">渠道代号:</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="ctype_name">
+                            <span class="help-block">字母组成</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">展示名称:</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="ctype_show_name">
+                            <span class="help-block">可以为中文</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">客户端:</label>
+                        <div class="col-md-9">
+                                <select class="form-control  ptype select" style="display: none;"  id="add_ptype">
+                                    <option value="Android" selected> Android</option>
+                                    <option value="IOS"> IOS</option>
+                                    <option value="Web">Web</option>
+                                </select>
+                        </div>
+                    </div>
+                </form>
+                <button  type="button" class="btn btn-info pull-right " id="add_ctype">添加</button>
+            </div>
+            <div class="block">
+                <h4> 添加广告位</h4>
+                <form id="ad_position" role="form" class="form-horizontal" action="javascript:alert('Form #validate submited');">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">客户端:</label>
+                        <div class="col-md-9">
+                            <select class="form-control  ptype select" style="display: none;" id="ad_ptype">
+                                <option value="Android" selected> Android</option>
+                                <option value="IOS"> IOS</option>
+                                <option value="Web">Web</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">广告平台名称:</label>
+                        <div class="col-md-9">
+                            <select class="form-control  ad_platform select" style="display: none;"  id="ad_platforms">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">广告位id:</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="aid">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">广告位置:</label>
+                        <div class="col-md-9">
+                            <select class="form-control  ad_position select" style="display: none;"  id="ad_positions">
+                                <option value="列表页">列表页</option>
+                                <option value="详情页">详情页</option>
+                                <option value="相关">相关</option>
+                                <option value="开屏">开屏</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">渠道代号:</label>
+                        <div class="col-md-9">
+                            <select class="form-control  qudao select" style="display: none;"  id="qudao">
+
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <button  type="button" class="btn btn-info pull-right " id="add_ad_position">添加</button>
+            </div>
+            <div class="block">
+                <h4> 添加广告平台</h4>
+                <form id="ad_platform" role="form" class="form-horizontal" action="javascript:alert('Form #validate submited');">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">广告平台名称代号:</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="ad_platform_name">
+                            <span class="help-block">字母组成</span>
+                        </div>
+                    </div>
+                </form>
+                <button  type="button" class="btn btn-info pull-right " id="add_ad_platform">添加</button>
+            </div>
+            <div class="block">
+                <h4> 添加版本</h4>
+                <form id="version" role="form" class="form-horizontal" action="javascript:alert('Form #validate submited');">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">版本名称:</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="version_name">
+                            <span class="help-block">数字与.组成</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">客户端:</label>
+                        <div class="col-md-9">
+                            <select class="form-control  ptype select" style="display: none;" id="ver_ptype">
+                                <option value="Android" selected> Android</option>
+                                <option value="IOS"> IOS</option>
+                                <option value="Web">Web</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">渠道名称:</label>
+                        <div class="col-md-9">
+                            <select class="form-control  qudao select" style="display: none;"  id="qudaos">
+
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <button  type="button" class="btn btn-info pull-right " id="add_version">添加</button>
+            </div>
+        </div>
+
+        <!-- END PAGE CONTENT WRAPPER -->
+        <!--page-->
+        <!--<div class="buttonBox pagination">-->
+        <!--<ul class="pagination pagination-sm pull-right "></ul>-->
+        <!--</div>-->
+    </div>
+    <!-- END PAGE CONTENT -->
+</div>
+<!-- END PAGE CONTAINER -->
+
+<!-- MESSAGE BOX-->
+<div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+            <div class="mb-content">
+                <p>Are you sure you want to log out?</p>
+                <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+            </div>
+            <div class="mb-footer">
+                <div class="pull-right">
+                    <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                    <button class="btn btn-default btn-lg mb-control-close">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MESSAGE BOX-->
+
+<!-- START SCRIPTS -->
+<!-- START PLUGINS -->
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<!--<script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- END PLUGINS -->
+<script src="js/data/jquery.cookie.js"></script>
+<script src="js/data/base.js"></script>
+<script src="js/plugins/bootstrap/bootstrap-pagy.min.js"></script>
+<script src="js/data/jquery.easyui.min.js"></script>
+<script src="js/data/ExportExcelDlg.js"></script>
+<!--<script src="js/data/doubleDate.js"></script>-->
+<script src="js/data/append.js"></script>
+<!-- START THIS PAGE PLUGINS-->
+<script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+<script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<!--<script type="text/javascript" src="js/plugins/scrolltotop/scrolltopcontrol.js"></script>-->
+<script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>
+<script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/plugins/daterangepicker/moment.js"></script>
+<script type="text/javascript" src="js/plugins/daterangepicker/daterangepickers.js"></script>
+<!-- END THIS PAGE PLUGINS-->
+
+<!-- START TEMPLATE -->
+<script type="text/javascript" src="js/settings.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/actions.js"></script>
+<!-- END TEMPLATE -->
+<!-- data start-->
+<!-- END SCRIPTS -->
+</body>
+</html>
+
+
+
+
+
+

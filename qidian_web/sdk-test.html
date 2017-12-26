@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>sdk测试</title>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+</head>
+<body>
+	
+	<div id="news-content"></div> 
+
+	<script type="text/javascript">
+		/*
+			将下面代码放入页面地图script标签中
+			设置内容关键词 和 内容容器的ID 以及 内容展示数量 
+		*/
+		(function(){
+			var script = document.createElement("script");
+			script.async = true;
+			script.src = "http://deeporiginalx.com/news-share/js/sdk.js";
+			var header = document.getElementsByTagName("head")[0];
+			header && header.insertBefore(script,header.firstChild);
+			script.onload = function(){
+				new List({
+					keyword:"OGYouTube", 	// 新闻关键词
+					containerID:"news-content", 	//列表容器ID
+					count:5,	// 新闻显示条数
+					type:1, // 标题显示类型 
+					keyword_sign:false, //关键词高亮 
+					source: "7" // 来源 
+				})
+			}
+			console.log(returnCitySN["cip"]+','+returnCitySN["cname"]);
+		})()
+	</script>
+
+</body>
+</html>

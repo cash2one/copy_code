@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <title>各渠道日点击量前一百排名</title>
+    <script src="js/jquery.min.js"></script>
+<style>
+    .type{
+        width:80%;height:auto;overflow: hidden;margin:30px auto 10px auto;
+    }
+    #ptype{
+        width:15%;height:25px;outline: none;
+        /*float: left;*/
+    }
+    #ctype{
+        width:15%;height:25px;outline: none;
+    }
+    table{
+        width:80%;height:auto;border: 1px solid #ddd;margin:20px auto;border-collapse: collapse;color:#56688A;
+    }
+    table>thead>tr>th{
+        font-size: 16px;line-height: 28px;background: #f1f5f9;width:100px;
+    }
+    td{
+        font-size: 16px;padding: 5px auto;text-align: left;line-height: 28px;padding-left:10px;
+    }
+    .title{
+        width:100%;font-size: 24px;color:#56688A;text-align: center;margin-top:20px;display: inline-block;
+    }
+</style>
+</head>
+<body>
+<span class="title">各渠道日点击量前一百排名</span>
+<div class="type">
+<span>渠道</span>
+    <select name="" id="ctype">
+        <option value="1">奇点资讯</option>
+        <option value="2">黄历天气</option>
+        <option value="3">文字锁屏</option>
+        <option value="4">猎鹰浏览器</option>
+        <option value="5">白板</option>
+    </select>
+    <span style="margin-left:10px">客户端</span>
+    <select name="" id="ptype">
+        <option value="1">ios</option>
+        <option value="2">android</option>
+    </select>
+</div>
+<table border="1">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>新闻标题</th>
+        <th>点击次数</th>
+        <th>展示次数</th>
+        <th>点击/展示</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<script>
+    getData('http://bdp.deeporiginalx.com/v2/re/top?ptype=1&ctype=1');
+    $('#ptype,#ctype').change(function(){
+//        console.log($('#ptype>option:selected').val()+'--'+$('#ctype>option:selected').val());
+        var ptype=$('#ptype>option:selected').val();
+        var ctype=$('#ctype>option:selected').val();
+        getData('http://bdp.deeporiginalx.com/v2/re/top?ptype='+ptype+'&ctype='+ctype);
+    })
+    function getData(url){
+        $.ajax({
+            url:url,
+            dataType:'json',
+            type:'get',
+            success:function(e){
+                var data= e.data,dataDiv='';
+                for(var i in data){
+                    var title=data[i]['title'];
+                    var clickcount=data[i]['clickcount'];
+                    var showcount=data[i]['showcount'];
+//                    alert(typeof (i));
+                    dataDiv+='<tr><td>'+(parseInt(i)+1)+'</td><td>'+title+'</td><td>'+clickcount+'</td><td>'+showcount+'</td><td>'+(showcount==0?0:percentNum(clickcount,showcount))+'</td></tr>';
+                }
+                $('tbody').html(dataDiv);
+            }
+        })
+    }
+    function percentNum(num, num2) {
+        return (Math.round(num / num2 * 10000) / 100.00 + "%"); //小数点后两位百分比
+    }
+</script>
+</body>
+</html>

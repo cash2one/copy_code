@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never"/>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>视频分享</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/zy.media.min.css"/>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!--<script src="js/iscroll-probe.js"></script>-->
+    <script src="js/zy.media.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/note.js"></script>
+    <script src="js/newsCopy.js"></script>
+<style>
+    #wrapper1{
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        /*height: auto;*/
+    }
+
+    #scroller1{
+        position: absolute;left: 0;top: 0;
+        z-index: 3;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        width: 100%;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -o-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+    #scroller-pullUp{
+        display: none;
+    }
+    .zy_media,video{
+        background-color: transparent;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        min-width: 0px;
+        max-width: none;
+        min-height: 0px;
+        max-height: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+        transform: none;
+        margin: 0px !important;
+        flex: 1 1 0% !important;
+    }
+    :-webkit-full-screen {
+        background-color: #000;
+        z-index: 2147483647;
+    }
+    video {
+        object-fit: contain;
+    }
+    .zy_media{
+        /*display: none;*/
+    }
+</style>
+
+</head>
+<body style="background: #f6f6f6">
+<!--<div id="wrapper1">-->
+    <!--<div id="scroller1">-->
+        <!--<div class="imgPlay"><img src="http://wsacdn2.miaopai.com/stream/BQ~96GzOm3oyTlia~UBygg___tmp_11_825_.jpg" alt="" class="video_img"/><img-->
+                <!--src="img/video_play.png" alt="" class="video_play"/></div>-->
+        <!--<iframe src="" frameborder="0" class="imgPlayer"></iframe>-->
+        <div class="zy_media">
+            <video poster="" data-config='{"mediaTitle": ""}' preload="auto" class="imgPlayer">
+                请稍后
+                <source src="" type="video/mp4" class="sources" id="aa">
+                您的浏览器不支持HTML5视频
+            </video>
+        </div>
+        <div class="videoTitle"></div>
+
+        <!--评论-->
+        <div class="elte-commentbox">
+            <div class="xiangguanVideoword">
+                <span>热门评论</span>
+            </div>
+            <div class="comments">
+            </div>
+            <!--<a href="" id="download">-->
+                <!--<div class="comments-more" style="text-align: center">-->
+                    <!--&lt;!&ndash;<div style="width: auto;height:auto;display: inline-block;overflow: hidden">&ndash;&gt;-->
+                    <!--<div class="qidianMore"><img src="../img/qidianMore.png"></div>-->
+                    <!--<div class="reping">打开奇点资讯，看全部热评</div>-->
+                    <!--<div class="qidianGo"><img src="../img/qidianGo.png"></div>-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</a>-->
+        </div>
+        <!--相关视频-->
+        <div class="xiangguanVideo">
+            <div class="xiangguanVideoword">
+                <span>相关观点</span>
+            </div>
+            <div class="videoCardbox">
+                <!--<div class="videoCard">-->
+                    <!--<a href="">-->
+                        <!--<div class="videoWord">-->
+                            <!--<div class="videoDes">xdssseffe</div>-->
+                            <!--<div class="videoFrom">sdfsf</div>-->
+                        <!--</div>-->
+                        <!--<div class="videoPlay">-->
+                            <!--<img src="" alt=""/>-->
+                            <!--<div class="bgPlay">-->
+                                <!--<div class="time">04:30</div>-->
+                                <!--<div class="video_playSmall"></div>-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="videoCard">-->
+                    <!--<a href="">-->
+                        <!--<div class="videoWord">-->
+                            <!--<div class="videoDes">xdssseffe</div>-->
+                            <!--<div class="videoFrom">sdfsf</div>-->
+                        <!--</div>-->
+                        <!--<div class="videoPlay"></div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="videoCard">-->
+                    <!--<a href="">-->
+                        <!--<div class="videoWord">-->
+                            <!--<div class="videoDes">xdssseffe</div>-->
+                            <!--<div class="videoFrom">sdfsf</div>-->
+                        <!--</div>-->
+                        <!--<div class="videoPlay"></div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="videoCard">-->
+                    <!--<a href="">-->
+                        <!--<div class="videoWord">-->
+                            <!--<div class="videoDes">xdssseffe</div>-->
+                            <!--<div class="videoFrom">sdfsf</div>-->
+                        <!--</div>-->
+                        <!--<div class="videoPlay"></div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="videoCard">-->
+                    <!--<a href="">-->
+                        <!--<div class="videoWord">-->
+                            <!--<div class="videoDes">xdssseffe</div>-->
+                            <!--<div class="videoFrom">sdfsf</div>-->
+                        <!--</div>-->
+                        <!--<div class="videoPlay"></div>-->
+                    <!--</a>-->
+                <!--</div>-->
+
+            </div>
+            <div class="loadMord">正在加载更多新闻...</div>
+        </div>
+
+    <!--</div>-->
+<!--</div>-->
+<script>
+
+    zymedia('video',{preload:'auto',autoplay:false,success:function(){
+    }});
+
+
+</script>
+</body>
+</html>

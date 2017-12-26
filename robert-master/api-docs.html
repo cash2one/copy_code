@@ -1,0 +1,71 @@
+location:  http://60.28.29.47:8383
+
+
+1. 获取微信登陆二维码
+param	: null
+type	: get
+path	: /wx/login
+callback:
+{
+  "_id": "586b492ec11b9b294d9cf3d0",							//窗口id
+  "src": "https://login.weixin.qq.com/qrcode/waI0YQeeLQ==",		//微信登陆二维码路径
+  "pgv_si": "s7918014464",										//用户登陆标识
+  "_": "1483426092933",
+  "time": "2017-01-03 14:48:14",								//二维码生成时间
+  "status": "wait"												//二维码状态
+}
+
+
+2. 获取登陆状态
+parm 	: _id 													// 窗口id
+type	:get
+path	:/login/status			
+callback:
+{
+  "_id": "586b59c08c06ae44b1f7ddbd",
+  "src": "https://login.weixin.qq.com/qrcode/oZ9-UAoUgQ==",
+  "avatar": "https://login.weixin.qq.com/qrcode/oZ9-UAoUgQ==",  //头像路径
+  "pgv_si": "s1673302016",
+  "time": "2017-01-03 15:58:56",
+  "status": "online",
+  "wxnum": "小微-001"											// 微信昵称
+}
+
+3. 获取用户所有群组和联系人
+parm : wxname                       // 微信昵称
+type : post 
+path : /show/group
+callback:
+{
+  "wxname": "千里飞雪",
+  "groups": [
+    "小微",
+    "小小鹿",
+    "文件传输助手 "
+  ]
+}
+
+4. 发送信息/定时发送
+parm : {
+  target : 目标群组  (必传)
+  theme  : 群发主题（可选）
+  msg{
+    type: 群发内容的类型 (必传)
+    text: 群发内容（必传）
+  }
+  status: 信息状态  草稿：edit    定时发送 ：wait  普通发送：wait
+  time: 发送时间  / 普通发送传now 定时发送传设置的时间
+}
+type:post
+path:send/msg
+callback:{
+  code:200
+}
+
+5. 查看消息列表
+parm: {status: 'wait/edit'}   ##草稿箱:edit  已发送:send
+type:post
+path:msg/list
+callbacl:{
+  
+}

@@ -1,0 +1,193 @@
+*{
+    margin:0;padding:0;list-style: none;font-weight: normal;box-sizing: border-box;
+}
+a{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+.header{
+    width: 100%;height: 50px;background:#999;position: relative;
+}
+.headerword{
+    width: 100%;height:100%;font-size:24px;color:#fff;text-align: center;line-height: 50px;
+}
+.headercircle{
+    width: 20px;height: 100%;position: absolute;right: 10%;top:0
+}
+.circle{
+    width: 10px;height: 10px;background: #fff;border-radius: 50%;margin-top:5px;margin-left:5px
+}
+.banner{
+    width: 100%;height: auto;position: relative;
+}
+.bannerzhe{
+    width: 100%;heigh:auto;background:rgba(0,0,0,0.5);position: absolute;bottom: 0;left:0;z-index:1;
+}
+#bannerImg{
+    width: 100%;
+}
+.yingdao{
+    width: 40%;height: auto;position: fixed;top:0;right:5%;display:none;z-index: 999;
+}
+.yingdao img{
+    width: 100%;
+}
+.bannertitle{
+    display:block;width: 90%;height:auto;font-size: 20px;margin-top:3%;margin-left:5%;
+    line-height: 26px;color:#fff;
+}
+.bannertime{
+    width: 90%;height:16px;margin-bottom:9% ;margin-left:5%;margin-top:1%;
+}
+.date{
+    display: block;float:left;font-size: 14px;color:#fff;
+}
+.time{
+    display: block;float:left;font-size: 14px;color:#fff;margin-left:24px ;
+}
+.wendu{
+    display: block;float:left;font-size: 14px;color:#fff;margin-left:36px;
+}
+.wenduword{
+    width: 90px;height: 100%;margin-left:20px;color:red;
+}
+.cardbox{
+    width: 100%;height:auto;
+}
+.card1{
+    width: 96%;height:auto;padding:10px;font-size:18px;margin:0 auto;background:#fff;margin-top:-24px;font-weight: bold;
+    position: relative;z-index: 1;line-height:25px ;
+}
+.card2{
+    width: 96%;height:auto;padding:10px;font-size:16px;margin:0 auto;background:#fff;margin-top:15px;  line-height: 25px;
+}
+img[class=card2]{
+    display:block;width: 100%;height:auto;font-size:16px;margin:0 auto;background:#fff;line-height: 25px;
+}
+.cardChild{
+    width: 100%;height:auto;margin-top:10px;font-size:16px;color:#35a6fb;line-height:25px;overflow:hidden;padding:0 5px 5px 5px;
+}
+.zhezhao{
+    width: 100%;height:300px;background:rgba(0,0,0,0.5);position:relative;position: fixed;top:0;left:0;display: none;z-index:3;
+}
+.zhezhaodownload{
+    width: 60%;height:auto;background:rgba(255,255,255,0.9);border-radius: 2%;position: absolute;left: 20%;top:30%;
+}
+/*.zhezhaodownload span{*/
+    /*display:block;width: 100%;height: 20px;font-size: 16px;text-align: center;line-height: 20px;*/
+/*}*/
+.down{
+    width: 40%;height: auto;margin:0px auto 20px auto;
+}
+.down img{
+    width: 100%;
+}
+.closeB{
+    width:20px;height: 20px;position: absolute;top:7px;right:7px;
+}
+.closeB img{
+    width: 100%;
+}
+.logodownload{
+    width:60px;height:60px;margin:20px auto;
+}
+.logodownload img{
+    width:100%;
+}
+.pinglun{
+    width: 96%;height:auto;background:#fff;margin:0 auto;margin-top:15px;
+}
+.pingluntop{
+    width: 100%;height: auto;
+}
+.pingluntop img{
+    width: 100%;
+}
+.pinglunbox{
+    width: 100%;height: auto;padding: 56px 40px;margin: 0 auto;
+}
+.pingluncard{
+    width:100%;height:auto;overflow: hidden;margin-top:22px;
+}
+.pinglunperson{
+    width: 35px;height:35px;float:left;border-radius: 50%;overflow: hidden;
+}
+.pinglunword{
+    width: 84%;height: auto;float:left;margin-left:3%;position: relative;font-size:16px;color:#35a6fb;line-height:25px;
+}
+.pinglunshu{
+    width: 40px;height: 20px;float:right;margin-top:10px;font-size: 16px;color:#35a6fb;text-align:center;line-height: 20px;
+}
+.pinglunmore{
+    width: 28px;height: 18px;float:right;margin-right:1%;margin-top:10px;
+}
+.pingluntitle{
+    display:block;width: 100%;height: 25px;
+}
+.pinglunname{
+    font-size:14px;color:#2b2b2b;margin-left:3%;float:left;
+}
+.pingluncon{
+    display:block;width: 100%;height:auto;line-height: 29px;margin-top:25px;
+}
+.pinglunw{
+    width: 35px;height:100%;float:left;border:1px solid #fff;
+}
+.plconword{
+    margin-float:333px;font-size:16px;color:#9c9c9c;
+}
+.pinglunline{
+    width: 100%;height: 22px;border-bottom:1px dashed #dadada;
+}
+.pinglunfoot{
+    width: 100%;height: 125px;border-top:1px solid #dadada;font-size:18px;text-align: center;
+    line-height: 125px;
+}
+/*pinglun end*/
+.pointcard{
+    width: 100%;height:230px;padding:35px 30px;border-bottom:1px solid #dadada;overflow: hidden;position: relative;
+}
+.pointtu{
+    width: 24%;height: 69%;background: red;float:left;overflow: hidden;
+}
+.pointword{
+    width:73%;height: auto;margin-left:3%;font-size:16px;color:#2b2b2b;line-height:40px;float:left;
+}
+.pointsword{
+    width: 50%;height: auto;font-size: 12px;color:#9c9c9c;position: absolute;right: 30px;bottom:35px;
+    text-align:right;
+}
+/*point end*/
+.footimg{
+    width: 96%;height:auto;margin:0 auto;margin-top:15px;
+}
+.footimg img{
+    width: 100%;
+}
+.footer{
+    width: 100%;height:100px;background:rgba(0,0,0,0.8);padding:25px;margin-top:15px;position:fixed;bottom:0px;z-index:99;
+}
+.footertu{
+    width: 13%;height: 69%;float:left;
+}
+.footertu img{
+    height: 140%;
+}
+.footerword{
+    width: 26%;height:69%;float:left;margin-left:6%;
+}
+.bigword{
+    width: 120%;height:auto;font-size:20px;color:#fff;
+}
+.sword{
+    width:150%;height:auto;font-size:10px;margin-top:8px;color:#fff;
+}
+.download{
+    display:inline-block;width: 37%;height:100%;float:right;margin-right:1%;line-height:60px;
+}
+.download img{
+    width: 100%;
+}
+.close{
+    width: 3%;height:100%;float:right;display: inline-block;margin-top:0px;position:absolute;top:7px;right:7px;
+}
+.close img{
+    width:100%;
+}

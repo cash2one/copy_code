@@ -1,0 +1,30 @@
+$(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop()>50){
+            //$(".navW").css("color","#000");
+            $(".navbox").css("opacity","0");
+            $(".navoutbox").css("height","60px")
+            //$(".navoutbox").animate({top:"0"})
+        }else{
+            $(".nW").css("color","#eee");
+            $(".navbox").css("opacity","1");
+            $(".navoutbox").css("height","0px")
+            //$(".navoutbox").animate({top:"-60px"})
+        }
+    })
+
+    $(".nW").each(function(i,obj){
+        $(obj).hover(function(){
+            $(this).css("color","#fff")
+        },function(){
+            $(this).css("color","#eee")
+        })
+    })
+    $(".navW").each(function(i,obj){
+        $(obj).hover(function(){
+            $(this).css("color","#000")
+        },function(){
+            $(this).css("color","#5c5c5c")
+        })
+    })
+})

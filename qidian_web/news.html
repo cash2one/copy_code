@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never"/>
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black" /> -->
+    <meta name="description" content='aaa'>
+    <!-- <meta itemprop="image" content="img/logoS.png"> -->
+    <title>奇点资讯</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/ex.css"/>
+    <link rel="stylesheet" href="css/news2.css"/>
+    <link rel="stylesheet" href="videoShare/css/index.css"/>
+    <link rel="stylesheet" href="videoShare/css/zy.media.min.css"/>
+    <link rel="stylesheet" href="zhuanti-share/css/index.css"/>
+    <script src="js/note.js"></script>
+    <!--<script src="js/iscroll-probe.js"></script>-->
+    <script src="videoShare/js/zy.media.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+     <script src="js/ex14.js"></script>
+    <script src="js/base.js"></script>
+    <!--<script src="js/newsCopy.js"></script>-->
+</head>
+<script>
+    $(function(){
+
+
+        $('body').on("touchstart", function(e) {
+//        e.preventDefault();
+        startX = e.originalEvent.changedTouches[0].pageX;
+                startY = e.originalEvent.changedTouches[0].pageY;
+    });
+$("body").on("touchmove", function(e) {
+//    e.preventDefault();
+    moveEndX = e.originalEvent.changedTouches[0].pageX;
+            moveEndY = e.originalEvent.changedTouches[0].pageY;
+            X = moveEndX - startX;
+            Y = moveEndY - startY;
+    if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+        $(".footer").css("display","block")
+    }
+    else if( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+        $(".footer").css("display","none")
+    }
+})
+
+    });
+
+</script>
+<style>
+    #wrapper1{
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        /*height: auto;*/
+    }
+
+    #scroller1{
+        position: absolute;left: 0;top: 0;
+        z-index: 3;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        width: 100%;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-touch-callout: none;
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;/
+        user-select: text;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -o-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+    #scroller-pullUp1{
+        position: absolute;
+        bottom: -43px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: black;
+    }
+    body{
+        background-color: #f6f6f6;
+    }
+</style>
+<script>
+
+    $(function(){
+    
+    })
+</script>
+<body>
+<div class="yingdao">
+    <img src="img/tishi.png">
+</div>
+<!--<div id="wrapper1">-->
+    <!--<div id="scroller1">-->
+        <div class="news">
+            <div class="banner" style="top:25px">
+                <div class="bannerzhe">
+                    <span class="bannertitle"></span>
+                    <div class="bannertime">
+                        <span class="date"></span>
+                        <span class="banner_time"></span>
+                    </div>
+                </div>
+            </div>
+            <!--banner end-->
+            <div class="cardbox" style="padding-top: 20px;">
+            </div>
+            <!-- 视频分享-->
+            <div class="videoOut">
+                <div class="zy_media">
+                    <video poster="" data-config='{"mediaTitle": ""}' preload="auto" class="imgPlayer">
+                        请稍后
+                        <source src="" type="video/mp4" class="sources" id="aa">
+                        您的浏览器不支持HTML5视频
+                    </video>
+                </div>
+                <div class="videoTitle"></div>
+                <div class="tags">
+                    <span class="tagWord"></span>
+                    <span class="tagClick"><span></span>次播放</span>
+                </div>
+                <div class="vedioZan">
+                    <div class="vedioDian">
+                        <img src="img/duanzi/up_normal_duanzi_day@3x.png" alt=""/>
+                        <span></span>
+                    </div>
+                    <div class="vedioDao">
+                        <img src="img/duanzi/down_normal_duanzi_day@3x.png" alt=""/>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 段子分享 43 77.6-->
+            <div class="duanziBox">
+                <div class="duanzi">
+                    <!--<div class="duanziForm">-->
+                        <!--<img src="img/qiDian.png"/>-->
+                        <!--<span>sadad</span>-->
+                    <!--</div>-->
+                    <!--<div class="duanziWord"></div>-->
+                </div>
+                <div class="duanziZan">
+                    <div class="duanziDian">
+                        <div>
+                            <img src="img/duanzi/up_normal_duanzi_day@3x.png" alt=""/>
+                            <span>122</span>
+                        </div>
+                    </div>
+                    <div class="duanziDao">
+                        <div>
+                            <img src="img/duanzi/down_normal_duanzi_day@3x.png" alt=""/>
+                            <span>122</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 精选评论 start -->
+            <div class="elte-commentbox">
+                <div class="xiangguanVideoword">
+                    <span>精选评论</span>
+                </div>
+                <div class="comments">
+                    <!--<div class="comment clearfix">-->
+                    <!--<div class="comment-img"> <img src="http://photocdn.sohu.com/20160315/mp63444225_1457989131470_1.jpeg"> </div>-->
+                    <!--<div class="comment-info">-->
+                    <!--<div class="user-info clearfix">-->
+                    <!--<div class="floatL">-->
+                    <!--<div class="user-name">火星网友</div>-->
+                    <!--<div class="user-time">2016-12-12 12:12:00</div>-->
+                    <!--</div>-->
+                    <!--<div class="floatR">-->
+                        <!--<span>11</span>-->
+                        <!--<img src="img/duanzi/up_normal_duanzi_day@3x.png" alt=""/>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="comment-text">-->
+                    <!--蔡依林做手表蛋糕让妈妈开心，网友大赞蔡依林为。-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                </div>
+                <a href="" id="download">
+                    <div class="comments-more" style="text-align: center">
+                        <!--<div style="width: auto;height:auto;display: inline-block;overflow: hidden">-->
+                        <!--<div class="qidianMore"><img src="img/qidianMore.png"></div>-->
+                        <div class="reping">查看全部热评</div>
+                        <div class="qidianGo"><img src="img/qidianGo.png"></div>
+                        <!--</div>-->
+                    </div>
+                </a>
+            </div>
+            <!-- 精选评论 end -->
+            <!-- 相关推荐-->
+            <div class="xiangguanVideo">
+                <div class="xiangguanVideoword">
+                    <span>相关推荐</span>
+                </div>
+                <div class="videoCardbox">
+
+                </div>
+                <div class="loadMord">正在加载更多新闻...</div>
+            </div>
+            <!-- 相关观点 end -->
+            <div id = "scroller-pullUp1">
+                <!--<span id = "up-icon" class = "icon-double-angle-up pull-up-icon">↑↑</span>-->
+                <!--<span id = "pullUp-msg" class = "pull-up-msg">上拉加载更多</span>-->
+            </div>
+        </div>
+        <div class="zhuanti_news">
+            <div class="topImg">
+                <img src="" alt=""/>
+            </div>
+            <div class="absBox">
+                <span class="abs">摘要</span><span class="absWord"></span>
+            </div>
+            <div class="mainBox">
+
+            </div>
+        </div>
+
+    <!--</div>-->
+<!--</div>-->
+
+<div class="zhezhao">
+    <div class="zhezhaodownload">
+        <!--<span>请下载我们的应用立即体验</span>-->
+        <div class="logodownload">
+            <img src="img/lgo.png">
+        </div>
+        <div class="down">
+            <a href=""><img src="img/download.png"></a>
+        </div>
+        <div class="closeB">
+            <img src="img/closeB.png">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="branch/js/public.js"></script>
+</body>
+</html>
+
+
+

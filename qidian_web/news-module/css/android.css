@@ -1,0 +1,116 @@
+@import url('reset.css');
+@import url('zy.media.min.css');
+
+/* 模式切换 -白天 */
+.daytime .title{
+	color:#333333;
+}
+.daytime .info span{
+	color: #999999;
+}
+.daytime .content p{
+	color: #333333;
+}
+.daytime .news-line{
+	border-bottom:1px solid #e8e8e8;
+}
+.daytime.page-content{
+	background-color: #f8f8f8;
+}
+/* 模式切换 -白天 */
+.nighttime .title{
+	font-size: 21px;
+	color:#909090;
+}
+.nighttime .info span{
+	font-size: 12px;
+	color: #545454;
+}
+.nighttime .content p{
+	font-size: 17px;
+	color: #909090;
+}
+.nighttime .news-line{
+	border-bottom:1px solid #2a2a2a;
+}
+.nighttime.page-content{
+	background-color: #202020;
+}
+
+/* 字体大小 -标准 */
+.norm .title{
+	font-size: 23px;
+}
+.norm .info span{
+	font-size: 12px;
+}
+.norm .content p{
+	font-size: 17px;
+}
+
+/* 字体大小 -大号 */
+.big .title{
+	font-size: 25px;
+}
+.big .info span{
+	font-size: 12px;
+}
+.big .content p{
+	font-size: 19px;
+}
+
+/* 字体大小 -超大 */
+.super .title{
+	font-size: 27px;
+}
+.super .info span{
+	font-size: 12px;
+}
+.super .content p{
+	font-size: 21px;
+}
+
+/* 页面布局 */
+body{
+	letter-spacing: 1.5;
+}
+.page-content{
+	padding: 5px 4%;
+	letter-spacing: 1.5;
+}
+.news-line{
+	height: 0px;
+}
+.zy_media{
+	margin-top: 16px;
+}
+.news-content{
+	margin-top: 24px;
+}
+.news-content p:first-child{
+	margin-top: 0px;
+}
+.news-content img:first-child{
+	margin-top: 0px;
+}
+.news-content p{
+	margin-top: 19px;
+	line-height: 1.5;
+	text-align: justify;
+}
+.news-content img{
+	max-width: 100%;
+	display: block;
+	margin: 19px auto 0px auto;
+}
+.news-title{
+	margin-top: 18px;
+	font-weight: 800;
+	line-height: 1.5;
+}
+.news-info span{
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+}

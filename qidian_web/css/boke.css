@@ -1,0 +1,232 @@
+
+@font-face {
+    font-family:SourceHanSansCN-Light;
+    src: url('../font/SourceHanSansCN-Light.otf');
+}
+*{
+    margin:0;padding:0;box-sizing: border-box;font-family: SourceHanSansCN-Light;
+}
+a{
+    text-decoration: none;
+}
+.margin{
+    margin:0 auto;
+}
+.backgroundImg{
+    width:100%;height:560px;background:url("../boke-img/backgroundImg.png");background-size: cover;position: relative;
+}
+.backgroundImg-call{
+    width:100%;height:560px;background:url("../call-img/backgroundImg.png");background-size: cover;position: relative;
+}
+.backgroundImg-join{
+    width:100%;height:560px;background:url("../join-img/backgroundImg.png");background-size: cover;position: relative;
+}
+.navbox{
+    width:64%;height:auto;position: fixed;left:18%;top:4%;
+}
+.navoutbox{
+    width:100%;height:0px;position: fixed;left:0;top:0px;z-index: 999;background: rgba(255,255,255,0.8);font-size: 16px;
+    color:#000;line-height: 60px;overflow:hidden;box-shadow: 0px 1px 0px #bbb;
+}
+.bokenav{
+    width:100%;height:60px;position: fixed;left:0;top:0;z-index: 999;background: rgba(255,255,255,0.8);font-size: 16px;
+    color:#000;line-height: 60px;overflow:hidden;box-shadow: 0px 1px 0px #bbb;
+}
+.fixword{
+    font-size: 16px;display: block;
+    color:#000;line-height: 40px;float:left;margin-left:100px;
+}
+.navbox1{
+    width:64%;height:auto;margin-left:18%;margin-top:11px;
+}
+.navW{
+    display:block;width:auto;height:16px;margin-top:1.5%;font-size:16px;color:#5c5c5c;text-align: left;line-height: 16px;float:left;
+    margin-left: 1%;
+}
+.logobox{
+    width:41px;height:31px;float:left;
+}
+.logobox>img{
+    height: 100%;
+}
+.navword{
+    display:block;width:auto;height:16px;margin-top:1.5%;font-size:16px;color:#eee;text-align: left;line-height: 16px;float:left;
+    margin-left: 1%;
+}
+.navwordxq{
+    display:block;width:auto;height:16px;margin-top:1.5%;font-size:16px;color:#5c5c5c;text-align: left;line-height: 16px;float:left;
+    margin-left: 1%;
+}
+.nword1{
+    margin-left:22%;
+}
+.nword2{
+    margin-left:11%;
+}
+.wordImg{
+    width:547px;height:57px;position: absolute;left:50%;margin-left:-273px;top:50%;margin-top:-28px;
+}
+.wordImg>img{
+    width:100%;
+}
+.chose{
+   width:1057px;height:auto;margin:34px auto 0px auto;
+}
+.choseWord{
+    font-size: 25px;color:#1f1f1f;margin-left: 75px;
+}
+.choseWord:hover{
+    cursor:pointer;
+}
+.underline{
+    width:60px;height:5px;background:#000;margin-top:10px;
+}
+.mainoutbox{
+    width:1057px;height:720px;margin:0 auto;position:relative;float: inherit;
+}
+.mainbox{
+    width:1057px;height:100%;margin:0 auto;position: absolute;
+}
+.mainInner{
+    width:1057px;height:620px;margin:0 auto;
+}
+.mainnei{
+    width:100%;height:620px;position: absolute;background:#ffffff;
+}
+.main{
+    width:1057px;height:auto;margin:0 auto;border-bottom:1px solid #e5e5e5;overflow: hidden;
+}
+.imgbox{
+    width:400px;height:310px;float:left;
+}
+.img{
+    width:100%;height:250px;margin:30px auto;
+}
+.img>img{
+    width:100%;
+}
+.wordbox{
+    width:630px;height:310px;float:left;margin-left:25px;position: relative;
+}
+.title{
+    width:100%;height:23px;margin-top:30px;font-size:23px;color:#1f1f1f;text-align: left;line-height: 23px;
+}
+.title:hover{
+    color:blue;
+}
+.data{
+    width:25%;height:15px;margin-top:20px;font-size:15px;color:#b7b7b7;text-align: left;line-height: 15px;float:left
+}
+.neirong{
+    width:100%;height:auto;margin-top:26px;font-size: 18px;color:#565656;line-height: 32px;
+    text-overflow: ellipsis;overflow:hidden; white-space:nowrap;float:left
+}
+.btn{
+    width:80px;height:30px;background:#e5e5e5;font-size: 15px;color:#b7b7b7;position: absolute;right:15px;bottom:30px;
+    text-align: center;line-height: 30px;
+}
+.btn:hover{
+    cursor:pointer;color:#333;
+}
+.fenyebox{
+    width:1057px;height:100px;margin:0 auto;
+}
+.fenyedown{
+    width:70px;height:30px;margin-top:30px;border:1px solid #000;font-size: 15px;color:#000;text-align: center;line-height: 30px;
+    float:right;margin-right:15px;
+}
+.fenyedown:hover{
+    cursor: pointer;
+}
+.fenyeup{
+    width:70px;height:30px;margin-top:30px;border:1px solid #000;font-size: 15px;color:#000;text-align: center;line-height: 30px;
+    float:right;margin-right:28px;
+}
+.fenyeup:hover{
+    cursor: pointer;
+}
+.footer{
+    width:100%;height:40px;background: #545454;font-size: 15px;color:#fff;text-align: center;line-height: 40px;
+}
+
+/*详情页开始*/
+.xqtitle{
+    width:1057px;height:32px;margin:92px auto 0 auto;font-size: 32px;color:#1f1f1f;text-align: left;line-height: 32px;
+}
+.xqdata{
+    width:1057px;height:15px;margin:24px auto 0 auto;font-size: 15px;color:#b7b7b7;text-align: left;line-height: 15px;
+
+}
+.xqdata>div{
+    float: left;margin-right:50px;
+}
+.xqnei{
+    width:1057px;height:auto;margin:40px auto 0 auto;
+}
+.xqword{
+    width:1057px;height:auto;font-size: 18px;color:#000;line-height: 32px;text-indent: 2em;
+}
+.xqimg{
+    width:1057px;height:auto;margin:20px auto;
+}
+.xqimg>img{
+    display: block;margin:0 auto;max-width: 100%;
+}
+.xqduan{
+    margin:25px auto 0 auto;
+}
+.xqfenye{
+    width:183px;height:100px;margin:0 auto;overflow: hidden;
+}
+
+/*联系页开始*/
+.calltitle{
+    width:1057px;height:auto;margin:54px auto 0 auto;font-size: 32px;color:#1f1f1f;text-align: left;line-height: 32px;
+}
+.calljieshao{
+    width:1057px;height:auto;font-size: 17px;color:#565656;line-height: 31px;margin:34px auto 72px auto;
+}
+.calllianxi{
+    width:1057px;height:auto;margin:0 auto 0 auto;font-size: 32px;color:#1f1f1f;text-align: left;line-height: 32px;
+}
+/*加入页开始*/
+.zhiweilist{
+    width:1057px;height:auto;margin:34px auto 100px auto;
+}
+.zhiwei{
+    width:100%;height:50px;margin:0 auto;
+}
+.auto{
+    height:auto;
+}
+.zhiweititle{
+    width:100%;height:50px;padding:16px 0;margin:0 auto;border-bottom:1px solid #e5e5e5;
+}
+.zhiweiname{
+    width:auto;height:100%;font-size: 17px;color:#565656;float:left;
+}
+.zhiweiname:hover{
+    cursor: pointer;
+}
+.jiantou{
+    width:12px;height:17px;float:right;position: relative;z-index: 99;
+}
+.jiantou>img{
+    width:100%;transition: all 1s ease;
+}
+.zhuandong{
+    transform:rotate(90deg);
+}
+.zhiweidata{
+    width:auto;height:100%;font-size: 17px;color:#565656;float:right;margin-right:54px;
+}
+.zhiweineirong{
+    width:100%;height:auto;margin:18px auto;padding:22px;background:#f9f9f9;font-size: 16px;color:#565656;line-height: 30px;
+    display: none;
+}
+.tiaojian{
+    width:100%;height:auto;
+}
+.email{
+    width:100%;height:auto;margin-top:42px;
+}

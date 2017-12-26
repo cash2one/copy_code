@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <title>团队博客</title>
+    <link rel="stylesheet" href="css/boke.css"/>
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="bokenav">
+        <nav class="navbox1">
+            <div class="logobox">
+                <img src="img/logoB.png" alt=""/>
+            </div>
+            <span class="navwordxq" >头条百家</span>
+            <a href="index.html"><span class="navwordxq nword1 navW">首页</span></a>
+            <a href="boke.html"><span class="navwordxq nword2 navW" style="color:#000">团队博客</span></a>
+            <a href="join.html"><span class="navwordxq nword2 navW">加入我们</span></a>
+            <a href="call.html"><span class="navwordxq nword2 navW">联系我们</span></a>
+        </nav>
+</div>
+    <div class="xqtitle">增加UIButton的响应区域</div>
+    <div class="xqdata">
+        <div>2015年10月10日</div>
+        <div>技术</div>
+        <div>作者：吕品</div>
+    </div>
+<div style="clear: both"></div>
+    <div class="xqnei">
+        <span class="xqword">经常遇到UIButton对象"点了没反应"或"很难被点击到"的情况. 有时候是因为其frame的size设置的过小, 导致体验不好.
+        解决办法当然是扩大按钮的响应范围. 若仅仅是为一个简单的button自定义的扩张响应的"rect", 我的做法是写一个分类, 设置供外界存取的"边缘扩
+            张大小"属性以及合适的方法, 然后重写系统方法hitTest:withEvent:以拦截事件分发. 注意,
+            因为分类不会合成属性的存取方法(合成属性会生成实例变量, 然而ivar存储在只读段, 运行时不可改变), 须配合关联语法使用. 话不多说,
+            上代码:
+        </span>
+        <div class="xqimg">
+            <img src="boke-img/001.jpg">
+        </div>
+        <div class="xqimg">
+            <img src="boke-img/002.jpg">
+        </div>
+        <div class="xqimg">
+            <img src="boke-img/003.jpg">
+        </div>
+        <!--<div class="xqduan navwordxq">品牌源自自然</div>-->
+    </div>
+    <div class="xqfenye">
+        <div class="fenyedown">下一篇</div>
+        <div class="fenyeup">上一篇</div>
+        <div style="clear:both"></div>
+    </div>
+<div class="footer">Copyright @ 20002015 G24</div>
+</body>
+</html>

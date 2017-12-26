@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文件上传</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<input type="file" value="" id='file' accept="image/jpg" multiple='multiple' >
+<button id='btn'>上传</button>
+</body>
+<script type="text/javascript">
+    $('#btn').click(function(){
+        var formdata=new FormData();//获取文件法一
+        var files = document.getElementById("file");
+        formdata.append('pics',files.files[0])
+        formdata.append('wxuin',123456)
+        formdata.append('type','image')
+        $.ajax({
+            type : 'post',
+            url : 'http://localhost:9000/user/upload',
+            data : formdata,
+            cache : false,
+            processData : false, // 不处理发送的数据，因为data值是Formdata对象，不需要对数据做处理
+            contentType : false, // 不设置Content-type请求头
+            success : function(data){
+
+            },
+            error : function(){ }
+        })
+    })
+
+</script>
+</html>

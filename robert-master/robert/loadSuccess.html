@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录成功</title>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <link rel="stylesheet" href="css/loadSuccess.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+<header>
+    <div class="logoBox">
+        <img src="img/logo.png" alt=""/><span></span>
+    </div>
+    <div class="indexs"></div>
+    <div class="line"></div>
+    <div class="username"></div>
+</header>
+<div class="main">
+    <div class="mainBox">
+        <div class="left">
+            <div class="left-user">
+                <img src="img/userbig.png" alt=""/>
+                <span></span>
+            </div>
+            <div class="left-btn">
+                <div class="btnWord">定制回复</div>
+                <div class="btnWord btnMass">精准群发</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="warmBox">
+                <div class="right-top">
+                    <img src="img/tixing.png" alt=""/>
+                    <span>提醒</span>
+                </div>
+                <div class="title">1.确保机器人账号在想要被发送消息的群里</div>
+                <div class="warm">须知：机器人账号被踢出或与被发送人解除好友关系将影响机器人服务</div>
+                <div class="title">2.如遇到问题，可添加fez.ai客服微信（微信号：qdzx8881)咨询了解</div>
+                <div class="warm">提醒：如果机器人已在群里，但仍看不到该群或联系人，请确保群内有新的发言互动，再刷新即可。</div>
+            </div>
+            <div class="massBox">
+                <ul class="massTab">
+                    <li class="massTabs tabClick">精准群发</li>
+                    <!--<li class="massTabs ">草稿箱</li>-->
+                    <!--<li class="massTabs">已发送</li>-->
+                </ul>
+                <span>
+                    <div class="massLine"></div>
+                <div class="target">
+                    <form action="">
+                        <!--<span>群发对象</span><input type="text" class="massName"/><img src="img/add.png" alt="" class="addPerson"/>-->
+                        <span>群发对象</span><div class="massName"></div><img src="img/add.png" alt="" class="addPerson"/>
+
+                    </form>
+
+                </div>
+                <div class="target">
+                    <form action="">
+                        <span>群发主题</span><input type="text" class="massTheme"/>
+                    </form>
+
+                </div>
+                <div class="sendType">
+                    <img src="img/text_normal.png" alt="" class="text" data-type="text" data-normal="img/text_normal.png" data-select="img/text_selected.png"/>
+                    <!-- <img src="img/picture_normal.png" alt="" class="picture" data-normal="img/picture_normal.png" data-select="img/picture_selected.png"/>
+                    <img src="img/voice_normal.png" alt="" class="voice" data-normal="img/voice_normal.png" data-select="img/voice_selected.png"/> -->
+                    <img src="img/API_normal.png" alt="" class="api" data-type="text" data-normal="img/API_normal.png" data-select="img/API_selected.png"/>
+                    <span>(只能选择一种格式作为答复内容)</span>
+                </div>
+                <div class="massBody">
+                    <textarea class="textBody" autofocus></textarea>
+                </div>
+                <ul class="massBtn">
+                    <li class="sendBtn">发送</li>
+                    <!--<li>定时发送</li>-->
+                    <!--<li>存草稿</li>-->
+                </ul>
+                </span>
+                <!-- 选择好友-->
+                <div class="choosePerson">
+                    <div class="chooseTitle">
+                        <span>选择群/好友</span>
+                        <img src="img/close.png" alt=""/>
+                    </div>
+                    <div class="chooseMain">
+                        <!--<div class="chooseName">-->
+                            <!--<img src="img/group_normal.png" alt=""/>-->
+                            <!--<span>assadsad</span>-->
+                        <!--</div>-->
+                        <!--<div class="chooseName">-->
+                            <!--<img src="" alt=""/>-->
+                            <!--<span>assadsad</span>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="chooseBtn">
+                        <div class="chooseSure">确定</div>
+                        <div class="chooseCancel">取消</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sendSuccess">
+                <img src="img/fasong.png" alt=""/>
+                <span>您的消息已群发成功</span>
+                <div>
+                    <div class="backIndex">返回群发首页</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/loadSuccess.js"></script>
+</body>
+</html>

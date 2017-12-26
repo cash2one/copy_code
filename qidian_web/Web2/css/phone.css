@@ -1,0 +1,166 @@
+
+    /*.jia{*/
+    /*width:100%;height:100%;position: absolute;top:0;left:0;z-index: 999;background: #000;*/
+    /*}*/
+    /*.loader {*/
+    /*margin: 20em auto;*/
+    /*}*/
+    /*.loader--glisteningWindow {*/
+    /*width: 0.25em;*/
+    /*height: 0.25em;*/
+    /*box-shadow: 0.70711em 0.70711em 0 0em #2ecc71, -0.70711em 0.70711em 0 0.17678em #9b59b6, -0.70711em -0.70711em 0 0.25em #3498db, 0.70711em -0.70711em 0 0.17678em #f1c40f;*/
+    /*animation: gw 1s ease-in-out infinite, rot 2.8s linear infinite;*/
+    /*}*/
+    /*@keyframes rot {*/
+    /*to {*/
+    /*transform: rotate(360deg);*/
+    /*}*/
+    /*}*/
+    /*@keyframes gw {*/
+    /*0% {*/
+    /*box-shadow: 0.70711em 0.70711em 0 0.125em #2ecc71, -0.70711em 0.70711em 0 0.39017em #9b59b6, -0.70711em -0.70711em 0 0.5em #3498db, 0.70711em -0.70711em 0 0.39017em #f1c40f;*/
+    /*}*/
+    /*25% {*/
+    /*box-shadow: 0.70711em 0.70711em 0 0.39017em #2ecc71, -0.70711em 0.70711em 0 0.5em #9b59b6, -0.70711em -0.70711em 0 0.39017em #3498db, 0.70711em -0.70711em 0 0.125em #f1c40f;*/
+    /*}*/
+    /*50% {*/
+    /*box-shadow: 0.70711em 0.70711em 0 0.5em #2ecc71, -0.70711em 0.70711em 0 0.39017em #9b59b6, -0.70711em -0.70711em 0 0.125em #3498db, 0.70711em -0.70711em 0 0.39017em #f1c40f;*/
+    /*}*/
+    /*75% {*/
+    /*box-shadow: 0.70711em 0.70711em 0 0.39017em #2ecc71, -0.70711em 0.70711em 0 0.125em #9b59b6, -0.70711em -0.70711em 0 0.39017em #3498db, 0.70711em -0.70711em 0 0.5em #f1c40f;*/
+    /*}*/
+    /*100% {*/
+    /*box-shadow: 0.70711em 0.70711em 0 0.125em #2ecc71, -0.70711em 0.70711em 0 0.39017em #9b59b6, -0.70711em -0.70711em 0 0.5em #3498db, 0.70711em -0.70711em 0 0.39017em #f1c40f;*/
+    /*}*/
+    /*}*/
+
+.phoneCard2,.phoneCard3,.phonedown,.phonewordbox{
+    display: none;
+}
+@media screen and (max-width:992px){
+    .navbox{display: none}
+    .phoneNav{width:100%;height:90px;background: #000;position: fixed;z-index: 999}
+    .phoneNav .logobox{position: absolute;left:9%;top:50%;margin-top:-15px;}
+    .phoneNav .navword{position: absolute;left:23%;top:50%;margin-top:-8px;}
+    .phoneNav .button{width:38px;height:31px;position: absolute;right:9%;top:50%;margin-top:-15px}
+    .btnLine{width:100%;height:4px;background: #fff;margin-top:6px}
+    .navbtn{width:100%;height:180px;background: #000000;position: absolute;top:90px;z-index: 999;
+        display:none;}
+    .navbtn li{
+        padding: 10px 9% 0 0;color:#fff;text-align: right;font-size: 16px;
+    }
+    .word1{
+        display: none;
+    }
+    .phonewordbox{
+        width:100%;height:auto;margin:20% auto 0 auto;display: block;
+    }
+    .phoneBaijia{
+        width: 120px;height:30px;font-size: 30px;color:#fff;margin:0 auto 0 auto;
+    }
+    .phoneSj{
+        width:143px;height:297px;left:50%;margin-left:-70px;top:34%;
+    }
+    .phoneSbaijia{
+        width:170px;height:20px;font-size: 20px;color: #fff;margin:3% auto 0 auto;
+    }
+    .phonedown{
+        display:block;width:100%;height:auto;margin:110% auto 0 auto;overflow: hidden;
+    }
+    .phoneandroid{
+        width:96px;height:36px;float:left;margin-left:25%;
+    }
+    .phoneandroid>a>img{
+        width:100%;
+    }
+    .phoneios{
+        width: 96px;height:36px;float:left;margin-left:2%;
+    }
+    .phoneios>a>img{
+        width:100%;transition:all 1s ease;
+    }
+    /*手机一屏结束*/
+    .box2,.box3,.box4,.box5,.box6{
+        display: none;
+    }
+    .phoneWord2{
+        width:100%;height: 30px;font-size: 30px;color:#fff;text-align: center;line-height: 30px;position: absolute;top:20%;left:0;opacity:0
+    }
+    .phonePhone2{
+        width:70%;height:auto;position: absolute;top:100%;left: 50%;margin-left:-55%
+    }
+    .phonePhone2>img{
+        width:100%
+    }
+    .phonePhonen2{
+        width:62%;height:auto;position: absolute;top:29%;left: 50%;margin-left:-31%;opacity: 0;
+    }
+    .phonePhonen2>img{
+        width:100%
+    }
+    .phoneShowcard2{
+        width:60%;height:auto;position: absolute;top:32%;left:50%;margin-left:-25%;opacity: 0;
+    }
+    .phoneShowcard2>img{
+        width:100%
+    }
+    .phoneWord2tu{
+        width:0%;height:auto;position: absolute;bottom:2%;left: 50%;margin-left:-35%
+
+    }
+    .phoneWord2tu>img{
+        width:100%
+    }
+    .phoneCard2,.phoneCard3{
+        display: block;
+    }
+    /**/
+    .phoneShowcard31{
+        width:45%;height:auto;position: absolute;top:32%;left:50%;margin-left:-30%;opacity: 0;
+    }
+    .phoneShowcard31>img{
+        width:100%
+    }
+    .phoneShowcard32{
+        width:45%;height:auto;position: absolute;top:40%;left:50%;margin-left:-22%;opacity: 0;
+    }
+    .phoneShowcard32>img{
+        width:100%
+    }
+    .phoneShowcard33{
+        width:45%;height:auto;position: absolute;top:49%;left:50%;margin-left:-14%;opacity: 0;
+    }
+    .phoneShowcard33>img{
+        width:100%
+    }
+    .phoneShowcard51{
+        width:45%;height:auto;position: absolute;top:32%;left:50%;margin-left:-30%;opacity: 0;
+    }
+    .phoneShowcard51>img{
+        width:100%
+    }
+    .phoneShowcard52{
+        width:45%;height:auto;position: absolute;top:37%;left:50%;margin-left:-25%;opacity: 0;
+    }
+    .phoneShowcard52>img{
+        width:100%
+    }
+    .phoneShowcard53{
+        width:45%;height:auto;position: absolute;top:42%;left:50%;margin-left:-20%;opacity: 0;
+    }
+    .phoneShowcard53>img{
+        width:100%
+    }
+    .phoneShowcard61{
+        width:45%;height:auto;position: absolute;top:32%;left:50%;margin-left:-10%;opacity: 0;
+    }
+    .phoneShowcard61>img{
+        width:100%
+    }
+    .phoneShowcard62{
+        width:45%;height:auto;position: absolute;top:42%;left:50%;margin-left:-20%;opacity: 0;
+    }
+    .phoneShowcard62>img{
+        width:100%
+    }
+}

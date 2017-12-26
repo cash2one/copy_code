@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		#GDT-sdk{
+			max-width: 100%;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="GDT-sdk"></div>
+	<script type="text/javascript" id="gdt-6060025218954940">
+		var TencentGDT = TencentGDT || [];
+		TencentGDT.push({
+			placement_id:'6060025218954940',
+			type:'banner',
+			count:2,
+			containerid:'GDT-sdk',//如果容器不合适，可自定义广告容器
+			fill_type:'full',//填充方式，full：填满宽度，fix:固定大小,
+			app_id: "1106184522"
+		});
+		(function() {
+			var doc=document, h=doc.getElementsByTagName('head')[0], s=doc.createElement('script');
+			s.async=true; 
+			s.src='//qzs.qq.com/qzone/biz/res/i.js';
+			h && h.insertBefore(s,h.firstChild);
+		})();
+		var content = document.getElementById("GDT-sdk");
+		content.style.width = document.body.offsetWidth + "px";
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+*{
+    padding:0;margin:0;list-style: none;box-sizing: border-box;font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+}
+/*hearder*/
+header{
+    width:67.7%;height:73px;margin:0 auto;font-size: 62.5%;
+}
+.logoBox{
+    width:17.2%;height:100%;float: left;text-align: center;
+}
+.logoBox img{
+    width:100%;height:auto;vertical-align:middle;
+}
+.logoBox span{
+    height: 100%;display: inline-block;width: 0;vertical-align: middle;
+}
+.land{
+    width:auto;height:100%;float:right;line-height: 73px;
+}
+.land span{
+    width: auto;height: 100%;display: inline-block;vertical-align: middle;font-size:1.3rem;color: #232424;margin-right: 5px;position: relative;
+}
+.land span:hover{
+    cursor: pointer;
+}
+.land div{
+    width: 100%;height:100%;position: absolute;top:0;left:0;z-index: 22;background: red;
+}
+.land img{
+    width:2.6rem;height:auto;vertical-align: middle;display: none;
+}
+.home {
+    width:auto;height:100%;float: right;margin-right: 5%;line-height: 73px;border-bottom: 8px solid #007bc0;font-size:1.5rem;color:#007bc0;
+}
+.indexs{
+    width: 18px;height: 18px;background: url("../img/home.png");float: right;margin-top:27px;
+}
+.indexs:hover{
+    cursor:pointer;
+}
+.line{
+    width: 2px;height:20px;background: #ccc;float: right;margin-right: 0.83%;margin-top:26px;
+}
+.username{
+    width: auto;height:100%;font-size: 15px;color:#232424;float: right;margin-right:0.83%;line-height: 73px;
+}

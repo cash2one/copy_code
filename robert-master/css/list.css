@@ -1,0 +1,127 @@
+*{
+    margin:0;padding:0;list-style: none;
+}
+.left{
+    margin-right:5px
+}
+.header{
+    width: 80%;height:55px;border-bottom: 1px solid #ccc;padding: 0 10%;
+}
+.add{
+    display:block;float: right;font-size: 22px;margin-right:30px;line-height: 55px;
+}
+.robertLogo{
+    width: 180px;height:auto;float: left;line-height: 65px;
+}
+.robertLogo>img{
+    width: 100%;
+}
+.list-content{
+    width: 80%;height:100%;overflow: hidden;position: relative;margin: 0 10%;
+}
+.listBox{
+    width: 20%;height:100%;float: left;box-sizing: border-box;
+}
+.list-left{
+    width: 100%;height: auto;overflow: hidden;
+}
+.list-right{
+    width: 80%;height: 100%;float: left;padding: 10px;box-sizing: border-box;border-left: 1px solid #ccc;
+}
+.list-left li{
+    width: 100%;height: auto;padding: 10px 0 10px 20px;font-size: 16px;
+}
+.list-left li:hover{
+    cursor: pointer;
+    background: #ddd;
+}
+.listBtn{
+    width: 80%;height:30px;border: 1px solid #007bc0;border-radius: 10px;font-size: 14px;text-align: center;line-height: 30px;color: #007bc0;margin:20px auto 0 auto;
+}
+.listBtn:hover{
+    cursor: pointer;
+}
+.talkOut{
+    width:100%;height:500px;border:1px solid #ccc;overflow:auto;
+}
+.talkBox{
+    width: 100%;height:auto;overflow: hidden;
+}
+.closeTalk{
+    width: 18px;height:18px;border-radius: 50%;text-align: center;line-height: 16px;float: left;opacity: 0;padding: 5px;
+}
+.closeTalk>img{
+    width: 100%;
+}
+.closeTalk:hover{
+    cursor: pointer;
+}
+.qBox{
+    width:40%;height:30px;padding: 10px 10px 10px 0;float: left;
+}
+.qBox span{
+    display:inline-block;width: 30px;height:30px;border-radius: 50%;background: #eee;text-align: center;line-height: 30px;font-size: 18px;color:#aaa;float: left;
+}
+.qBox span>img{
+    width: 100%;
+}
+.aBox span{
+    display:inline-block;width: 30px;height:30px;border-radius: 50%;background: #eee;text-align: center;line-height: 30px;font-size: 18px;color:#aaa;float: right;
+}
+.aBox span>img{
+    width: 100%;
+}
+.question{
+    margin-left: 5px;padding: 5px;border-radius: 10px;border:1px solid #b4b4b4;outline: none;width: 80%;margin-top:2px;
+}
+.answer{
+    margin-right: 5px;padding: 5px;border-radius: 10px;border:1px solid #b4b4b4;outline: none;width: 80%;float: right;margin-top:2px;
+}
+
+.aBox{
+    width:40%;height:30px;padding: 10px 0px 10px 10px;float: right;margin-top:30px;
+}
+.talkBtn{
+    width: 100%;height:100px;
+}
+.addBtn{
+    width:15%;height:30px;border:1px solid #007bc0;margin-top: 20px;font-size: 14px;text-align: center;color: #007bc0;line-height: 30px;border-radius: 10px;float: left;
+}
+.saveBtn{
+    width:15%;height:30px;border:1px solid #007bc0;margin-top: 20px;font-size: 14px;text-align: center;color: #007bc0;line-height: 30px;border-radius: 10px;
+    float: right;
+}
+.addBtn:hover,.saveBtn:hover{
+    cursor: pointer;
+}
+/*creat rule*/
+.creatRule{
+    width: 60%;height:auto;background: #ccc;position: absolute;top:200px;left: 50%;margin-left: -35%;border-radius: 20px;display: none;
+}
+.creat{
+width:60%;height:auto;margin:30px auto 0 auto;vertical-align: middle;
+}
+.creat span{
+    font-size: 16px;color: #222;line-height: 30px;
+}
+.creat input{
+    width:70%;outline: none;border: 0;border-radius: 10px;margin-left: 10px;padding: 5px;
+}
+.creat textarea{
+    width:70%;outline: none;border: 0;border-radius: 10px;margin-left: 10px;padding: 5px;resize: none;height: 60px;
+}
+.creatBtn{
+    width: 50px;height: 25px;border-radius: 10px;border: 1px solid #222;float:right;margin:20px 30% 20px 0;font-size: 14px;text-align: center;line-height: 25px;
+}
+.creatBtn:hover,.quxiaoBtn:hover{
+    cursor: pointer;
+}
+.quxiaoBtn{
+    width: 50px;height: 25px;border-radius: 10px;border: 1px solid #222;float:right;margin:20px 5% 20px 0;font-size: 14px;text-align: center;line-height: 25px;
+}
+.creatSuccess{
+    position: absolute;top:200px;left: 50%;display: none;
+}
+.addBackground{
+    background: #ddd;
+}

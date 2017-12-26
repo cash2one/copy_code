@@ -1,0 +1,74 @@
+html{ font-size: 62.5% }
+a{
+	color: inherit;
+}
+
+/*.recommend-item:last-child{
+	border-bottom: 0px solid #fff;
+}*/
+.recommend-title{
+	line-height: 31px;
+	font-size: 1.4rem;
+	color: #666;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+}
+.recommend-foot{
+	font-size: 1.2rem;
+	color: #999999;
+	line-height: 30px;
+}
+/*
+.recommend-item{
+	padding: 12px 0px 8px 0px;
+	border-bottom: 1px solid #e9e9e9;
+	overflow: hidden;
+}
+.recommend-info{
+	padding-right: 154px;
+	max-height: 120px;
+}
+*/
+.recommend-info {
+    padding-right: 154px;
+    max-height: 120px;
+}
+
+.recommend-item {
+    padding: 5px 0px 5px 0px;
+    border-bottom: 1px solid #e9e9e9;
+    overflow: hidden;
+}
+.recommend-img{
+	width:134px;
+	float: right;
+}
+.recommend-img img{
+	width: 100%;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.full{
+	padding-right: 0px;
+}
+/* 字体样式 */
+.style-SDK-1{
+	font-size: 1.6rem;
+	color: #666;
+    margin-left: 0px;
+}
+.style-SDK-2{
+	font-size: 1.4rem;
+	color: #666;
+    margin-left: 20px;
+}

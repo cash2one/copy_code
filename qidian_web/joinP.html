@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <title>加入我们</title>
+    <link rel="stylesheet" href="css/indexP.css"/>
+    <link rel="stylesheet" href="css/serve.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/indexP.js"></script>
+</head>
+<script>
+    $(function(){
+        var flag=true;
+        $(".zhiwei").each(function(i,obj){
+            $(this).find(".jiantou").click(function(){
+                var that=this;
+                $(that).find("img").toggleClass("zhuandong");
+                $(that).parent().parent().css("height","auto");
+                $(that).parent().siblings().slideToggle(700);
+            })
+            $(this).find(".zhiweiname").click(function(){
+                var that=this;
+                $(that).siblings(".jiantou").find("img").toggleClass("zhuandong");
+                $(that).parent().parent().css("height","auto");
+                $(that).parent().siblings().slideToggle(700);
+            })
+        })
+    })
+</script>
+<body>
+<div class="topBox">
+    <div class="nav">
+        <div class="logoBox">
+            <div class="logoBox1">
+                <img src="img/deep.png">
+            </div>
+            <div class="logoBox2">
+                <img src="img/logoWord.png">
+            </div>
+
+        </div>
+        <ul class="navBox">
+            <li><a href="callP.html" style="margin-right:0">联系我们
+                <div class="sanjiao" ></div>
+                <div class="underline" ></div></a></li>
+            <li><a href="">加入我们
+                <div class="sanjiao" style="opacity: 1"></div>
+                <div class="underline" style="opacity: 1"></div>
+            </a></li>
+            <li><a href="bokeP.html">团队博客
+                <div class="sanjiao" ></div>
+                <div class="underline"></div>
+            </a></li>
+            <!--<li><a href="localNews.html">应用案例-->
+                <!--<div class="sanjiao"></div>-->
+                <!--<div class="underline"></div>-->
+            <!--</a></li>-->
+            <li><a href="serveP.html">我们的服务
+                <div class="sanjiao"></div>
+                <div class="underline"></div>
+            </a></li>
+            <li><a href="indexP.html">深源首页
+                <div class="sanjiao"></div>
+                <div class="underline"></div>
+            </a></li>
+        </ul>
+    </div>
+    <div class="bannerBox">
+        <img src="imgBoke/joinweb.png">
+    </div>
+    <div class="calltitle">职位列表</div>
+    <div class="zhiweilist">
+        <div class="zhiwei">
+            <div class="zhiweititle">
+                <div class="zhiweiname">后台工程师（海量数据处理研发工程师）</div>
+                <div class="jiantou">
+                    <img src="imgBoke/jiantou.png">
+                </div>
+                <div class="zhiweidata">2015-09-10</div>
+            </div>
+            <div class="zhiweineirong">
+                <div class="tiaojian">
+                    1、计算机、数学等相关理科专业本科及以上学历，2年以上相关专业工作经验；
+                </div>
+                <div class="tiaojian">
+                    2、熟悉Python、Java、Scala其中最少一种语言并有实际的项目开发经验；
+                </div>
+                <div class="tiaojian">
+                    3、熟悉Mysql、MongoDB、PostgreSQL、Redis等数据库，并有实际的项目经验；；
+                </div>
+                <div class="tiaojian">
+                    4、熟悉Hadoop、Spark、Storm、Hbase等分布式计算与存储的应用；
+                </div>
+                <div class="tiaojian">
+                    5、熟悉常用的推荐算法和自然语言处理算法，有实际的项目经验和二次开发能力；
+                </div>
+                <div class="tiaojian">
+                    6、有强烈责任感，主动性强，优秀的学习能力。
+                </div>
+                <div class="email">招聘邮箱：dongxx@falconnect.cn</div>
+            </div>
+        </div>
+
+        <div class="zhiwei">
+            <div class="zhiweititle">
+                <div class="zhiweiname">会计</div>
+                <div class="jiantou">
+                    <img src="imgBoke/jiantou.png">
+                </div>
+                <div class="zhiweidata">2015-09-10</div>
+            </div>
+            <div class="zhiweineirong">
+                <div class="tiaojian">
+                    1、 财会、会计相关专业大专专科以上学历，3年以上工作经验，有会计初级职称；
+                </div>
+                <div class="tiaojian">
+                    2、 了解税务法规和相关税收政策；
+                </div>
+                <div class="tiaojian">
+                    3、 工作认真细致，接受能力强，能独立思考，良好的职业操守；
+                </div>
+                <div class="tiaojian">
+                    4、 熟练使用财务软件和办公软件；；
+                </div>
+                <div class="tiaojian">
+                    5、 互联网广告行业优先。
+                </div>
+                <div class="email">招聘邮箱：dongxx@falconnect.cn</div>
+            </div>
+        </div>
+
+
+    </div>
+    <footer>copyright© 2015-2016 G24lab.</footer>
+</div>
+<div class="callP">
+    <div class="topP">
+        <div class="logoP"></div>
+        <div class="btnP"></div>
+    </div>
+    <ul class="navP">
+        <li><a href="indexP.html">
+            <div class="iconP">
+                <img src="imgPhone/icon1.png">
+            </div>
+            <div class="navWord">首页</div>
+        </a></li>
+        <li><a href="mainP.html">
+            <div class="iconP">
+                <img src="imgPhone/icon2.png">
+            </div>
+            <div class="navWord">我们的服务</div>
+        </a></li>
+        <!--<li><a href="localNews.html">-->
+            <!--<div class="iconP">-->
+                <!--<img src="imgPhone/icon3.png">-->
+            <!--</div>-->
+            <!--<div class="navWord">应用案例</div>-->
+        <!--</a></li>-->
+        <li><a href="bokeP.html">
+            <div class="iconP">
+                <img src="imgPhone/icon5.png">
+            </div>
+            <div class="navWord">团队博客</div>
+        </a></li>
+        <li><a href="joinP.html">
+            <div class="iconP">
+                <img src="imgPhone/icon6.png">
+            </div>
+            <div class="navWord">加入我们</div>
+        </a></li>
+        <li><a href="">
+            <div class="iconP">
+                <img src="imgPhone/icon4.png">
+            </div>
+            <div class="navWord">联系我们</div>
+        </a></li>
+    </ul>
+    <div class="bannerBox" style="margin-top:0">
+        <img src="imgBoke/joinP.png">
+    </div>
+    <div class="calltitle" style="width:82%">职位列表</div>
+    <div class="zhiweilist" style="width:82%">
+        <div class="zhiwei">
+            <div class="zhiweititle">
+                <div class="zhiweiname">后台工程师（海量数据处理研发工程师）</div>
+                <div class="jiantou">
+                    <img src="imgBoke/jiantou.png">
+                </div>
+                <div class="zhiweidata">2015-09-10</div>
+            </div>
+            <div class="zhiweineirong">
+                <div class="tiaojian">
+                    1、计算机、数学等相关理科专业本科及以上学历，2年以上相关专业工作经验；
+                </div>
+                <div class="tiaojian">
+                    2、熟悉Python、Java、Scala其中最少一种语言并有实际的项目开发经验；
+                </div>
+                <div class="tiaojian">
+                    3、熟悉Mysql、MongoDB、PostgreSQL、Redis等数据库，并有实际的项目经验；；
+                </div>
+                <div class="tiaojian">
+                    4、熟悉Hadoop、Spark、Storm、Hbase等分布式计算与存储的应用；
+                </div>
+                <div class="tiaojian">
+                    5、熟悉常用的推荐算法和自然语言处理算法，有实际的项目经验和二次开发能力；
+                </div>
+                <div class="tiaojian">
+                    6、有强烈责任感，主动性强，优秀的学习能力。
+                </div>
+                <div class="email">招聘邮箱：dongxx@falconnect.cn</div>
+            </div>
+        </div>
+
+        <div class="zhiwei">
+            <div class="zhiweititle">
+                <div class="zhiweiname">会计</div>
+                <div class="jiantou">
+                    <img src="imgBoke/jiantou.png">
+                </div>
+                <div class="zhiweidata">2015-09-10</div>
+            </div>
+            <div class="zhiweineirong">
+                <div class="tiaojian">
+                    1、 财会、会计相关专业大专专科以上学历，3年以上工作经验，有会计初级职称；
+                </div>
+                <div class="tiaojian">
+                    2、 了解税务法规和相关税收政策；
+                </div>
+                <div class="tiaojian">
+                    3、 工作认真细致，接受能力强，能独立思考，良好的职业操守；
+                </div>
+                <div class="tiaojian">
+                    4、 熟练使用财务软件和办公软件；；
+                </div>
+                <div class="tiaojian">
+                    5、 互联网广告行业优先。
+                </div>
+                <div class="email">招聘邮箱：dongxx@falconnect.cn</div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

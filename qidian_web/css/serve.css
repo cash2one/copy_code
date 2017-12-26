@@ -1,0 +1,145 @@
+.calltitle{
+    width:62.5%;height:auto;margin:54px auto 0 auto;font-size: 32px;color:#1f1f1f;text-align: left;line-height: 32px;
+}
+.zhiweilist{
+    width:62.5%;height:auto;margin:34px auto 100px auto;
+}
+.zhiwei{
+    width:100%;height:50px;margin:0 auto;
+}
+.auto{
+    height:auto;
+}
+.zhiweititle{
+    width:100%;height:50px;padding:16px 0;margin:0 auto;border-bottom:1px solid #e5e5e5;
+}
+.zhiweiname{
+    width:auto;height:100%;font-size: 17px;color:#565656;float:left;
+}
+.zhiweiname:hover{
+    cursor: pointer;
+}
+.jiantou{
+    width:12px;height:17px;float:right;position: relative;z-index: 99;
+}
+.jiantou>img{
+    width:100%;transition: all 1s ease;
+}
+.zhuandong{
+    transform:rotate(90deg);
+}
+.zhiweidata{
+    width:auto;height:100%;font-size: 17px;color:#565656;float:right;margin-right:54px;
+}
+.zhiweineirong{
+    width:100%;height:auto;margin:18px auto;padding:22px;background:#f9f9f9;font-size: 16px;color:#565656;line-height: 30px;
+    display: none;
+}
+.tiaojian{
+    width:100%;height:auto;
+}
+.email{
+    width:100%;height:auto;margin-top:42px;
+}
+
+/*博客页面*/
+.chose{
+    width:62.5%;height:auto;margin:34px auto 0px auto;
+}
+.choseWord{
+    font-size: 25px;color:#1f1f1f;margin-left: 75px;
+}
+.choseWord:hover{
+    cursor:pointer;
+}
+.underlines{
+    width:60px;height:5px;background:#000;margin-top:10px;
+}
+.mainoutbox{
+    width:62.5%;height:550px;margin:0 auto;position:relative;float: inherit;
+}
+.mainbox{
+    width:100%;height:100%;margin:0 auto;position: absolute;
+}
+.mainInner{
+    width:100%;height:520px;margin:0 auto;
+}
+.mainnei{
+    width:100%;height:520px;position: absolute;background:#ffffff;
+}
+.main{
+    width:100%;height:auto;margin:0 auto;border-bottom:1px solid #e5e5e5;overflow: hidden;
+}
+/*.imgbox{*/
+/*width:400px;height:310px;float:left;*/
+/*}*/
+.imgbox{
+    width:33.3%;height:auto;float: left;
+}
+.img{
+    width:100%;height:auto;margin:30px auto;
+}
+.img>img{
+    width:100%;
+}
+.wordbox{
+    width:60%;height:auto;float:left;margin-left:25px;position: relative;
+}
+.title{
+    width:100%;height:23px;margin-top:30px;font-size:23px;color:#1f1f1f;text-align: left;line-height: 23px;
+}
+.title:hover{
+    color:blue;
+}
+.data{
+    width:25%;height:15px;margin-top:20px;font-size:15px;color:#b7b7b7;text-align: left;line-height: 15px;float:left
+}
+.neirong{
+    width:100%;height:auto;margin-top:26px;font-size: 18px;color:#565656;line-height: 32px;
+    text-overflow: ellipsis;overflow:hidden; white-space:nowrap;float:left
+}
+.btn{
+    width:80px;height:30px;background:#e5e5e5;font-size: 15px;color:#b7b7b7;position: absolute;right:15px;bottom:-60px;
+    text-align: center;line-height: 30px;
+}
+.btn:hover{
+    cursor:pointer;color:#333;
+}
+.fenyebox{
+    width:100%;height:100px;margin:0 auto;
+}
+.fenyedown{
+    width:70px;height:30px;margin-top:30px;border:1px solid #000;font-size: 15px;color:#000;text-align: center;line-height: 30px;
+    float:right;margin-right:15px;
+}
+.fenyedown:hover{
+    cursor: pointer;
+}
+.fenyeup{
+    width:70px;height:30px;margin-top:30px;border:1px solid #000;font-size: 15px;color:#000;text-align: center;line-height: 30px;
+    float:right;margin-right:28px;
+}
+.fenyeup:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:992px){
+.zhiweiname,.zhiweidata,.tiaojian{
+    font-size: 22px;
+}
+    .fenyedown{
+        margin-right: 40%;
+    }
+    .title{
+        font-size: 28px;
+    }
+    .data{
+        font-size: 18px;width:50%
+    }
+    .neirong{
+        font-size: 22px;
+    }
+    .btn{
+        font-size: 18px;
+    }
+}

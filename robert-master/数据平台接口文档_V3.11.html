@@ -1,0 +1,3048 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>API_Doc.html</title>
+  <meta name="generator" content="Haroopad 0.13.2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF);background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:5px -27px no-repeat #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:#FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:#EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:#75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:1px solid #1A3C6C;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin:0;max-width:none;min-height:0;outline:#112644 0;overflow-x:visible;overflow-y:visible;padding:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}.mermaid .label{color:#333}.node circle,.node ellipse,.node polygon,.node rect{fill:#ECECFF;stroke:#CCF;stroke-width:1px}.edgePath .path{stroke:#333}.edgeLabel{background-color:#e8e8e8}.cluster rect{fill:#ffffde!important;rx:4!important;stroke:#aa3!important;stroke-width:1px!important}.cluster text{fill:#333}.actor{stroke:#CCF;fill:#ECECFF}text.actor{fill:#000;stroke:none}.actor-line{stroke:grey}.messageLine0{stroke-width:1.5;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#333}.messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#arrowhead{fill:#333}#crosshead path{fill:#333!important;stroke:#333!important}.messageText{fill:#333;stroke:none}.labelBox{stroke:#CCF;fill:#ECECFF}.labelText,.loopText{fill:#000;stroke:none}.loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#CCF}.note{stroke:#aa3;fill:#fff5ad}.noteText{fill:#000;stroke:none;font-family:'trebuchet ms',verdana,arial;font-size:14px}.section{stroke:none;opacity:.2}.section0{fill:rgba(102,102,255,.49)}.section2{fill:#fff400}.section1,.section3{fill:#fff;opacity:.2}.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3{fill:#333}.sectionTitle{text-anchor:start;font-size:11px;text-height:14px}.grid .tick{stroke:lightgrey;opacity:.3;shape-rendering:crispEdges}.grid path{stroke-width:0}.today{fill:none;stroke:red;stroke-width:2px}.task{stroke-width:2}.taskText{text-anchor:middle;font-size:11px}.taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}.taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}.taskText0,.taskText1,.taskText2,.taskText3{fill:#fff}.task0,.task1,.task2,.task3{fill:#8a90dd;stroke:#534fbc}.taskTextOutside0,.taskTextOutside1,.taskTextOutside2,.taskTextOutside3{fill:#000}.active0,.active1,.active2,.active3{fill:#bfc7ff;stroke:#534fbc}.activeText0,.activeText1,.activeText2,.activeText3{fill:#000!important}.done0,.done1,.done2,.done3{stroke:grey;fill:lightgrey;stroke-width:2}.doneText0,.doneText1,.doneText2,.doneText3{fill:#000!important}.crit0,.crit1,.crit2,.crit3{stroke:#f88;fill:red;stroke-width:2}.activeCrit0,.activeCrit1,.activeCrit2,.activeCrit3{stroke:#f88;fill:#bfc7ff;stroke-width:2}.doneCrit0,.doneCrit1,.doneCrit2,.doneCrit3{stroke:#f88;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}.activeCritText0,.activeCritText1,.activeCritText2,.activeCritText3,.doneCritText0,.doneCritText1,.doneCritText2,.doneCritText3{fill:#000!important}.titleText{text-anchor:middle;font-size:18px;fill:#000}.node text{font-family:'trebuchet ms',verdana,arial;font-size:14px}div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:'trebuchet ms',verdana,arial;font-size:12px;background:#ffffde;border:1px solid #aa3;border-radius:2px;pointer-events:none;z-index:100}html{height:100%}body{padding:5px 20px 26px;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x;border:0;height:3px;padding:0}hr.underscore{border-top-style:dashed!important}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:url(../img/ajax.gif) center center no-repeat #fff}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}div.toc{margin:0!important}div.toc ul{padding-left:10px}div.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}div.toc li,div.toc ul{list-style-type:none}div.toc li{width:100%;padding:0;overflow:hidden}div.toc li a::after{content:"."}div.toc li a:before{content:"• "}div.toc h5{text-transform:uppercase}div.toc .title{float:left;padding-right:3px}div.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}input.task-list-item{margin-left:-1.62em}.markdown{font-family:"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-wrap:break-word}.markdown pre{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;overflow:auto;padding:.5em}.markdown pre code{border:0;display:block}.markdown pre.hljs,.markdown pre>code{font-family:Consolas,Inconsolata,Courier,monospace;font-weight:700;white-space:pre}.markdown code{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown mark{color:#000;background-color:#fcf8e3}.markdown table{padding:0;border-collapse:collapse;border-spacing:0;margin-bottom:16px}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);.haroopad{padding:20px;color:#222;font-size:15px;font-family:"Roboto Condensed",Tauri,"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}.haroopad a{color:#3269a0}.haroopad a:hover{color:#4183c4}.haroopad h2{border-bottom:1px solid #e6e6e6}.haroopad h6{color:#777}.haroopad hr{border:1px solid #e6e6e6}.haroopad blockquote>code,.haroopad h1>code,.haroopad h2>code,.haroopad h3>code,.haroopad h4>code,.haroopad h5>code,.haroopad h6>code,.haroopad li>code,.haroopad p>code,.haroopad td>code{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:85%;background-color:rgba(0,0,0,.02);padding:.2em .5em;border:1px solid #efefef}.haroopad pre>code{font-size:1em;letter-spacing:-1px;font-weight:700}.haroopad blockquote{border-left:4px solid #e6e6e6;padding:0 15px;color:#777}.haroopad table{background-color:#fafafa}.haroopad table tr td,.haroopad table tr th{border:1px solid #e6e6e6}.haroopad table tr:nth-child(2n){background-color:#f2f2f2}.hljs{display:block;overflow-x:auto;padding:.5em;background:#fdf6e3;color:#657b83;-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment,.hljs-doctype,.hljs-pi,.lisp .hljs-string{color:#93a1a1}.css .hljs-tag,.hljs-addition,.hljs-keyword,.hljs-request,.hljs-status,.hljs-winutils,.method,.nginx .hljs-title{color:#859900}.hljs-command,.hljs-doctag,.hljs-hexcolor,.hljs-link_url,.hljs-number,.hljs-regexp,.hljs-rule .hljs-value,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#2aa198}.css .hljs-function,.hljs-built_in,.hljs-chunk,.hljs-decorator,.hljs-id,.hljs-identifier,.hljs-localvars,.hljs-name,.hljs-title,.vhdl .hljs-literal{color:#268bd2}.hljs-attribute,.hljs-class .hljs-title,.hljs-constant,.hljs-link_reference,.hljs-parent,.hljs-type,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number{color:#b58900}.css .hljs-pseudo,.diff .hljs-change,.hljs-attr_selector,.hljs-cdata,.hljs-header,.hljs-pragma,.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-shebang,.hljs-special,.hljs-subst,.hljs-symbol,.hljs-symbol .hljs-string{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#eee8d5}.MathJax_Hover_Frame{border-radius:.25em;-webkit-border-radius:.25em;-moz-border-radius:.25em;-khtml-border-radius:.25em;box-shadow:0 0 15px #83A;-webkit-box-shadow:0 0 15px #83A;-moz-box-shadow:0 0 15px #83A;-khtml-box-shadow:0 0 15px #83A;border:1px solid #A6D!important;display:inline-block;position:absolute}.MathJax_Menu_Button .MathJax_Hover_Arrow{position:absolute;cursor:pointer;display:inline-block;border:2px solid #AAA;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-khtml-border-radius:4px;font-family:'Courier New',Courier;font-size:9px;color:#F0F0F0}.MathJax_Menu_Button .MathJax_Hover_Arrow span{display:block;background-color:#AAA;border:1px solid;border-radius:3px;line-height:0;padding:4px}.MathJax_Hover_Arrow:hover{color:#fff!important;border:2px solid #CCC!important}.MathJax_Hover_Arrow:hover span{background-color:#CCC!important}#MathJax_About{position:fixed;left:50%;width:auto;text-align:center;border:3px outset;padding:1em 2em;background-color:#DDD;color:#000;cursor:default;font-family:message-box;font-size:120%;font-style:normal;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-khtml-border-radius:15px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_About.MathJax_MousePost{outline:0}.MathJax_Menu{position:absolute;background-color:#fff;color:#000;width:auto;padding:5px 0;border:1px solid #CCC;margin:0;cursor:default;font:menu;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-khtml-border-radius:5px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_MenuItem{padding:1px 2em;background:0 0}.MathJax_MenuArrow{position:absolute;right:.5em;padding-top:.25em;color:#666;font-size:.75em}.MathJax_MenuActive .MathJax_MenuArrow{color:#fff}.MathJax_MenuArrow.RTL{left:.5em;right:auto}.MathJax_MenuCheck{position:absolute;left:.7em}.MathJax_MenuCheck.RTL{right:.7em;left:auto}.MathJax_MenuRadioCheck{position:absolute;left:.7em}.MathJax_MenuRadioCheck.RTL{right:.7em;left:auto}.MathJax_MenuLabel{padding:1px 2em 3px 1.33em;font-style:italic}.MathJax_MenuRule{border-top:1px solid #DDD;margin:4px 3px}.MathJax_MenuDisabled{color:GrayText}.MathJax_MenuActive{background-color:#606872;color:#fff}.MathJax_MenuDisabled:focus,.MathJax_MenuLabel:focus{background-color:#E8E8E8}.MathJax_ContextMenu .MathJax_MenuItem:focus,.MathJax_ContextMenu:focus{outline:0}#MathJax_AboutClose{top:.2em;right:.2em}.MathJax_Menu .MathJax_MenuClose{top:-10px;left:-10px}.MathJax_MenuClose{position:absolute;cursor:pointer;display:inline-block;border:2px solid #AAA;border-radius:18px;-webkit-border-radius:18px;-moz-border-radius:18px;-khtml-border-radius:18px;font-family:'Courier New',Courier;font-size:24px;color:#F0F0F0}.MathJax_MenuClose span{display:block;background-color:#AAA;border:1.5px solid;border-radius:18px;-webkit-border-radius:18px;-moz-border-radius:18px;-khtml-border-radius:18px;line-height:0;padding:8px 0 6px}.MathJax_MenuClose:hover{color:#fff!important;border:2px solid #CCC!important}.MathJax_MenuClose:hover span{background-color:#CCC!important}.MathJax_MenuClose:hover:focus{outline:0}.MathJax_Preview .MJXf-math{color:inherit!important}.MJX_Assistive_MathML{position:absolute!important;top:0;left:0;clip:rect(1px,1px,1px,1px);padding:1px 0 0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden!important;display:block!important;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.MJX_Assistive_MathML.MJX_Assistive_MathML_Block{width:100%!important}#MathJax_Zoom{position:absolute;background-color:#F0F0F0;overflow:auto;display:block;z-index:301;padding:.5em;border:1px solid #000;margin:0;font-weight:400;font-style:normal;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;box-shadow:5px 5px 15px #AAA;-webkit-box-shadow:5px 5px 15px #AAA;-moz-box-shadow:5px 5px 15px #AAA;-khtml-box-shadow:5px 5px 15px #AAA;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_ZoomOverlay{position:absolute;left:0;top:0;z-index:300;display:inline-block;width:100%;height:100%;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}#MathJax_ZoomFrame{position:relative;display:inline-block;height:0;width:0}#MathJax_ZoomEventTrap{position:absolute;left:0;top:0;z-index:302;display:inline-block;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}.MathJax_Preview{color:#888}#MathJax_Message{position:fixed;left:1em;bottom:1.5em;background-color:#E6E6E6;border:1px solid #959595;margin:0;padding:2px 8px;z-index:102;color:#000;font-size:80%;width:auto;white-space:nowrap}#MathJax_MSIE_Frame{position:absolute;top:0;left:0;width:0;z-index:101;border:0;margin:0;padding:0}.MathJax_Error{color:#C00;font-style:italic}.MJXp-script{font-size:.8em}.MJXp-right{-webkit-transform-origin:right;-moz-transform-origin:right;-ms-transform-origin:right;-o-transform-origin:right;transform-origin:right}.MJXp-bold{font-weight:700}.MJXp-italic{font-style:italic}.MJXp-scr{font-family:MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}.MJXp-frak{font-family:MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}.MJXp-sf{font-family:MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}.MJXp-cal{font-family:MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}.MJXp-mono{font-family:MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}.MJXp-largeop{font-size:150%}.MJXp-largeop.MJXp-int{vertical-align:-.2em}.MJXp-math{display:inline-block;line-height:1.2;text-indent:0;font-family:'Times New Roman',Times,STIXGeneral,serif;white-space:nowrap;border-collapse:collapse}.MJXp-display{display:block;text-align:center;margin:1em 0}.MJXp-math span{display:inline-block}.MJXp-box{display:block!important;text-align:center}.MJXp-box:after{content:" "}.MJXp-rule{display:block!important;margin-top:.1em}.MJXp-char{display:block!important}.MJXp-mo{margin:0 .15em}.MJXp-mfrac{margin:0 .125em;vertical-align:.25em}.MJXp-denom{display:inline-table!important;width:100%}.MJXp-denom>*{display:table-row!important}.MJXp-surd{vertical-align:top}.MJXp-surd>*{display:block!important}.MJXp-script-box>*{display:table!important;height:50%}.MJXp-script-box>*>*{display:table-cell!important;vertical-align:top}.MJXp-script-box>:last-child>*{vertical-align:bottom}.MJXp-script-box>*>*>*{display:block!important}.MJXp-mphantom{visibility:hidden}.MJXp-munderover{display:inline-table!important}.MJXp-over{display:inline-block!important;text-align:center}.MJXp-over>*{display:block!important}.MJXp-munderover>*{display:table-row!important}.MJXp-mtable{vertical-align:.25em;margin:0 .125em}.MJXp-mtable>*{display:inline-table!important;vertical-align:middle}.MJXp-mtr{display:table-row!important}.MJXp-mtd{display:table-cell!important;text-align:center;padding:.5em 0 0 .5em}.MJXp-mtr>.MJXp-mtd:first-child{padding-left:0}.MJXp-mtr:first-child>.MJXp-mtd{padding-top:0}.MJXp-mlabeledtr{display:table-row!important}.MJXp-mlabeledtr>.MJXp-mtd:first-child{padding-left:0}.MJXp-mlabeledtr:first-child>.MJXp-mtd{padding-top:0}.MJXp-merror{background-color:#FF8;color:#C00;border:1px solid #C00;padding:1px 3px;font-style:normal;font-size:90%}.MJXp-scale0{-webkit-transform:scaleX(0);-moz-transform:scaleX(0);-ms-transform:scaleX(0);-o-transform:scaleX(0);transform:scaleX(0)}.MJXp-scale1{-webkit-transform:scaleX(.1);-moz-transform:scaleX(.1);-ms-transform:scaleX(.1);-o-transform:scaleX(.1);transform:scaleX(.1)}.MJXp-scale2{-webkit-transform:scaleX(.2);-moz-transform:scaleX(.2);-ms-transform:scaleX(.2);-o-transform:scaleX(.2);transform:scaleX(.2)}.MJXp-scale3{-webkit-transform:scaleX(.3);-moz-transform:scaleX(.3);-ms-transform:scaleX(.3);-o-transform:scaleX(.3);transform:scaleX(.3)}.MJXp-scale4{-webkit-transform:scaleX(.4);-moz-transform:scaleX(.4);-ms-transform:scaleX(.4);-o-transform:scaleX(.4);transform:scaleX(.4)}.MJXp-scale5{-webkit-transform:scaleX(.5);-moz-transform:scaleX(.5);-ms-transform:scaleX(.5);-o-transform:scaleX(.5);transform:scaleX(.5)}.MJXp-scale6{-webkit-transform:scaleX(.6);-moz-transform:scaleX(.6);-ms-transform:scaleX(.6);-o-transform:scaleX(.6);transform:scaleX(.6)}.MJXp-scale7{-webkit-transform:scaleX(.7);-moz-transform:scaleX(.7);-ms-transform:scaleX(.7);-o-transform:scaleX(.7);transform:scaleX(.7)}.MJXp-scale8{-webkit-transform:scaleX(.8);-moz-transform:scaleX(.8);-ms-transform:scaleX(.8);-o-transform:scaleX(.8);transform:scaleX(.8)}.MJXp-scale9{-webkit-transform:scaleX(.9);-moz-transform:scaleX(.9);-ms-transform:scaleX(.9);-o-transform:scaleX(.9);transform:scaleX(.9)}.MathJax_PHTML .noError{font-size:90%;text-align:left;color:#000;padding:1px 3px;border:1px solid}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown haroopad">
+<h1 id="数据平台接口文档_v3.11"><a name="数据平台接口文档_v3.11" href="#数据平台接口文档_v3.11"></a>数据平台接口文档_V3.11</h1><h1 id="目录"><a name="目录" href="#目录"></a>目录</h1><div class="toc"><ul>
+<li><ul>
+<li><span class="title">
+<a href="#更新日志" title="更新日志">更新日志</a>
+</span>
+<!--span class="number">
+0
+</span-->
+</li>
+<li><span class="title">
+<a href="#通用注释" title="通用注释">通用注释</a>
+</span>
+<!--span class="number">
+1
+</span-->
+<ul>
+<li><span class="title">
+<a href="#错误码" title="错误码">错误码</a>
+</span>
+<!--span class="number">
+2
+</span-->
+</li>
+<li><span class="title">
+<a href="#图片服务" title="图片服务">图片服务</a>
+</span>
+<!--span class="number">
+3
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#客户端接口" title="客户端接口">客户端接口</a>
+</span>
+<!--span class="number">
+4
+</span-->
+<ul>
+<li><span class="title">
+<a href="#1-用户" title="1 用户">1 用户</a>
+</span>
+<!--span class="number">
+5
+</span-->
+<ul>
+<li><span class="title">
+<a href="#1.1-游客用户" title="1.1 游客用户">1.1 游客用户</a>
+</span>
+<!--span class="number">
+6
+</span-->
+<ul>
+<li><span class="title">
+<a href="#1.1.1-游客用户注册" title="1.1.1 游客用户注册">1.1.1 游客用户注册</a>
+</span>
+<!--span class="number">
+7
+</span-->
+</li>
+<li><span class="title">
+<a href="#1.1.2-游客用户登录" title="1.1.2 游客用户登录">1.1.2 游客用户登录</a>
+</span>
+<!--span class="number">
+8
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#1.2-三方用户注册" title="1.2 三方用户注册">1.2 三方用户注册</a>
+</span>
+<!--span class="number">
+9
+</span-->
+</li>
+<li><span class="title">
+<a href="#1.3-本地用户" title="1.3 本地用户">1.3 本地用户</a>
+</span>
+<!--span class="number">
+10
+</span-->
+<ul>
+<li><span class="title">
+<a href="#1.3.1-本地用户注册" title="1.3.1 本地用户注册">1.3.1 本地用户注册</a>
+</span>
+<!--span class="number">
+11
+</span-->
+</li>
+<li><span class="title">
+<a href="#1.3.2-本地用户登录" title="1.3.2 本地用户登录">1.3.2 本地用户登录</a>
+</span>
+<!--span class="number">
+12
+</span-->
+</li>
+<li><span class="title">
+<a href="#1.3.3-本地用户修改密码" title="1.3.3 本地用户修改密码">1.3.3 本地用户修改密码</a>
+</span>
+<!--span class="number">
+13
+</span-->
+</li>
+<li><span class="title">
+<a href="#1.3.4-本地用户重置密码" title="1.3.4 本地用户重置密码">1.3.4 本地用户重置密码</a>
+</span>
+<!--span class="number">
+14
+</span-->
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#2-新闻列表页" title="2 新闻列表页">2 新闻列表页</a>
+</span>
+<!--span class="number">
+15
+</span-->
+<ul>
+<li><span class="title">
+<a href="#2.1-列表页响应统一格式" title="2.1 列表页响应统一格式">2.1 列表页响应统一格式</a>
+</span>
+<!--span class="number">
+16
+</span-->
+</li>
+<li><span class="title">
+<a href="#2.2-列表页刷新" title="2.2 列表页刷新">2.2 列表页刷新</a>
+</span>
+<!--span class="number">
+17
+</span-->
+</li>
+<li><span class="title">
+<a href="#2.3-列表页加载" title="2.3 列表页加载">2.3 列表页加载</a>
+</span>
+<!--span class="number">
+18
+</span-->
+</li>
+<li><span class="title">
+<a href="#2.4-列表页刷新（广告）" title="2.4 列表页刷新（广告）">2.4 列表页刷新（广告）</a>
+</span>
+<!--span class="number">
+19
+</span-->
+</li>
+<li><span class="title">
+<a href="#2.5-列表页加载（广告）" title="2.5 列表页加载（广告）">2.5 列表页加载（广告）</a>
+</span>
+<!--span class="number">
+20
+</span-->
+</li>
+<li><span class="title">
+<a href="#2.6-行政区划-列表页刷新" title="2.6 行政区划-列表页刷新">2.6 行政区划-列表页刷新</a>
+</span>
+<!--span class="number">
+21
+</span-->
+</li>
+<li><span class="title">
+<a href="#2.7-行政区划-列表页加载" title="2.7 行政区划-列表页加载">2.7 行政区划-列表页加载</a>
+</span>
+<!--span class="number">
+22
+</span-->
+</li>
+<li><span class="title">
+<a href="#2.8-新闻源-列表页刷新" title="2.8 新闻源-列表页刷新">2.8 新闻源-列表页刷新</a>
+</span>
+<!--span class="number">
+23
+</span-->
+</li>
+<li><span class="title">
+<a href="#2.9-新闻源-列表页加载" title="2.9 新闻源-列表页加载">2.9 新闻源-列表页加载</a>
+</span>
+<!--span class="number">
+24
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#3-新闻详情页" title="3 新闻详情页">3 新闻详情页</a>
+</span>
+<!--span class="number">
+25
+</span-->
+<ul>
+<li><span class="title">
+<a href="#3.1-新闻详情内容" title="3.1 新闻详情内容">3.1 新闻详情内容</a>
+</span>
+<!--span class="number">
+26
+</span-->
+</li>
+<li><span class="title">
+<a href="#3.2-下一条详情页" title="3.2 下一条详情页">3.2 下一条详情页</a>
+</span>
+<!--span class="number">
+27
+</span-->
+</li>
+<li><span class="title">
+<a href="#3.3-上一条详情页" title="3.3 上一条详情页">3.3 上一条详情页</a>
+</span>
+<!--span class="number">
+28
+</span-->
+</li>
+<li><span class="title">
+<a href="#3.4-视频详情页" title="3.4 视频详情页">3.4 视频详情页</a>
+</span>
+<!--span class="number">
+29
+</span-->
+</li>
+<li><span class="title">
+<a href="#3.5-详情页相关推荐列表" title="3.5 详情页相关推荐列表">3.5 详情页相关推荐列表</a>
+</span>
+<!--span class="number">
+30
+</span-->
+</li>
+<li><span class="title">
+<a href="#3.6-详情页相关推荐列表(带广告)" title="3.6 详情页相关推荐列表(带广告)">3.6 详情页相关推荐列表(带广告)</a>
+</span>
+<!--span class="number">
+31
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#4-评论列表" title="4 评论列表">4 评论列表</a>
+</span>
+<!--span class="number">
+32
+</span-->
+<ul>
+<li><span class="title">
+<a href="#4.1-新闻普通评论列表" title="4.1 新闻普通评论列表">4.1 新闻普通评论列表</a>
+</span>
+<!--span class="number">
+33
+</span-->
+</li>
+<li><span class="title">
+<a href="#4.2-新闻热点评论列表" title="4.2 新闻热点评论列表">4.2 新闻热点评论列表</a>
+</span>
+<!--span class="number">
+34
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#5-专题详情" title="5 专题详情">5 专题详情</a>
+</span>
+<!--span class="number">
+35
+</span-->
+</li>
+<li><span class="title">
+<a href="#6-新闻搜索" title="6 新闻搜索">6 新闻搜索</a>
+</span>
+<!--span class="number">
+36
+</span-->
+<ul>
+<li><span class="title">
+<a href="#6.1-搜索" title="6.1 搜索">6.1 搜索</a>
+</span>
+<!--span class="number">
+37
+</span-->
+</li>
+<li><span class="title">
+<a href="#6.2-搜索新闻及订阅号" title="6.2 搜索新闻及订阅号">6.2 搜索新闻及订阅号</a>
+</span>
+<!--span class="number">
+38
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#7-广告请求" title="7 广告请求">7 广告请求</a>
+</span>
+<!--span class="number">
+39
+</span-->
+</li>
+<li><span class="title">
+<a href="#8-新闻发布源" title="8 新闻发布源">8 新闻发布源</a>
+</span>
+<!--span class="number">
+40
+</span-->
+<ul>
+<li><span class="title">
+<a href="#8.1-添加新闻发布源关心" title="8.1 添加新闻发布源关心">8.1 添加新闻发布源关心</a>
+</span>
+<!--span class="number">
+41
+</span-->
+</li>
+<li><span class="title">
+<a href="#8.2-取消新闻发布源关心" title="8.2 取消新闻发布源关心">8.2 取消新闻发布源关心</a>
+</span>
+<!--span class="number">
+42
+</span-->
+</li>
+<li><span class="title">
+<a href="#8.3-已关心发布源列表" title="8.3 已关心发布源列表">8.3 已关心发布源列表</a>
+</span>
+<!--span class="number">
+43
+</span-->
+</li>
+<li><span class="title">
+<a href="#8.4-已关心发布源的新闻列表刷新" title="8.4 已关心发布源的新闻列表刷新">8.4 已关心发布源的新闻列表刷新</a>
+</span>
+<!--span class="number">
+44
+</span-->
+</li>
+<li><span class="title">
+<a href="#8.5-已关心发布源的新闻列表加载" title="8.5 已关心发布源的新闻列表加载">8.5 已关心发布源的新闻列表加载</a>
+</span>
+<!--span class="number">
+45
+</span-->
+</li>
+<li><span class="title">
+<a href="#8.6-指定新闻发布源新闻列表" title="8.6 指定新闻发布源新闻列表">8.6 指定新闻发布源新闻列表</a>
+</span>
+<!--span class="number">
+46
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#9-用户相关操作" title="9 用户相关操作">9 用户相关操作</a>
+</span>
+<!--span class="number">
+47
+</span-->
+<ul>
+<li><span class="title">
+<a href="#9.1-新闻评论" title="9.1 新闻评论">9.1 新闻评论</a>
+</span>
+<!--span class="number">
+48
+</span-->
+<ul>
+<li><span class="title">
+<a href="#9.1.1-创建评论" title="9.1.1 创建评论">9.1.1 创建评论</a>
+</span>
+<!--span class="number">
+49
+</span-->
+</li>
+<li><span class="title">
+<a href="#9.1.2-删除评论" title="9.1.2 删除评论">9.1.2 删除评论</a>
+</span>
+<!--span class="number">
+50
+</span-->
+</li>
+<li><span class="title">
+<a href="#9.1.3-查看评论列表" title="9.1.3 查看评论列表">9.1.3 查看评论列表</a>
+</span>
+<!--span class="number">
+51
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#9.2-新闻评论点赞" title="9.2 新闻评论点赞">9.2 新闻评论点赞</a>
+</span>
+<!--span class="number">
+52
+</span-->
+<ul>
+<li><span class="title">
+<a href="#9.2.1-点赞" title="9.2.1 点赞">9.2.1 点赞</a>
+</span>
+<!--span class="number">
+53
+</span-->
+</li>
+<li><span class="title">
+<a href="#9.2.2-取消赞" title="9.2.2 取消赞">9.2.2 取消赞</a>
+</span>
+<!--span class="number">
+54
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#9.3-新闻收藏" title="9.3 新闻收藏">9.3 新闻收藏</a>
+</span>
+<!--span class="number">
+55
+</span-->
+<ul>
+<li><span class="title">
+<a href="#9.3.1-添加收藏" title="9.3.1 添加收藏">9.3.1 添加收藏</a>
+</span>
+<!--span class="number">
+56
+</span-->
+</li>
+<li><span class="title">
+<a href="#9.3.2-取消收藏" title="9.3.2 取消收藏">9.3.2 取消收藏</a>
+</span>
+<!--span class="number">
+57
+</span-->
+</li>
+<li><span class="title">
+<a href="#9.3.3-查看收藏列表" title="9.3.3 查看收藏列表">9.3.3 查看收藏列表</a>
+</span>
+<!--span class="number">
+58
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#9.4-新闻关心" title="9.4 新闻关心">9.4 新闻关心</a>
+</span>
+<!--span class="number">
+59
+</span-->
+<ul>
+<li><span class="title">
+<a href="#9.4.1-添加关心" title="9.4.1 添加关心">9.4.1 添加关心</a>
+</span>
+<!--span class="number">
+60
+</span-->
+</li>
+<li><span class="title">
+<a href="#9.4.2-取消关心" title="9.4.2 取消关心">9.4.2 取消关心</a>
+</span>
+<!--span class="number">
+61
+</span-->
+</li>
+<li><span class="title">
+<a href="#9.4.3-查看关心列表" title="9.4.3 查看关心列表">9.4.3 查看关心列表</a>
+</span>
+<!--span class="number">
+62
+</span-->
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#10-新闻频道" title="10 新闻频道">10 新闻频道</a>
+</span>
+<!--span class="number">
+63
+</span-->
+<ul>
+<li><span class="title">
+<a href="#10.1-普通频道" title="10.1 普通频道">10.1 普通频道</a>
+</span>
+<!--span class="number">
+64
+</span-->
+</li>
+<li><span class="title">
+<a href="#10.2-用户定制频道" title="10.2 用户定制频道">10.2 用户定制频道</a>
+</span>
+<!--span class="number">
+65
+</span-->
+</li>
+<li><span class="title">
+<a href="#10.3-用户定制频道修改" title="10.3 用户定制频道修改">10.3 用户定制频道修改</a>
+</span>
+<!--span class="number">
+66
+</span-->
+</li>
+</ul>
+</li>
+<li><span class="title">
+<a href="#11-日志上报" title="11 日志上报">11 日志上报</a>
+</span>
+<!--span class="number">
+67
+</span-->
+<ul>
+<li><span class="title">
+<a href="#11.1-点击日志" title="11.1 点击日志">11.1 点击日志</a>
+</span>
+<!--span class="number">
+68
+</span-->
+</li>
+<li><span class="title">
+<a href="#11.2-用户手机信息,手机app列表收集接口" title="11.2 用户手机信息,手机app列表收集接口">11.2 用户手机信息,手机app列表收集接口</a>
+</span>
+<!--span class="number">
+69
+</span-->
+</li>
+<li><span class="title">
+<a href="#11.3-转发记录" title="11.3 转发记录">11.3 转发记录</a>
+</span>
+<!--span class="number">
+70
+</span-->
+</li>
+<li><span class="title">
+<a href="#11.4-不感兴趣记录" title="11.4 不感兴趣记录">11.4 不感兴趣记录</a>
+</span>
+<!--span class="number">
+71
+</span-->
+</li>
+<li><span class="title">
+<a href="#11.5-滑动接口" title="11.5 滑动接口">11.5 滑动接口</a>
+</span>
+<!--span class="number">
+72
+</span-->
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+</ul>
+</div><hr class="section"><h2 id="更新日志"><a name="更新日志" href="#更新日志"></a>更新日志</h2><p><em>V3.10:</em></p><ol>
+<li>相关新闻添加评论:/v2/ns/ascad</li><li>修改滑动统计接口：/v2/sl/ins</li></ol><p><em>V3.9:</em></p><ol>
+<li>第三方用户注册添加utype：<br>黄历天气：12，<br>纹字锁频：13，<br>猎鹰浏览器：14，<br>白牌：15</li></ol><p><em>V3.8:</em></p><ol>
+<li>feed流接口（/v2/ns/fed/ra、/v2/ns/fed/la、/v2/ns/fed/rn、/v2/ns/fed/ln）、专题详情接口(/v2/ns/tdq) 、新闻相关列表接口(/v2/ns/asc)：添加两个字段logtype、logchid</li><li>点击日志上报接口(/rep/v2/c)：多上传两个字段(请注意上传日志中的数据类型，否则上传成功了，后台解析不了)</li></ol><p><em>V3.7:</em></p><ol>
+<li>添加接口: 滑动统计接口</li><li>添加接口: 详情页广告</li></ol><hr class="section"><h2 id="通用注释"><a name="通用注释" href="#通用注释"></a>通用注释</h2><h3 id="错误码"><a name="错误码" href="#错误码"></a>错误码</h3><ol>
+<li>HTTP标准错误码；</li><li>2000：服务端成功；</li><li>2001：服务端错误；</li><li>2002：服务端未找到数据；</li><li>2003：服务端数据创建失败；</li><li>2004：服务端数据删除失败；</li><li>4001：请求数据错误；</li><li>4002：请求体JSON格式错误；</li><li>4003：用户验证错误；</li></ol><h3 id="图片服务"><a name="图片服务" href="#图片服务"></a>图片服务</h3><p>图片原图 HOST(接口中返回的图片 HOST)：bdp-pic.deeporiginalx.com<br>图片处理 HOST(用于图片处理的 HOST)：pro-pic.deeporiginalx.com</p><p>注释：原图 URL 中已经增加了图片的尺寸，使用符号大写的字母<code>X</code>分割，前面为 <strong>宽</strong>，后面为 <strong>高</strong>，即 <strong>…ExOWM_宽X高.jpg</strong>。</p><p>如果需要获取对应尺寸的图片，参考下面的流程：</p><ol>
+<li>首先将获得的图片 URL 中的 HOST(即原图 HOST)替换为<code>图片处理的 HOST</code>:<br><code>http://bdp-pic.deeporiginalx.com/W0JAN2RjNjExOWM_397X220.jpg</code><br>=&gt; <code>http://pro-pic.deeporiginalx.com/W0JAN2RjNjExOWM_397X220.jpg</code></li><li>参考《阿里云 OSS 图片处理服务》的官方文档，设置处理脚本，比如：<br><code>1e_1c_0o_0l_100sh_200h_300w_95q.src</code> 表示：按短边缩放、居中裁剪、缩减宽高分别为(300,200)、锐化100、质量95</li><li>将编辑好的脚本使用符号<code>@</code>与第一步中的 URL 连接得到最终的缩略图 URL：<br><code>http://pro-pic.deeporiginalx.com/W0JAN2RjNjExOWM_397X220.jpg@1e_1c_0o_0l_100sh_200h_300w_95q.src</code></li></ol><p>如果只有宽高缩放的需求，可以直接将上面脚本中的<code>200h_300w</code>替换为需要的尺寸，如果有更多需求，参考 OSS 服务配置文档。</p><hr class="section"><h2 id="客户端接口"><a name="客户端接口" href="#客户端接口"></a>客户端接口</h2><h3 id="1-用户"><a name="1-用户" href="#1-用户"></a>1 用户</h3><p>用户平台注释（platform）：</p><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align:left">代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IOS</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td>安卓</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td>网页</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td>无法识别</td>
+<td style="text-align:left">4</td>
+</tr>
+</tbody>
+</table><p>用户类型注释（utype）：</p><table>
+<thead>
+<tr>
+<th>类型</th>
+<th style="text-align:left">代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本地注册用户</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td>游客用户</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td>微博三方用户</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td>微信三方用户</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td>黄历天气</td>
+<td style="text-align:left">12</td>
+</tr>
+<tr>
+<td>纹字锁频</td>
+<td style="text-align:left">13</td>
+</tr>
+<tr>
+<td>猎鹰浏览器</td>
+<td style="text-align:left">14</td>
+</tr>
+<tr>
+<td>白牌</td>
+<td style="text-align:left">15</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="1.1-游客用户"><a name="1.1-游客用户" href="#1.1-游客用户"></a>1.1 游客用户</h4><h5 id="1.1.1-游客用户注册"><a name="1.1.1-游客用户注册" href="#1.1.1-游客用户注册"></a>1.1.1 游客用户注册</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/au/sin/g
+Host: bdp.deeporiginalx.com
+Content-Type: application/json
+
+{
+  "utype": 2,
+  "platform": 1,
+  "province": "北京市",   - Option
+  "city": "北京市",       - Option
+  "district": "东城区"    - Option
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic OWNtcWFibHYoN2tzZ2MuZyoqN18uZjQydS50bnBpNSlnYmR+filwdW4qaWVpM2xzNXhxOH4qeWdzMWRuOXVndQ
+
+{
+  "code": 2000,
+  "data": {
+    "utype": 2,
+    "uid": 22,
+    "password": "YWU1YzhmZGYtNDY3My00NTZjLTk3OGYtZDM0MTljMmVlYWVj"
+  }
+}
+</pre><hr class="section"><h5 id="1.1.2-游客用户登录"><a name="1.1.2-游客用户登录" href="#1.1.2-游客用户登录"></a>1.1.2 游客用户登录</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/au/lin/g
+Host: bdp.deeporiginalx.com
+Content-Type: application/json
+
+{
+  "uid": 22,
+  "password": "YWU1YzhmZGYtNDY3My00NTZjLTk3OGYtZDM0MTljMmVlYWVj"
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X3VmNDM5YXQ3MWdlJ28qNGMyJzlyfnJpZG9+dicybDZrNydhdXcyaW82MmFsc20pdV8xcDh6aTY5bmwuNl9vKA
+
+{
+  "code": 2000,
+  "data": {
+    "utype": 2,
+    "uid": 22,
+    "password": "YWU1YzhmZGYtNDY3My00NTZjLTk3OGYtZDM0MTljMmVlYWVj"
+  }
+}
+</pre><hr class="section"><h4 id="1.2-三方用户注册"><a name="1.2-三方用户注册" href="#1.2-三方用户注册"></a>1.2 三方用户注册</h4><p><em>Request</em></p><pre class="json hljs">POST /v2/au/sin/s
+Host: bdp.deeporiginalx.com
+Content-Type: application/json
+
+{
+  "muid": 4,                          - Option - 游客合并三方时提供该字段
+  "msuid": "weibo_suid_xxx",          - Option - 三方之间进行合并时提供该字段
+  "utype": 3,                         - 用户类型 - 本地注册用户:1, 游客用户:2 ,微博三方用户:3 ,微信三方用户:4, 黄历天气:12, 纹字锁频:13, 猎鹰浏览器:14, 白牌:15
+  "platform": 1,                      - 平台类型 - IOS:1, 安卓:2, 网页:3, 无法识别:4
+  "suid": "weibo_suid_xxx1",          - 第三方用户id 
+  "stoken": "weibo_stoken_xxx",       - 第三方登录stoken
+  "sexpires": "2016-4-27 17:37:22",   - 过期时间
+  "uname": "zhange",                  - 用户名
+  "gender": 1,                        - Option - 性别
+  "avatar": "http://tva4.jpg",        - Option - 头像地址
+  "averse": [                         - Option - 用户屏蔽字段列表
+    "政治",
+    "战争",
+    "腐败"
+  ],
+  "prefer": [                         - Option - 用户偏好字段列表
+    "体育",
+    "音乐",
+    "杂志"
+  ],
+  "province": "河南省",               - Option
+  "city": "郑州市",                   - Option
+  "district": "二七区"                - Option
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": {
+    "utype": 3,
+    "uid": 5,
+    "uname": "zhange",
+    "avatar": "http://tva4.sinaimg.cn/crop.0.0.1080.1080.180/e56a51c9jw8erh17sxq87j20u00u0jta.jpg"
+  }
+}
+</pre><hr class="section"><h4 id="1.3-本地用户"><a name="1.3-本地用户" href="#1.3-本地用户"></a>1.3 本地用户</h4><h5 id="1.3.1-本地用户注册"><a name="1.3.1-本地用户注册" href="#1.3.1-本地用户注册"></a>1.3.1 本地用户注册</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/au/sin/l
+Host: bdp.deeporiginalx.com
+Content-Type: application/json
+
+{
+  "utype": 1,
+  "platform": 1,
+  "uid": 22,    - Option
+  "uname":"lieying",
+  "email":"lieying@lieying.cn",
+  "password":"******",
+  "province": "北京市",   - Option
+  "city": "北京市",       - Option
+  "district": "东城区"    - Option
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic OWNtcWFibHYoN2tzZ2MuZyoqN18uZjQydS50bnBpNSlnYmR+filwdW4qaWVpM2xzNXhxOH4qeWdzMWRuOXVndQ
+
+{
+  "code": 2000,
+  "data": {
+    "utype": 1,
+    "uid": 22,
+    "uname": "lieying"
+  }
+}
+</pre><hr class="section"><h5 id="1.3.2-本地用户登录"><a name="1.3.2-本地用户登录" href="#1.3.2-本地用户登录"></a>1.3.2 本地用户登录</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/au/lin/g
+Host: bdp.deeporiginalx.com
+Content-Type: application/json
+
+{
+  "email": "lieying@lieying.cn",
+  "password": "******"
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X3VmNDM5YXQ3MWdlJ28qNGMyJzlyfnJpZG9+dicybDZrNydhdXcyaW82MmFsc20pdV8xcDh6aTY5bmwuNl9vKA
+
+{
+  "code": 2000,
+  "data": {
+    "utype": 1,
+    "uid": 22,
+    "uname": "lieying"
+  }
+}
+</pre><hr class="section"><h5 id="1.3.3-本地用户修改密码"><a name="1.3.3-本地用户修改密码" href="#1.3.3-本地用户修改密码"></a>1.3.3 本地用户修改密码</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/au/lin/c
+Host: bdp.deeporiginalx.com
+Content-Type: application/json
+
+{
+  "email": "lieying@lieying.cn",
+  "oldpassword": "******",
+  "newpassword": "******",
+  "verification": ""    - Option
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X3VmNDM5YXQ3MWdlJ28qNGMyJzlyfnJpZG9+dicybDZrNydhdXcyaW82MmFsc20pdV8xcDh6aTY5bmwuNl9vKA
+
+{
+  "code": 2000,
+  "data": {
+    "utype": 1,
+    "uid": 22,
+    "uname": "lieying"
+  }
+}
+</pre><hr class="section"><h5 id="1.3.4-本地用户重置密码"><a name="1.3.4-本地用户重置密码" href="#1.3.4-本地用户重置密码"></a>1.3.4 本地用户重置密码</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/au/lin/r
+Host: bdp.deeporiginalx.com
+Content-Type: application/json
+
+{
+  "email": "lieying@lieying.cn",
+  "verification": ""    - Option
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X3VmNDM5YXQ3MWdlJ28qNGMyJzlyfnJpZG9+dicybDZrNydhdXcyaW82MmFsc20pdV8xcDh6aTY5bmwuNl9vKA
+
+{
+  "code": 2000,
+  "data": {
+    "utype": 1,
+    "uid": 22,
+    "uname": "lieying"
+  }
+}
+</pre><hr class="section"><h3 id="2-新闻列表页"><a name="2-新闻列表页" href="#2-新闻列表页"></a>2 新闻列表页</h3><h4 id="2.1-列表页响应统一格式"><a name="2.1-列表页响应统一格式" href="#2.1-列表页响应统一格式"></a>2.1 列表页响应统一格式</h4><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": [
+    {
+      "nid": 6695,                                            - 新闻ID
+      "docid": "http://toutiao.com",                          - 用于获取评论的 docid
+      "title": "日媒：欧洲能源多元化 俄天然气外交走向终结",
+      "ptime": "2016-05-22 01:20:46",
+      "pname": "参考消息",
+      "purl": "http://m.cankaoxiaoxi.com//20160522/1166670.shtml",
+      "descr": "俄天然气外交走向终结...",                        - 新闻内容摘要
+      "tags": ["欧洲", "多元化"]                                  - 关键字
+      "channel": 9,
+      "collect": 0,                                           - 收藏数
+      "concern": 0,                                           - 关心数
+      "comment": 4,                                           - 评论数
+      "style": 1,                                             - 列表图格式，0、1、2、3
+      "imgs": [                                               - 该字段会有对应style数值的图片
+        "http://bdp-pic.deeporiginalx.com/W0JAMjM4Mjc4ZDE.png"
+      ],
+      "province": "山东",
+      "city": "青岛",
+      "district": "山东"
+    },
+    ...
+  ]
+}
+</pre><hr class="section"><h4 id="2.2-列表页刷新"><a name="2.2-列表页刷新" href="#2.2-列表页刷新"></a>2.2 列表页刷新</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/fed/rn
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">频道ID</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>tmk</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">是(1)否(0)模拟实时发布时间(部分新闻的发布时间修改为5分钟以内)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>t</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">显示专题  是(1)否(0)</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="2.3-列表页加载"><a name="2.3-列表页加载" href="#2.3-列表页加载"></a>2.3 列表页加载</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/fed/ln
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">频道ID</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>tmk</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">是(1)否(0)模拟实时发布时间(部分新闻的发布时间修改为5分钟以内)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>t</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">显示专题  是(1)否(0)</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="2.4-列表页刷新（广告）"><a name="2.4-列表页刷新（广告）" href="#2.4-列表页刷新（广告）"></a>2.4 列表页刷新（广告）</h4><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/fed/ra
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">频道ID：推荐频道1，视频：44</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>tmk</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">是(1)否(0)模拟实时发布时间(部分新闻的发布时间修改为5分钟以内)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>b</td>
+<td style="text-align:left">String(base64编码)</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">广告调用传的规格参数,具体见广告调用pdf,用base64编码处理</td>
+</tr>
+<tr>
+<td>t</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示专题  是(1)否(0)</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示https图片地址  是(1)否(0)</td>
+</tr>
+<tr>
+<td>v</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示视频  是(1)否(0)</td>
+</tr>
+<tr>
+<td>nid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">最大新闻ID</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="2.5-列表页加载（广告）"><a name="2.5-列表页加载（广告）" href="#2.5-列表页加载（广告）"></a>2.5 列表页加载（广告）</h4><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/fed/la
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">频道ID</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>tmk</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">是(1)否(0)模拟实时发布时间(部分新闻的发布时间修改为5分钟以内)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>b</td>
+<td style="text-align:left">String(base64编码)</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">广告调用传的规格参数,具体见广告调用pdf,用base64编码处理</td>
+</tr>
+<tr>
+<td>t</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示专题  是(1)否(0)</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示https图片地址  是(1)否(0)</td>
+</tr>
+<tr>
+<td>v</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示视频  是(1)否(0)</td>
+</tr>
+<tr>
+<td>nid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">最小新闻ID</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="2.6-行政区划-列表页刷新"><a name="2.6-行政区划-列表页刷新" href="#2.6-行政区划-列表页刷新"></a>2.6 行政区划-列表页刷新</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/loc/r
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pr</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">省，<font color="#ff0000">三种行政区划参数最少提供一个，不能为空字符串[“”]</font></td>
+</tr>
+<tr>
+<td>di</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">市</td>
+</tr>
+<tr>
+<td>ci</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">区/县</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>tmk</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">是(1)否(0)模拟实时发布时间(部分新闻的发布时间修改为5分钟以内)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="2.7-行政区划-列表页加载"><a name="2.7-行政区划-列表页加载" href="#2.7-行政区划-列表页加载"></a>2.7 行政区划-列表页加载</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/loc/l
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pr</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">省，<font color="#ff0000">三种行政区划参数最少提供一个，不能为空字符串[“”]</font></td>
+</tr>
+<tr>
+<td>di</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">市</td>
+</tr>
+<tr>
+<td>ci</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">区/县</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>tmk</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">是(1)否(0)模拟实时发布时间(部分新闻的发布时间修改为5分钟以内)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="2.8-新闻源-列表页刷新"><a name="2.8-新闻源-列表页刷新" href="#2.8-新闻源-列表页刷新"></a>2.8 新闻源-列表页刷新</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/src/r
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻源ID</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>tmk</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">是(1)否(0)模拟实时发布时间(部分新闻的发布时间修改为5分钟以内)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="2.9-新闻源-列表页加载"><a name="2.9-新闻源-列表页加载" href="#2.9-新闻源-列表页加载"></a>2.9 新闻源-列表页加载</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/src/l
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻源ID</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>tmk</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">是(1)否(0)模拟实时发布时间(部分新闻的发布时间修改为5分钟以内)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><hr class="section"><h3 id="3-新闻详情页"><a name="3-新闻详情页" href="#3-新闻详情页"></a>3 新闻详情页</h3><h4 id="3.1-新闻详情内容"><a name="3.1-新闻详情内容" href="#3.1-新闻详情内容"></a>3.1 新闻详情内容</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/con
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(非正式注册用户不提供)</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示https图片地址  是(1)否(0)</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": {
+    "nid": 6825,                                    - 新闻ID
+    "docid": "http://mp.weixin.qq.com/...",         - 用于获取评论的docid
+    "title": "分享 | 驾照自学直考到底难不难？成都31人报名2人拿证，他们的经验是......",
+    "ptime": "2016-05-22 01:03:00",                 - 发布时间
+    "pname": "央视新闻",
+    "purl": "http://mp.weixin.qq.com/s?...",
+    "channel": 2,                                   - 频道ID
+    "inum": 6,                                      - 正文图片数量
+    "tags": [                                       - 关键字
+      "驾照","驾校"
+    ],
+    "descr": "今年4月1日起，武汉、成都、南京、福州等...",
+    "content": [
+      {
+        "txt": "本文来源：荆楚网、华西都市报"
+      },
+      {
+        "img": "http://bdp-pic.deeporiginalx.com/W0JAMjIzZmZhZGQ.jpg"
+      },
+      {
+        "vid": "http://anyvideourl.com"
+      },
+      ...
+    ],
+    "collect": 1,
+    "concern": 1,
+    "comment": 0,
+    "colflag":1,        - 是(1)否(0)已收藏
+    "conflag":1,        - 是(1)否(0)已关心
+    "conpubflag":1        - 是(1)否(0)已关心该新闻对应的发布源
+  }
+}
+</pre><hr class="section"><h4 id="3.2-下一条详情页"><a name="3.2-下一条详情页" href="#3.2-下一条详情页"></a>3.2 下一条详情页</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/next
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>chid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">频道ID</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示https图片地址  是(1)否(0)</td>
+</tr>
+</tbody>
+</table><hr class="section"><h4 id="3.3-上一条详情页"><a name="3.3-上一条详情页" href="#3.3-上一条详情页"></a>3.3 上一条详情页</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/last
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>chid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">频道ID</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示https图片地址  是(1)否(0)</td>
+</tr>
+</tbody>
+</table><hr class="section"><hr class="section"><h4 id="3.4-视频详情页"><a name="3.4-视频详情页" href="#3.4-视频详情页"></a>3.4 视频详情页</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/vi/con
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": {
+    "nid": 6825,                                    - 新闻ID
+    "docid": "http://mp.weixin.qq.com/...",         - 用于获取评论的docid
+    "title": "分享 | 驾照自学直考到底难不难？成都31人报名2人拿证，他们的经验是......",
+    "ptime": "2016-05-22 01:03:00",                 - 发布时间
+    "pname": "央视新闻",
+    "purl": "http://mp.weixin.qq.com/s?...",
+    "channel": 2,                                   - 频道ID
+    "inum": 6,                                      - 正文图片数量
+    "tags": [                                       - 关键字
+      "驾照","驾校"
+    ],
+    "descr": "今年4月1日起，武汉、成都、南京、福州等...",
+    "content": [
+      {
+        "txt": "本文来源：荆楚网、华西都市报"
+      },
+      {
+        "img": "http://bdp-pic.deeporiginalx.com/W0JAMjIzZmZhZGQ.jpg"
+      },
+      {
+        "vid": "http://anyvideourl.com"
+      },
+      ...
+    ],
+    "collect": 1,
+    "concern": 1,
+    "comment": 0,
+    "colflag":1,        - 是(1)否(0)已收藏
+    "conflag":1,        - 是(1)否(0)已关心
+    "conpubflag":1,        - 是(1)否(0)已关心该新闻对应的发布源
+    "videourl": "http://gslb.miaopai.com/stream/sHLX8Z6pr0hAKyK6SDucXA__.mp4?yx=&amp;refer=weibo_app&amp;Expires=1482375610&amp;ssig=MtRxNEvf0N&amp;KID=unistore,video", -视频url
+    "thumbnail": "http://bdp-pic.deeporiginalx.com/W0JAMjIzZmZhZGQ.jpg" -背景图
+  }
+}
+</pre><hr class="section"><h4 id="3.5-详情页相关推荐列表"><a name="3.5-详情页相关推荐列表" href="#3.5-详情页相关推荐列表"></a>3.5 详情页相关推荐列表</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/asc
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示https图片地址  是(1)否(0)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": [
+    {
+      "url": "http://deeporiginalx.com/news.html?type=0&amp;nid=10608629",
+      "title": "【背部训练】与@韩夕Jessie 的背部训练。来一起练背￼一介粗人的秒拍视频  workout vlog vol.3",
+      "from": "Qidian",
+      "rank": 1,
+      "pname": "微博热点",
+      "ptime": "2017-01-08 22:02:26",
+      "img": "http://wsqncdn.miaopai.com/stream/Uj1lz71h-04mAv15B33TJA___m.jpg",
+      "nid": 10608629,
+      "duration": 190,
+      "logtype": 26,
+      "logchid": 0
+    },
+    ...
+  ]
+}
+</pre><h4 id="3.6-详情页相关推荐列表(带广告)"><a name="3.6-详情页相关推荐列表(带广告)" href="#3.6-详情页相关推荐列表(带广告)"></a>3.6 详情页相关推荐列表(带广告)</h4><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/ascad
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>b</td>
+<td style="text-align:left">String(base64编码)</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">广告调用传的规格参数,具体见广告调用pdf,用base64编码处理</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示https图片地址  是(1)否(0)</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": [
+    {
+      "url": "http://deeporiginalx.com/news.html?type=0&amp;nid=10608629",
+      "title": "【背部训练】与@韩夕Jessie 的背部训练。来一起练背￼一介粗人的秒拍视频  workout vlog vol.3",
+      "from": "Qidian",
+      "rank": 1,
+      "pname": "微博热点",
+      "ptime": "2017-01-08 22:02:26",
+      "img": "http://wsqncdn.miaopai.com/stream/Uj1lz71h-04mAv15B33TJA___m.jpg",
+      "nid": 10608629,
+      "duration": 190,
+      "logtype": 26,
+      "logchid": 0
+    },
+    {
+      "url": "",
+      "title": "",
+      "from": "",
+      "rank": 0,
+      "pname": "",
+      "ptime": "2017-03-28 18:15:10",
+      "rtype": 3,
+      "logtype": 3,
+      "adresponse": {
+        "version": 1,
+        "status": 0,
+        "message": "Success",
+        "data": {
+          "adspace": [
+            {
+              "aid": 246,
+              "adformat": 5,
+              "creative": [
+                {
+                  "cid": 0,
+                  "index": 0,
+                  "ad_native": [
+                    {
+                      "template_id": "167",
+                      "index": 0,
+                      "required_field": 2,
+                      "action_type": 0,
+                      "required_value": "http://pgdt.gtimg.cn/gdt/0/DAABYMtAEsAEsAAIBYHBf6BTpLlzwG.jpg/0?ck=59b912f913a8bda4c9b6cbede441ba99",
+                      "type": "jpg",
+                      "index_value": "icon"
+                    },
+                    {
+                      "template_id": "167",
+                      "index": 1,
+                      "required_field": 1,
+                      "action_type": 0,
+                      "required_value": "会员才知道的世界，你懂的",
+                      "type": "text",
+                      "index_value": "title"
+                    },
+                    {
+                      "template_id": "167",
+                      "index": 2,
+                      "required_field": 1,
+                      "action_type": 0,
+                      "required_value": "95%的人不知道的优惠！你正在浪费你的特权",
+                      "type": "text",
+                      "index_value": "description"
+                    },
+                    {
+                      "template_id": "167",
+                      "index": 3,
+                      "required_field": 2,
+                      "action_type": 0,
+                      "required_value": "http://pgdt.gtimg.cn/gdt/0/transformer_11383441592749851919_149.jpg/0?ck=f0274540034de43753d2084ead861db9",
+                      "type": "jpg",
+                      "index_value": "image"
+                    }
+                  ],
+                  "impression": [
+                    "http://v.gdt.qq.com/gdt_stats.fcg?count=1&amp;viewid0=88_e5tPeEmHlT!TyRJImpjTR!tw7SW2ZKbEK1Fhww8fFIN9G5GICvcCfZWqZo8bLGxwMAeermn!wIyR5DQksPyz5pz2KCQUP0E5IuS_rVAac19hqy5PL1nx7GoVi47mS7nOuciGaNBXMAAInLntjyCJjRDKNQY1o6BNQdhm2n3UU6unRpwPAU8iYKvl6yhubR9e7Ky1xP2H0JzXNdRUC0g",
+                    "http://as.lieying.cn/v2/forward/imp/ch/16?version=1.0&amp;sspaid=246&amp;sid=0&amp;guid=ffa8568e69c74e61910f16a293467776"
+                  ],
+                  "click": [
+                    "http://as.lieying.cn/v2/forward/click/ch/16?version=1.0&amp;sspaid=246&amp;sid=0&amp;guid=ffa8568e69c74e61910f16a293467776"
+                  ],
+                  "event": [
+                    {
+                      "event_key": 1,
+                      "event_value": "http://c.gdt.qq.com/gdt_mclick.fcg?viewid=88_e5tPeEmHlT!TyRJImpjTR!tw7SW2ZKbEK1Fhww8fFIN9G5GICvcCfZWqZo8bLGxwMAeermn!wIyR5DQksPyz5pz2KCQUP0E5IuS_rVAac19hqy5PL1nx7GoVi47mS7nOuciGaNBXMAAInLntjyCJjRDKNQY1o6BNQdhm2n3UU6unRpwPAU8iYKvl6yhubR9e7Ky1xP2H0JzXNdRUC0g&amp;jtype=0&amp;i=1&amp;os=2&amp;acttype=&amp;s=%7B%22down_x%22%3A-999%2C%22down_y%22%3A-999%2C%22up_x%22%3A-999%2C%22up_y%22%3A-999%7D"
+                    }
+                  ],
+                  "admark": "http://alicdn.lieying.cn/sentshow/imgs/tmp/tsa_ad_logo.png"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+    ...
+  ]
+}
+</pre><hr class="section"><h3 id="4-评论列表"><a name="4-评论列表" href="#4-评论列表"></a>4 评论列表</h3><hr class="section"><h4 id="4.1-新闻普通评论列表"><a name="4.1-新闻普通评论列表" href="#4.1-新闻普通评论列表"></a>4.1 新闻普通评论列表</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/coms/c
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>did</td>
+<td style="text-align:left">String(base64)</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻 docid</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">注册用户ID，提供该ID会在响应中设置该用户的点赞标记 upflag</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OKT
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": [
+    {
+      "id": 2,                          - 评论ID
+      "content": "66666",               - 评论正文
+      "commend": 10,                    - 赞数
+      "ctime": "2016-05-24 19:22:11",   - 创建时间
+      "uid": 4,                         - 创建该评论的用户ID
+      "uname": "zhange",                - 创建该评论的用户名
+      "avatar": "http://touxiang.jpg"   - Option
+      "docid": "http://toutiao.com/group/2223/comments/111",  - 该评论对应的新闻 docid
+      "upflag": 1,                      - 用户是否能对该条评论点赞，0、1 对应 可点、不可点
+      "nid": 12332,                        - 该评论的新闻ID，仅用户个人评论列表接口
+      "ntitle": "这是新闻标题"            - 该评论的新闻标题，仅用户个人评论列表接口
+    }
+  ]
+}
+</pre><hr class="section"><h4 id="4.2-新闻热点评论列表"><a name="4.2-新闻热点评论列表" href="#4.2-新闻热点评论列表"></a>4.2 新闻热点评论列表</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/coms/h
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>did</td>
+<td style="text-align:left">String(base64)</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻 docid</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">注册用户ID，提供该ID会在响应中设置该用户的点赞标记 upflag</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 5)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><hr class="section"><h3 id="5-专题详情"><a name="5-专题详情" href="#5-专题详情"></a>5 专题详情</h3><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/tdq
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tid</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">专题ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": {
+    "topicBaseInfo": {                                                 - 专题基本信息
+      "id": 1,                                                         - 专题ID
+      "name": "专题标题",
+      "cover": "http://bdp-pic.deeporiginalx.com/W0JAMjM4Mjc4ZDE.png", - 专题封面图
+      "description": "",
+      "class_count": 0,                                                - 专题包含分类数
+      "news_count": 0,                                                 - 专题包含新闻数
+      "online": 1,                                                     - 专题是否上线
+      "top": 0,                                                        - 专题是否置顶
+      "create_time": "2016-09-27 16:46:54"
+    },
+    "topicClass": [                                                    - 专题分类数组
+      {
+        "topicClassBaseInfo": {                                        - 专题分类基本信息
+          "id": 1,
+          "name": "分类一",
+          "topic": 1,
+          "order": 1
+        },
+        "newsFeed": [                                                  - 专题分类中的新闻feed流数组
+          {
+            "nid": 7660914,
+            "docid": "http://www.yidianzixun.com/article/0Ehfu9ep",
+            "title": "詹姆斯有多强？NBA经理们说最强SF/PF都是他！",
+            "ptime": "2016-10-19 11:23:59",
+            "pname": "颜小白的篮球梦",
+            "channel": 6,
+            "collect": 0,
+            "concern": 0,
+            "comment": 0,
+            "style": 1,
+            "imgs": [
+              "http://bdp-pic.deeporiginalx.com/111c7c64f9ccb7be3c8a61e6d3fcca0e_544X408.jpg"
+            ],
+            "logtype": 41,                                             - 推荐日志类型:比rtype区分更细
+            "logchid": 1                                              - 点击新闻所在频道:区分奇点和其他频道
+          }
+          ......
+        ]
+      },
+      {
+        "topicClassBaseInfo": {
+          "id": 2,
+          "name": "分类二",
+          "topic": 1,
+          "order": 2
+        },
+        "newsFeed": [
+          {
+            "nid": 7660911,
+            "docid": "https://kuaibao.qq.com/s/20161019G02RTQ00",
+            "title": "2016学年度华东师范大学优秀外国留学生奖学金申请",
+            "ptime": "2016-10-19 11:23:53",
+            "pname": "华东师范大学留学生办公室",
+            "channel": 28,
+            "collect": 0,
+            "concern": 0,
+            "comment": 0,
+            "style": 0,
+            "city": "上海",
+            "logtype": 41,                                             - 推荐日志类型:比rtype区分更细
+            "logchid": 1                                              - 点击新闻所在频道:区分奇点和其他频道
+          }
+          ......
+        ]
+      }
+      ......
+    ]
+  }
+}
+</pre><hr class="section"><h3 id="6-新闻搜索"><a name="6-新闻搜索" href="#6-新闻搜索"></a>6 新闻搜索</h3><hr class="section"><h4 id="6.1-搜索"><a name="6.1-搜索" href="#6.1-搜索"></a>6.1 搜索</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/es/s
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keywords</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">搜索关键字</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">用户id</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": [
+    {
+      "nid": 6695,                                            - 新闻ID
+      "docid": "http://toutiao.com",                          - 用于获取评论的 docid
+      "title": "日媒：欧洲能源多元化 俄天然气外交走向终结",
+      "ptime": "2016-05-22 01:20:46",
+      "pname": "参考消息",
+      "purl": "http://m.cankaoxiaoxi.com//20160522/1166670.shtml",
+      "channel": 9,
+      "collect": 0,                                           - 收藏数
+      "concern": 0,                                           - 关心数
+      "comment": 4,                                           - 评论数
+      "style": 1,                                             - 列表图格式，0、1、2、3
+      "imgs": [                                               - 该字段会有对应style数值的图片
+        "http://bdp-pic.deeporiginalx.com/W0JAMjM4Mjc4ZDE.png"
+      ],
+      "province": "山东",
+      "city": "青岛",
+      "district": "山东"
+    },
+    …
+  ],
+  "total": 2000                                               - 总条数
+}
+</pre><hr class="section"><h4 id="6.2-搜索新闻及订阅号"><a name="6.2-搜索新闻及订阅号" href="#6.2-搜索新闻及订阅号"></a>6.2 搜索新闻及订阅号</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/es/snp
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keywords</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">搜索关键字</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否(默认 20)</td>
+<td style="text-align:left">条数</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">用户id</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": 
+  {
+            "news": [
+                {
+                  "nid": 6695,                                            - 新闻ID
+                  "docid": "http://toutiao.com",                          - 用于获取评论的 docid
+                  "title": "日媒：欧洲能源多元化 俄天然气外交走向终结",
+                  "ptime": "2016-05-22 01:20:46",
+                  "pname": "参考消息",
+                  "purl": "http://m.cankaoxiaoxi.com//20160522/1166670.shtml",
+                  "channel": 9,
+                  "collect": 0,                                           - 收藏数
+                  "concern": 0,                                           - 关心数
+                  "comment": 4,                                           - 评论数
+                  "style": 1,                                             - 列表图格式，0、1、2、3
+                  "imgs": [                                               - 该字段会有对应style数值的图片
+                    "http://bdp-pic.deeporiginalx.com/W0JAMjM4Mjc4ZDE.png"
+                  ],
+                  "province": "山东",
+                  "city": "青岛",
+                  "district": "山东"
+                },
+                …
+              ],
+              "total": 2000,                                              - 总条数
+              "publisher": [
+                  {
+                    "id": 6695,                                            - 订阅号ID
+                    "ctime": "2016-05-22 01:20:46",                        - 创建时间
+                    "name": "安卓中国",                                     -  订阅号名称
+                    "concern": 0,                                           - 关注数
+                    "flag": 0,                                             - 0未关注, &gt;0已关注
+                  },
+                  …
+                ]
+  }
+}
+</pre><h3 id="7-广告请求"><a name="7-广告请求" href="#7-广告请求"></a>7 广告请求</h3><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/ad
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>b</td>
+<td style="text-align:left">String(base64编码)</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">广告调用传的规格参数,具体见广告调用pdf,用base64编码处理</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">显示https图片地址  是(1)否(0)</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": [
+    {
+      "nid": 0,
+      "docid": "0",
+      "title": "走！去滑雪！满200减100",
+      "ptime": "2017-01-18 14:20:02",
+      "pname": " ",
+      "purl": "http://c.gdt.qq.com/gdt_mclick.fcg?viewid=3zeyBuN!Sfr0OTbn_JziawNBUXB9a189HufqCn3tppKE3PlycbsBypCBuq1VTWife3JAyQ0BjqfDDuv4IzGOSBzYLg9fnz6AQwPhwcHhVhk2AT_YiIYHU_L0wfeztXsagWv1L_yl!JvhiXz0L_IQ_Sgk8m31agR_Z4Xr2HfcXFAt7R40F3s2cUFaHmLg!N4paGC1WWDCHv9Oi9aCQKXpxHtqiQ_e2yZi&amp;jtype=0&amp;i=1&amp;os=2&amp;acttype=&amp;s={\"down_x\":-999,\"down_y\":-999,\"up_x\":-999,\"up_y\":-999}",
+      "channel": 9999,
+      "collect": 0,
+      "concern": 0,
+      "comment": 0,
+      "style": 1,
+      "imgs": [
+        "https://pgdt.gtimg.cn/gdt/0/DAABYMtAUAALQABXBYfsxzAU7tY5EH.jpg/0?ck=b497aed2f491d4768f106639edfc2fe0"
+      ],
+      "rtype": 3,
+      "adimpression": [
+        "http://v.gdt.qq.com/gdt_stats.fcg?count=1&amp;viewid0=3zeyBuN!Sfr0OTbn_JziawNBUXB9a189HufqCn3tppKE3PlycbsBypCBuq1VTWife3JAyQ0BjqfDDuv4IzGOSBzYLg9fnz6AQwPhwcHhVhk2AT_YiIYHU_L0wfeztXsagWv1L_yl!JvhiXz0L_IQ_Sgk8m31agR_Z4Xr2HfcXFAt7R40F3s2cUFaHmLg!N4paGC1WWDCHv9Oi9aCQKXpxHtqiQ_e2yZi"
+      ]
+    }
+  ]
+}
+</pre><hr class="section"><h3 id="8-新闻发布源"><a name="8-新闻发布源" href="#8-新闻发布源"></a>8 新闻发布源</h3><hr class="section"><h4 id="8.1-添加新闻发布源关心"><a name="8.1-添加新闻发布源关心" href="#8.1-添加新闻发布源关心"></a>8.1 添加新闻发布源关心</h4><p><em>Request</em></p><pre><code>POST /v2/ns/pbs/cocs
+Authorization: Basic MmFhOXhrZTlxbGVmM3luOCc2M3kwanFwcChjeHBmczM1ZDRjYip4cyoycjdobG51ZWd5eXFmOGZiaHRrcTVrcw
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</code></pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>参数列表</th>
+<th>是否必须</th>
+<th>参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>是</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>pname</td>
+<td>String</td>
+<td>是</td>
+<td>发布源名称</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code":2000,
+  "data":122            - 更新后，该发布源的关心数
+}
+</pre><h4 id="8.2-取消新闻发布源关心"><a name="8.2-取消新闻发布源关心" href="#8.2-取消新闻发布源关心"></a>8.2 取消新闻发布源关心</h4><p><em>Request</em></p><pre><code>DELETE /v2/ns/pbs/cocs
+Authorization: Basic MmFhOXhrZTlxbGVmM3luOCc2M3kwanFwcChjeHBmczM1ZDRjYip4cyoycjdobG51ZWd5eXFmOGZiaHRrcTVrcw
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</code></pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>参数列表</th>
+<th>是否必须</th>
+<th>参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>是</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>pname</td>
+<td>String</td>
+<td>是</td>
+<td>发布源名称</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code":2000,
+  "data":122            - 更新后，该发布源的关心数
+}
+</pre><h4 id="8.3-已关心发布源列表"><a name="8.3-已关心发布源列表" href="#8.3-已关心发布源列表"></a>8.3 已关心发布源列表</h4><p><em>Request</em></p><pre><code>GET /v2/ns/pbs/cocs?uid=112011 HTTP/1.1
+Authorization: Basic MmFhOXhrZTlxbGVmM3luOCc2M3kwanFwcChjeHBmczM1ZDRjYip4cyoycjdobG51ZWd5eXFmOGZiaHRrcTVrcw
+Host: bdp.deeporiginalx.com
+</code></pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>参数列表</th>
+<th>是否必须</th>
+<th>参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>是</td>
+<td>用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code":2000,
+  "data":[
+    {
+      "id":6,
+      "ctime":"2016-07-18 22:09:19",
+      "name":"深圳吃货",
+      "icon":"http://some.png",
+      "descr":"深圳美食",
+      "concern":1
+    }
+  ]
+}
+</pre><h4 id="8.4-已关心发布源的新闻列表刷新"><a name="8.4-已关心发布源的新闻列表刷新" href="#8.4-已关心发布源的新闻列表刷新"></a>8.4 已关心发布源的新闻列表刷新</h4><p><em>Request</em></p><pre><code>GET /v2/ns/pbs/cocs/r
+Authorization: Basic MmFhOXhrZTlxbGVmM3luOCc2M3kwanFwcChjeHBmczM1ZDRjYip4cyoycjdobG51ZWd5eXFmOGZiaHRrcTVrcw
+Host: bdp.deeporiginalx.com
+</code></pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>参数类型</th>
+<th>是否必须</th>
+<th>参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>是</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td>String</td>
+<td>是</td>
+<td>起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>p</td>
+<td>String</td>
+<td>否(默认 1)</td>
+<td>页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>String</td>
+<td>否(默认 20)</td>
+<td>条数</td>
+</tr>
+</tbody>
+</table><p><strong>Response：新闻列表页数据格式</strong></p><h4 id="8.5-已关心发布源的新闻列表加载"><a name="8.5-已关心发布源的新闻列表加载" href="#8.5-已关心发布源的新闻列表加载"></a>8.5 已关心发布源的新闻列表加载</h4><p><em>Request</em></p><pre><code>GET /v2/ns/pbs/cocs/l
+Authorization: Basic MmFhOXhrZTlxbGVmM3luOCc2M3kwanFwcChjeHBmczM1ZDRjYip4cyoycjdobG51ZWd5eXFmOGZiaHRrcTVrcw
+Host: bdp.deeporiginalx.com
+</code></pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>参数类型</th>
+<th>是否必须</th>
+<th>参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td>String</td>
+<td>是</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td>String</td>
+<td>是</td>
+<td>起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>p</td>
+<td>String</td>
+<td>否(默认 1)</td>
+<td>页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>String</td>
+<td>否(默认 20)</td>
+<td>条数</td>
+</tr>
+</tbody>
+</table><p><strong>Response：新闻列表页数据格式</strong></p><h4 id="8.6-指定新闻发布源新闻列表"><a name="8.6-指定新闻发布源新闻列表" href="#8.6-指定新闻发布源新闻列表"></a>8.6 指定新闻发布源新闻列表</h4><p><em>Request</em></p><pre><code>GET /v2/ns/pbs
+Host: bdp.deeporiginalx.com
+</code></pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>参数类型</th>
+<th>是否必须</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pname</td>
+<td>String</td>
+<td>是</td>
+<td>发布源名称</td>
+</tr>
+<tr>
+<td>info</td>
+<td>String</td>
+<td>否(默认 0)</td>
+<td>是(1)否(0)同时获得改发布源的详情</td>
+</tr>
+<tr>
+<td>tcr</td>
+<td>String</td>
+<td>是</td>
+<td>起始时间，13位时间戳</td>
+</tr>
+<tr>
+<td>p</td>
+<td>String</td>
+<td>否(默认 1)</td>
+<td>页数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>String</td>
+<td>否(默认 20)</td>
+<td>条数</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code":2000,
+  "data":{
+    "info":{                            - 该发布源详情
+      "id":4,
+      "ctime":"2016-07-15 18:23:05",
+      "name":"环球网",
+      "concern":1,
+      "icon":"http://some.png",
+      "descr":"环球网新闻"
+    },
+      "news":[
+      {
+       "nid":5212751,                    - 通用列表页结构
+       "docid":"http://m.huanqiu...",
+       "title":" “十二金衩”+“彩蛋”:盛大游戏Showgirl制霸2016CJ",
+       "ptime":"2016-07-22 13:47:45",
+       "pname":"环球网",
+       "purl":"http://m.huanqiu....",
+       "channel":22,
+       "collect":0,
+       "concern":0,
+       "comment":0,
+       "style":3,
+       "imgs":["http://bdp-pic.deeporiginalx.com/...",
+               "http://bdp-pic.deeporiginalx.com/..."
+              ]
+      },
+      ...
+    ]
+  }
+</pre><hr class="section"><h3 id="9-用户相关操作"><a name="9-用户相关操作" href="#9-用户相关操作"></a>9 用户相关操作</h3><hr class="section"><h4 id="9.1-新闻评论"><a name="9.1-新闻评论" href="#9.1-新闻评论"></a>9.1 新闻评论</h4><hr class="section"><h5 id="9.1.1-创建评论"><a name="9.1.1-创建评论" href="#9.1.1-创建评论"></a>9.1.1 创建评论</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/coms
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+
+{
+  "content": "66666",
+  "commend": 0,                             - 设置为 0
+  "ctime": "2016-05-24 19:22:11",
+  "uid": 22,
+  "uname": "zhange",
+  "avatar": "http://customtouxiang.jpg"     - Option
+  "docid": "http://toutiao.com/group/1/comments/?count=100&amp;offset=0&amp;format=json"
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 7               - 已创建的评论ID
+}
+</pre><hr class="section"><h5 id="9.1.2-删除评论"><a name="9.1.2-删除评论" href="#9.1.2-删除评论"></a>9.1.2 删除评论</h5><p><em>Request</em></p><pre class="json hljs">DELETE /v2/ns/au/coms
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>did</td>
+<td style="text-align:left">String(base64)</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">评论的 docid</td>
+</tr>
+<tr>
+<td>cid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">评论  ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 7               - 已删除的评论ID
+}
+</pre><hr class="section"><h5 id="9.1.3-查看评论列表"><a name="9.1.3-查看评论列表" href="#9.1.3-查看评论列表"></a>9.1.3 查看评论列表</h5><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/au/coms
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><h4 id="9.2-新闻评论点赞"><a name="9.2-新闻评论点赞" href="#9.2-新闻评论点赞"></a>9.2 新闻评论点赞</h4><hr class="section"><h5 id="9.2.1-点赞"><a name="9.2.1-点赞" href="#9.2.1-点赞"></a>9.2.1 点赞</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/coms/up
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">评论ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 12            - 更新后的赞数
+}
+</pre><hr class="section"><h5 id="9.2.2-取消赞"><a name="9.2.2-取消赞" href="#9.2.2-取消赞"></a>9.2.2 取消赞</h5><p><em>Request</em></p><pre class="json hljs">DELETE /v2/ns/coms/up
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">评论ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 12            - 更新后的赞数
+}
+</pre><h4 id="9.3-新闻收藏"><a name="9.3-新闻收藏" href="#9.3-新闻收藏"></a>9.3 新闻收藏</h4><hr class="section"><h5 id="9.3.1-添加收藏"><a name="9.3.1-添加收藏" href="#9.3.1-添加收藏"></a>9.3.1 添加收藏</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/cols
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 2               - 更新后的收藏数
+}
+</pre><hr class="section"><h5 id="9.3.2-取消收藏"><a name="9.3.2-取消收藏" href="#9.3.2-取消收藏"></a>9.3.2 取消收藏</h5><p><em>Request</em></p><pre class="json hljs">DELETE /v2/ns/cols
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 1               - 更新后的收藏数
+}
+</pre><hr class="section"><h5 id="9.3.3-查看收藏列表"><a name="9.3.3-查看收藏列表" href="#9.3.3-查看收藏列表"></a>9.3.3 查看收藏列表</h5><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/au/cols
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response：新闻列表页数据格式</em><br>返回格式与feed流一样</p><h4 id="9.4-新闻关心"><a name="9.4-新闻关心" href="#9.4-新闻关心"></a>9.4 新闻关心</h4><hr class="section"><h5 id="9.4.1-添加关心"><a name="9.4.1-添加关心" href="#9.4.1-添加关心"></a>9.4.1 添加关心</h5><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/cocs
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 2               - 更新后的关心数
+}
+</pre><hr class="section"><h5 id="9.4.2-取消关心"><a name="9.4.2-取消关心" href="#9.4.2-取消关心"></a>9.4.2 取消关心</h5><p><em>Request</em></p><pre class="json hljs">DELETE /v2/ns/cocs
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">新闻ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 1               - 更新后的关心数
+}
+</pre><hr class="section"><h5 id="9.4.3-查看关心列表"><a name="9.4.3-查看关心列表" href="#9.4.3-查看关心列表"></a>9.4.3 查看关心列表</h5><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/au/cocs
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><hr class="section"><h3 id="10-新闻频道"><a name="10-新闻频道" href="#10-新闻频道"></a>10 新闻频道</h3><hr class="section"><h4 id="10.1-普通频道"><a name="10.1-普通频道" href="#10.1-普通频道"></a>10.1 普通频道</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/chs
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 1)</td>
+<td style="text-align:left">上线状态，0 或 1</td>
+</tr>
+<tr>
+<td>sech</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否(默认 0)</td>
+<td style="text-align:left">是否同时获得每个一级频道对应的二级频道列表</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": [
+    {
+      "id": 11,
+      "cname": "热点",
+      "state": 1
+      "schs": [                - 如果提供了 sech 参数，并且该一级频道拥有二级频道
+          "id":1,                - 二级频道 ID
+          "cname":"评测",
+          "chid":11,            - 对应的一级频道 ID
+          "state":1
+      ]
+    }
+  ]
+}
+</pre><hr class="section"><h4 id="10.2-用户定制频道"><a name="10.2-用户定制频道" href="#10.2-用户定制频道"></a>10.2 用户定制频道</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/ns/au/chs/{uid}
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": [
+    {
+      "id": 2,
+      "cname": "社会",
+      "state": 1
+    },
+    ...
+  ]
+}
+</pre><hr class="section"><h4 id="10.3-用户定制频道修改"><a name="10.3-用户定制频道修改" href="#10.3-用户定制频道修改"></a>10.3 用户定制频道修改</h4><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/au/chs/{uid}
+Host: bdp.deeporiginalx.com
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+
+{
+  "channels": [
+    "娱乐",
+    ...
+  ]
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": {
+    "channels": [
+      "娱乐",
+      ...
+    ]
+  }
+}
+</pre><hr class="section"><h3 id="11-日志上报"><a name="11-日志上报" href="#11-日志上报"></a>11 日志上报</h3><hr class="section"><h4 id="11.1-点击日志"><a name="11.1-点击日志" href="#11.1-点击日志"></a>11.1 点击日志</h4><p><em>Request</em></p><pre class="json hljs">GET /rep/v2/c
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">省份</td>
+</tr>
+<tr>
+<td>t</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">市</td>
+</tr>
+<tr>
+<td>i</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">地区/县</td>
+</tr>
+<tr>
+<td>d</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">数据</td>
+</tr>
+</tbody>
+</table><p>字段 d 的数据格式初始为JSON，通过base64加密并移除末尾空格：</p><pre class="json hljs">"d":[
+  {
+    "n": 234,   - Long 新闻ID
+    "c": 12,    - Int 频道ID
+    "t": 2,     - Int 新闻类型ID
+    "s": 23,    - Int 停留时长，秒
+    "f": 1,     - Int 进入位置ID
+    "lt": 0,    - Int logtype,新闻推荐类型
+    "lc": 1,    - Int logchid,新闻从那个频道点击进入
+  },
+  ...
+]
+</pre><ol>
+<li>将字段d的值(不包括字段名[“d”:]部分)进行base64加密 - ImQiOlt7Im4iOiAyMzQsImMiOiAxMiwidCI6IDIsInMiOiAyMywiZiI6IDF9XQ==</li><li>移除空格 - ImQiOlt7Im4iOiAyMzQsImMiOiAxMiwidCI6IDIsInMiOiAyMywiZiI6IDF9XQ</li><li>与其他参数一起进行URLEncode，构建请求出URL</li></ol><p><strong>示例</strong></p><pre><code class="sh">GET http://bdp.deeporiginalx.com/rep/v2/c?u=22&amp;p=%E5%8C%97%E4%BA%AC&amp;t=%E5%8C%97%E4%BA%AC&amp;i=%E4%B8%9C%E5%9F%8E&amp;d=ImQiOlt7Im4iOiAyMzQsImMiOiAxMiwidCI6IDIsInMiOiAyMywiZiI6IDF9XQ
+
+HTTP/1.1 200 OK
+Content-Type: image/gif
+</code></pre><font color="#ff8000">目前“新闻类型ID”尚未提供，暂时设置为以下值，后续相应模块开发后，根据实际的值提供：</font><p><strong>新闻类型ID</strong></p><table>
+<thead>
+<tr>
+<th>值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:left">普通新闻</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:left">个性推荐</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:left">热点推荐</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:left">编辑推荐</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:left">广告推广</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">后续新增</td>
+</tr>
+</tbody>
+</table><p><strong>进入位置ID</strong></p><table>
+<thead>
+<tr>
+<th>值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:left">列表页</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:left">搜索页</td>
+</tr>
+<tr>
+<td>-</td>
+<td style="text-align:left">后续新增</td>
+</tr>
+</tbody>
+</table><hr class="section"><hr class="section"><h4 id="11.2-用户手机信息,手机app列表收集接口"><a name="11.2-用户手机信息,手机app列表收集接口" href="#11.2-用户手机信息,手机app列表收集接口"></a>11.2 用户手机信息,手机app列表收集接口</h4><p><em>Request</em></p><pre class="json hljs">POST /v2/au/app
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+Content-Type: application/json
+
+{
+  "uid": 634788,
+  "province": "省份",
+  "city": "市",
+  "area": "地区/县",
+  "brand": "苹果",
+  "model": "iPhone7",
+  "apps": [
+    {
+      "app_id": "sogou.mobile.explorer",
+      "app_name": "搜狗浏览器",
+      "active": 0                                   --预装软件
+    },
+    {
+      "app_id": "com.baidu.BaiduMap",
+      "app_name": "百度地图",
+      "active": 1                                   --自装软件
+    }
+  ]
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": 634788
+}
+</pre><hr class="section"><h4 id="11.3-转发记录"><a name="11.3-转发记录" href="#11.3-转发记录"></a>11.3 转发记录</h4><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/replay
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+
+{
+  "nid": 1,                                                              - 新闻ID
+  "uid": 634788,                                                         - 用户ID
+  "whereabout": 1                                                        - 转发去向:1:微信朋友圈 2:微信好友 3:QQ好友 4:新浪微博 5:短信 6:邮件 7:转发链接
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 1               - 已创建的转发记录ID
+}
+</pre><hr class="section"><h4 id="11.4-不感兴趣记录"><a name="11.4-不感兴趣记录" href="#11.4-不感兴趣记录"></a>11.4 不感兴趣记录</h4><p><em>Request</em></p><pre class="json hljs">POST /v2/ns/hate
+Content-Type: application/json
+Host: bdp.deeporiginalx.com
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+X-Requested-With: *
+
+{
+  "nid": 1,                                                              - 新闻ID
+  "uid": 634788,                                                         - 用户ID
+  "reason": 1                                                            - 不感兴趣原因(可空):1、不喜欢 2、低质量 3、重复旧闻 4、来源;
+}
+</pre><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+Authorization: Basic X29pZH5jeDYyMmNvKXhuNzU2NmVuMXNzJy5yaXg0aWphZWUpaTc0M2JjbG40M2l1NDZlYXE3MXcyYV94KDBwNA
+
+{
+  "code": 2000,
+  "data": 1               - 已创建的不感兴趣记录ID
+}
+</pre><h4 id="11.5-滑动接口"><a name="11.5-滑动接口" href="#11.5-滑动接口"></a>11.5 滑动接口</h4><p><em>Request</em></p><pre class="json hljs">GET /v2/sl/ins
+Host: bdp.deeporiginalx.com
+</pre><table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align:left">参数类型</th>
+<th style="text-align:left">是否必须</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mid</td>
+<td style="text-align:left">Stirng</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">机器唯一id, Android为imei, IOS为idfa</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:left">Long</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">用户ID</td>
+</tr>
+<tr>
+<td>ctype</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">渠道类型, 1：奇点资讯， 2：黄历天气，3：纹字锁频，4：猎鹰浏览器，5：白牌</td>
+</tr>
+<tr>
+<td>ptype</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">平台类型，1：IOS，2：安卓，3：网页，4：无法识别</td>
+</tr>
+<tr>
+<td>version_text</td>
+<td style="text-align:left">Stirng</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">APP版本</td>
+</tr>
+<tr>
+<td>operate_type</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">操作类型: 滑动展示:1， 广告展示：2</td>
+</tr>
+</tbody>
+</table><p><em>Response</em></p><pre class="json hljs">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "code": 2000,
+  "data": 634788   --uid
+}
+</pre>
+
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+@font-face {
+    font-family:SourceHanSansCN-Light;
+    src: url('../font/SourceHanSansCN-Light.otf');
+}
+*{
+    font-family: SourceHanSansCN-Light;list-style: none;margin:0;padding: 0;
+}
+.navbox{
+    width:64%;height:auto;position: fixed;left:18%;top:4%;z-index: 99;
+}
+.logobox{
+    width:41px;height:31px;float:left;
+}
+.logobox>img{
+    height: 100%;
+}
+.navword{
+    display:block;width:auto;height:16px;margin-top:1.5%;font-size:16px;color:#eee;text-align: left;line-height: 16px;float:left;
+    margin-left: 1%;
+}
+.nword1{
+    margin-left:22%;
+}
+.nword2{
+    margin-left:11%;
+}
+/*nav结束*/
+.phone1{
+    width:239px;height:496px;position: absolute;left:22%;top:19%;background: url("../img/phone2.png");
+    background-size:cover;
+}
+.phonen{
+    width: 88%;height:75%;margin-top:25%;margin-left:6%;overflow: hidden;position: absolute;
+}
+.phonen>img{
+    width:100%;
+    transition:all ease 2s;
+    position: absolute;
+}
+.phonen>img:hover{
+
+    transform:scale(1.2,1.2);
+}
+.phone1>img{
+    width: 100%;
+}
+.word1{
+    width:auto;height:auto;position:absolute;left:47%;top:35%;
+}
+.baijia{
+    display: block;font-size:62px;color:#fff;
+}
+.sbaijia{
+    display:block;font-size: 40px;color:#fff;
+}
+.erweima{
+    width: 135px;height:135px;float:left;
+}
+.erweima>img{
+    width:100%;
+}
+.download{
+    width:auto;height:auto;float:left;margin-left:5%;margin-top:1%;
+}
+.android{
+    width:160px;height:60px;position: relative;
+}
+.android>a>img{
+    width:100%;transition:all 1s ease;position: absolute;
+}
+.android>a>img:nth-child(2){
+    opacity: 0;
+}
+.ios{
+    width:160px;height:60px;margin-top:7%;position: relative;
+}
+.ios>a>img{
+    width: 100%;transition:all 1s ease;position: absolute;
+}
+.ios>a>img:nth-child(2){
+    opacity: 0;
+}
+/*首屏结束*/
+.word2{
+    display: block;position: absolute;left:19%;top:50%;font-size: 50px;color:#fff;opacity: 0;
+}
+.word2Tu{
+    width:460px;height:162px;position: absolute;left:19%;top:47%;z-index: 99;opacity: 0;
+}
+.word2Tu>img{
+    width:0;position:absolute;right:0;bottom:0;
+}
+.phone2{
+    width:408px;height:494px;position: absolute;right:19%;top:100%;
+}
+.phone2>img{
+    width:100%;
+}
+.phonen2{
+    width:358px;height:395px;position: absolute;right:21%;top:100%;overflow: hidden;
+}
+.phonen2>img{
+    width:100%;position: absolute;opacity: 0
+}
+.showcard2{
+    width:340px;height:248px;position: absolute;right:15%;top:29%;opacity: 0;
+}
+.showcard2>img{
+    width:100%;
+}
+/*2屏结束*/
+.phone3{
+    width:411px;height:496px;position: absolute;left:19%;top:100%;
+}
+.phone3>img{
+    width:100%;
+}
+.word3{
+    display: block;position: absolute;right:13%;top:50%;font-size: 50px;color:#fff;opacity: 0;
+}
+.word3Tu{
+    width:460px;height:162px;position: absolute;right:13%;top:47%;z-index: 99;opacity: 0;
+}
+.word3Tu>img{
+    width:0;position:absolute;left:0;bottom:0;
+}
+.card31{
+    width:241px;height:121px;position: absolute;left:21%;top:30%;opacity: 0;
+}
+.card31>img{
+    width:100%;
+}
+.card32{
+    width:246px;height:141px;position: absolute;left:24%;top:39%;opacity: 0;
+}
+.card32>img{
+    width:100%;
+}
+.card33{
+    width:232px;height:119px;position: absolute;left:27%;top:50%;opacity: 0;
+}
+.card33>img{
+    width:100%;
+}
+.phonen3{
+    width:358px;height:395px;position: absolute;left:21%;top:41%;overflow: hidden;
+}
+.phonen3>img{
+    width:100%;position: absolute;opacity: 0;
+}
+/*3屏结束*/
+.word4{
+    display: block;position: absolute;left:19%;top:50%;font-size: 50px;color:#fff;opacity: 0;
+}
+.word4Tu{
+    width:460px;height:162px;position: absolute;left:19%;top:47%;z-index: 99;opacity: 0;
+}
+.word4Tu>img{
+    width:0;position:absolute;right:0;bottom:0;
+}
+.phone4{
+    width:408px;height:494px;position: absolute;right:19%;top:100%;
+}
+.phone4>img{
+    width:100%;
+}
+.phonen4{
+    width:358px;height:395px;position: absolute;right:21%;top:41%;overflow: hidden;
+}
+.phonen4>img{
+    width:100%;position: absolute;opacity: 0
+}
+.showcard4{
+    width:340px;height:248px;position: absolute;right:15%;top:29%;opacity: 0;
+}
+.showcard4>img{
+    width:100%;
+}
+/*4屏结束*/
+.phone5{
+    width:411px;height:496px;position: absolute;left:19%;top:100%;
+}
+.phone5>img{
+    width:100%;
+}
+.word5{
+    display: block;position: absolute;right:13%;top:50%;font-size: 50px;color:#fff;opacity: 0;
+}
+.word5Tu{
+    width:460px;height:162px;position: absolute;right:13%;top:47%;z-index: 99;opacity: 0;
+}
+.word5Tu>img{
+    width:0;position:absolute;left:0;bottom:0;
+}
+.card5-1{
+    width:300px;height:158px;position: absolute;left:21%;top:34%;opacity: 0;
+}
+.card5-1>img{
+    width:100%;
+}
+.card5-2{
+    width:297px;height:162px;position: absolute;left:23%;top:41%;opacity: 0;
+}
+.card5-2>img{
+    width:100%;
+}
+.card5-3{
+    width:297px;height:168px;position: absolute;left:25%;top:47%;opacity: 0;
+}
+.card5-3>img{
+    width:100%;
+}
+.phonen5{
+    width:358px;height:395px;position: absolute;left:21%;top:41%;overflow: hidden;
+}
+.phonen5>img{
+    width:100%;position: absolute;opacity: 0;
+}
+/*5屏结束*/
+.word6{
+    display: block;position: absolute;left:19%;top:50%;font-size: 50px;color:#fff;opacity: 0;
+}
+.word6Tu{
+    width:460px;height:162px;position: absolute;left:19%;top:47%;z-index: 99;opacity: 0;
+}
+.word6Tu>img{
+    width:0;position:absolute;right:0;bottom:0;
+}
+.phone6{
+    width:408px;height:494px;position: absolute;right:19%;top:100%;
+}
+.phone6>img{
+    width:100%;
+}
+.phonen6{
+    width:358px;height:395px;position: absolute;right:21%;top:41%;overflow: hidden;
+}
+.phonen6>img{
+    width:100%;position: absolute;opacity: 0
+}
+.card6-1{
+    width:265px;height:146px;position: absolute;right:15%;top:29%;opacity: 0;
+}
+.card6-1>img{
+    width:100%;
+}
+.card6-2{
+    width:267px;height:149px;position: absolute;right:15%;top:42%;opacity: 0;
+}
+.card6-2>img{
+    width:100%;
+}

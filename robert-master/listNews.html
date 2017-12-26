@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<script>
+    $(function(){
+        function getUrlParam(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r!=null)
+                return unescape(r[2]);
+//            return r[2];
+            return null;
+        }
+        $(".userName").html(decodeURI(escape(getUrlParam('username'))));
+        console.log(getUrlParam('username'))
+        console.log('åƒé‡Œé£žé›ª')
+    })
+</script>
+<style>
+    .touxiang{
+        width: 40px;height:40px;background: red;
+    }
+    .touxiang img{
+        width: 100%;
+    }
+    .userName{
+        font-size: 16px;margin-top:10px;
+    }
+</style>
+<body>
+<div class="touxiang"><img src=""></div>
+<div class="userName">qwqee</div>
+</body>
+</html>

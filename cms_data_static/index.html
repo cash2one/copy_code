@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <!-- META SECTION -->
+        <title>数据展示</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+        <!--<link rel="stylesheet" href="css/daterangepicker-bs3.css"/>-->
+        <!-- EOF CSS INCLUDE -->                                    
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container">
+            
+            <!-- START PAGE SIDEBAR -->
+            <!--#include virtual="left.html"-->
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                    <!-- SEARCH -->
+                    <!--<li class="xn-search">-->
+                        <!--<form role="form">-->
+                            <!--<input type="text" name="search" placeholder="Search..."/>-->
+                        <!--</form>-->
+                    <!--</li>   -->
+                    <!-- END SEARCH -->
+                    <!-- SIGN OUT -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>                        
+                    </li> 
+                    <!-- END SIGN OUT -->
+
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Dashboard</li>
+                </ul>
+                <!-- END BREADCRUMB -->                       
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                    <button  type="button" class="btn btn-info pull-right " id="btn2">导出</button>
+
+                    <button type="button" class="btn btn-info pull-right search-btn" style="margin-right:15px">查询</button>
+                    <div id="reportrange" class="pull-right col-md-2 col-sm-2" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;margin-right: 10px">
+                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                        <span class="dates"></span> <b class="caret"></b>
+                    </div>
+                    <div class="col-md-2 pull-right col-sm-2 ">
+                        <select class="form-control  version" style="display: none;" multiple id="version">
+
+                        </select>
+                    </div>
+                    <span class="pull-right" style="font-size: 14px;margin-top:5px">版本号:</span>
+                    <div class="col-md-2 pull-right">
+                        <select class="form-control  ptype " style="display: none;" multiple id="ptype">
+                            <!--<option value="All" selected>全部</option>-->
+                            <!--<option > Android</option>-->
+                            <!--<option > IOS</option>-->
+                        </select>
+                    </div>
+                    <span class="pull-right" style="font-size: 14px;margin-top:5px">客户端:</span>
+                    <div class="col-md-2 pull-right col-sm-2">
+                        <select class="form-control  qudao " style="display: none;" multiple id="qudao">
+                            <!--  id="ww" size="5"-->
+                            <!--<option value="0" selected> 全部</option>-->
+                            <!--<option value="1"> 奇点资讯</option>-->
+                            <!--<option value="2">黄历天气</option>-->
+                            <!--<option value="3">纹字锁屏</option>-->
+                            <!--<option value="4">猎鹰浏览器</option>-->
+                            <!--<option>美图</option>-->
+                            <!--<option value="5">白牌</option>-->
+                            <!--<option>微网资讯</option>-->
+                        </select>
+                    </div>
+                    <span class="pull-right" style="font-size: 14px;margin-top:5px">渠道:</span>
+                    <div class="panel panel-default" style="overflow-x:auto ">
+                        <div style="margin:20% auto;text-align: center;display: none" class="noWord">所选日期暂无数据</div>
+                        <div class="panel-body" style="display: none">
+                            <table class="table table-bordered text-center">
+                                <thead >
+                                <tr class="text-center">
+                                    <th rowspan="2">时间</th>
+                                    <th rowspan="2">渠道</th>
+                                    <th rowspan="2">版本号</th>
+                                    <th colspan="3">总PV</th>
+                                    <th colspan="2">UV</th>
+                                    <th rowspan="2">PV/UV</th>
+                                    <th colspan="4">安卓总PV</th>
+                                    <th rowspan="2">安卓UV</th>
+                                    <th rowspan="2">安卓PV/UV</th>
+                                    <th colspan="4">IOS总PV</th>
+                                    <th rowspan="2">IOS UV</th>
+                                    <th rowspan="2">IOS PV/UV</th>
+                                    <th rowspan="2">价值UV</th>
+                                </tr>
+                                <tr>
+                                    <!--<th>id</th>-->
+                                    <!--<th>First Name</th>-->
+                                    <th>产品PV</th>
+                                    <th>网页PV</th>
+                                    <th>第三方</th>
+                                    <th>产品总UV</th>
+                                    <th>网页UV</th>
+                                    <th>总</th>
+                                    <th>列表</th>
+                                    <th>详情</th>
+                                    <th>频道</th>
+                                    <th>总</th>
+                                    <th>列表</th>
+                                    <th>详情</th>
+                                    <th>频道</th>
+                                </tr>
+                                </thead>
+                                <tbody class="dataBody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->
+<!--page-->
+                <!--<div class="buttonBox pagination">-->
+                    <!--<ul class="pagination pagination-sm pull-right "></ul>-->
+                <!--</div>-->
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.js"></script>
+        <!--<script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>-->
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
+        <script src="js/data/jquery.cookie.js"></script>
+        <script src="js/data/base.js"></script>
+        <script src="js/plugins/bootstrap/bootstrap-pagy.min.js"></script>
+        <script src="js/data/jquery.easyui.min.js"></script>
+        <script src="js/data/ExportExcelDlg.js"></script>
+        <script src="js/data/doubleDate.js"></script>
+        <script src="js/data/qidianPv.js"></script>
+        <!-- START THIS PAGE PLUGINS-->        
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+        <script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="js/plugins/daterangepicker/moment.js"></script>
+        <script type="text/javascript" src="js/plugins/daterangepicker/daterangepickers.js"></script>
+        <!-- END THIS PAGE PLUGINS-->        
+
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script>
+        <!-- END TEMPLATE -->
+       <!-- data start-->
+
+    <!-- END SCRIPTS -->         
+    </body>
+</html>
+
+
+
+
+
+

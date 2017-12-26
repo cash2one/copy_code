@@ -1,0 +1,114 @@
+.nav{
+    width:62.5%;height:100%;margin:0 auto;margin-top:4.8%;overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.logoBox{
+    width:308px;height:auto;float:left;
+}
+.logoBox1{
+    width:179px;height:auto;
+}
+.logoBox1>img{
+    width:100%;
+}
+.logoBox2{
+    width:240px;height:auto;margin-top:10px;
+}
+.logoBox2>img{
+    width:100%;
+}
+.navBox{
+    width:calc(100% - 308px);height:auto;float:right;overflow: hidden;margin-top:4%;
+}
+.navBox>li>a{
+    font-size:14px;color:#878787;float:right;margin-right:4.3%;
+}
+.navBoxB{
+    width:60%;height:auto;float:right;overflow: hidden;margin-top:4%;
+}
+.navBoxB>li>a{
+    font-size:14px;color:#878787;float:right;margin-right:4.3%;
+}
+.sanjiao{
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #6cc1fb;margin:2px auto 0 auto;opacity:0
+}
+.underline{
+    width:100%;height:3px;background: #6cc1fb;opacity:0
+}
+.navBox>li>a:hover{
+    color:#6cc1fb;
+}
+.bannerBox{
+    width:100%;height:auto;overflow: hidden;margin-top:1%;position: relative;
+}
+.nav{
+    display: block;
+}
+.topP,.navP{
+    display: none;
+}
+
+@media screen and (max-width:992px){
+    .topBox,.nav{display: none}
+    .mainBox{display: none}
+    footer{display: none}
+    .cInner1{
+        display: none;
+    }
+    .callP{
+        display:block;
+    }
+    .bannerboxP{
+        display:block;width:100%;height:100%;background: url("../imgPhone/bannerP.png");background-size:cover;
+    }
+    .bannerboxP>img{
+        width:100%;
+    }
+    .topP{
+        display:block;width:100%;height:auto;background: #fff;position: relative;top:0;left:0;overflow: hidden;
+    }
+    /*.logoP{*/
+        /*width:179px;height:30px;background: url("../imgPhone/logoP.png");position: absolute;top:50%;margin-top:-15px;left:50%;margin-left:-90px;background-size: cover;*/
+    /*}*/
+    .logoP{
+        width: 25%;height:auto;margin:2% 36%;
+    }
+    .logoP>img{
+        width: 80%;
+    }
+    .btnP{
+        width:25px;height:19px;background: url("../imgPhone/btnP.png");background-size: cover;position:absolute;top:50%;margin-top:-9px;right:10px;
+    }
+    .navP{
+        width:40%;height:auto;position: absolute;right:0;z-index: 99;background: rgba(255,255,255,0.95);display: none;
+    }
+    .navP li{
+        width:100%;height:40px;border-bottom:1px solid #d2d2d2;padding:2px 12px;
+    }
+    .iconP{
+        width:20px;height:20px;float: left;margin-top:10px;
+    }
+    .iconP>img{
+        width:100%;
+    }
+    .navWord{
+        width:65%;height:25px;float: left;margin-left:20px;text-align: left;line-height: 25px;font-size:14px;color:#333;margin-top:10px;
+    }
+    .beginP{
+        width:252px;height:88px;position: absolute;top:70%;left:50%;margin-left:-126px;background: url("../imgPhone/rectP.png");font-size:2em;text-align: center;line-height: 88px;color:#6cc1fb;
+    }
+
+    /*产品页面*/
+
+}
+@media screen and (max-width:768px) {
+    .logoP{
+        width: 30%;height:auto;margin:4% 36%;
+    }
+}

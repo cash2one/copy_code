@@ -1,0 +1,77 @@
+*{
+    margin: 0;padding: 0;list-style: none;box-sizing: border-box;
+}
+.topImg{
+    width:100%;height:90px;overflow: hidden;
+}
+.topImg>img{
+    width: 100%;
+}
+/*摘要*/
+.absBox{
+    width: 100%;height:auto;padding:13px 3.2%;border-bottom: 1px solid #e4e4e4;background: #f6f6f6;display: none;
+}
+.abs{
+    font-size:12px;color: #e94220;border: 1px solid #e94220;padding: 1px;
+}
+.absWord{
+    font-size: 15px;color: #333;margin-left: 1.4%;line-height: 25px;
+}
+/*专题部分*/
+.mainBox{
+    width:100%;height:auto;
+}
+.mainData{
+    width:100%;height:auto;margin-top:9px;border-top:1px solid #e4e4e4;border-bottom: 1px solid #e4e4e4;background: #f6f6f6;
+}
+.titleData{
+    width: 100%;height:auto;padding: 12px 0;border-bottom: 1px solid #e4e4e4;overflow: hidden;
+}
+.colorBox{
+    width: 4px;height:15px;background: #fb7a12;float: left;
+}
+.titleName{
+    font-size: 15px;color: #666;float: left;margin-left:8px;
+}
+.fenleiCard{
+    width: 93.6%;height:auto;overflow: hidden;margin:0 auto;border-bottom: 1px solid #e4e4e4;padding: 15px 0;display: block;
+}
+.fenleiWordnoimg{
+    width:100%;height:auto;float: left;
+
+}
+.fenleiWord{
+    width:calc(95.7% - 115px);height:auto;float: left;
+}
+.wordData{
+    width: 100%;height:auto;font-size: 18px;color: #333;line-height: 24px;
+}
+.formData{
+    width: 100%;height:auto;margin-top:18px;overflow: hidden;
+}
+.form{
+    font-size: 12px;color: #999;float: left;
+}
+.num{
+    font-size: 12px;color: #999;float: right;
+}
+.fenleiImg{
+    width: 115px;height: auto;float: left;margin-left: 4.3%;
+}
+.fenleiImg>img{
+    width: 100%;
+}
+.imgData{
+    width: 100%;height:auto;margin-top:16px;overflow: hidden;
+}
+.imgData>img{
+    width: 32%;float: left;margin-left: 2%;
+}
+.imgData>img:nth-child(1){
+    margin-left: 0;
+}
+@media screen and (min-width: 992px){
+    .topImg{
+    width:100%;height:auto;
+}
+}

@@ -1,0 +1,326 @@
+*{
+    margin:0;padding:0;list-style: none;box-sizing: border-box;font-weight: normal;
+}
+.shuju{
+    width: 41.67%;height:auto;text-align: right;font-size: 18px;color: #fff;text-shadow: 0 2px 2px #000;position: absolute;top:53%;left:50%;margin-left: -20.835%;
+}
+.shuju>span{
+    font-size: 18px;color: #fff;text-shadow: 0 2px 2px #000;
+}
+.forms{
+    width:41.67%;height:35px;border: 1px solid #fff;background: rgba(0,0,0,0.3);position: absolute;top:60%;left:50%;margin-left: -20.835%;border-radius: 5px;
+}
+.inputs{
+    width: 90%;height: 100%;font-size: 16px;color:#f8f8f8;padding: 10px;border: 0;background: rgba(0,0,0,0)
+}
+.inputs:focus{
+    outline:none;
+}
+.inputs::-webkit-input-placeholder {
+    color:#ccc;padding: 0 45%;
+}
+.inputs:-moz-placeholder {
+    color:#ccc;padding: 0 45%;
+}
+.button{
+    width: 10%;height: 100%;background:url("../img/buttonWeb.png") no-repeat;float: right;background-position: center;background-size: 40%;
+}
+.button:hover{
+    cursor:pointer;
+}
+
+/**/
+.sForm{
+    width: 46.88%;height:42px;margin: 70px auto 0 auto;border: 1px solid #cfcfcf;box-shadow: 0 0 5px #6cc1fb;border-radius: 5px;display: block;overflow: hidden;
+}
+.sInput{
+    width: 90%;height:100%;border: 0;font-size:16px ;color: #383838;padding: 10px 10px;
+}
+.sInput:focus{
+    outline: none;
+}
+.sButton{
+    width: 9%;height: 100%;background: #6cc1fb url("../img/buttonWebw.png") no-repeat;font-size: 20px;color: #fff;background-position: center;float: right;background-size: 40%;
+}
+.sButton:hover{
+    cursor:pointer;
+}
+.buttonBox{
+        text-align:center;height:30px;margin:30px auto 80px auto;display: none;
+}
+
+.buttonNum{
+    width: 30px;height: 30px;font-size: 16px;color:#222;text-align: center;line-height: 30px;float: left;margin-right: 10px;border: 1px solid #ccc;
+}
+.buttonNum:first-child{
+    border: 0px;
+}
+#test{
+    width: 100%;height: 100%;position: relative;background: #6cc1fb;display: none;
+}
+#change{
+    width:40%;position: absolute;top:50%;left:50%;margin-left:-20%;margin-top: -20%
+}
+@-webkit-keyframes change
+{
+    0%   {-webkit-transform:rotate(0deg)}
+    50%  {-webkit-transform:rotate(180deg)}
+    100% {-webkit-transform:rotate(360deg)}
+}
+@-moz-keyframes change
+{
+    0%   {-webkit-transform:rotate(0deg)}
+    50%  {-webkit-transform:rotate(180deg)}
+    100% {-webkit-transform:rotate(360deg)}
+}
+@-ms-keyframes change
+{
+    0%   {-webkit-transform:rotate(0deg)}
+    50%  {-webkit-transform:rotate(180deg)}
+    100% {-webkit-transform:rotate(360deg)}
+}
+@keyframes change
+{
+    0%   {-webkit-transform:rotate(0deg)}
+    50%  {-webkit-transform:rotate(180deg)}
+    100% {-webkit-transform:rotate(360deg)}
+}
+@keyframes spinner
+{
+    0%   {background: url("../imgPhone/Spinner1.png") no-repeat;background-position: center;background-size: 100%;}
+    30%  {background: url("../imgPhone/Spinner2.png") no-repeat;background-position: center;background-size: 100%}
+    70% {background: url("../imgPhone/Spinner3.png") no-repeat;background-position: center;background-size: 100%}
+    100% {background: url("../imgPhone/Spinner4.png") no-repeat;background-position: center;background-size: 100%}
+}
+
+#change{-webkit-animation:change 2s linear infinite;-moz-animation:change 2s linear infinite;}
+.phoneTest{
+    width:30px;height:30px;margin:20px auto 0 auto;display: none;}
+/*#phoneChange{-webkit-animation:change 2s linear infinite;width: 80%}*/
+.phoneWait{
+    width: 100%;height:auto;font-size: 16px;color:#8e8d93;margin-top: 10px;text-align: center;display: none;
+}
+.next{
+    width: 82px;height: 30px;border: 1px solid #ccc;font-size: 16px;color:#222;text-align: center;line-height: 30px;float: left;margin-right: 10px;
+}
+.buttonNum:hover,.next:hover{
+     cursor:pointer;
+ }
+.mainOutbox{
+    width:100%;height:auto;margin:30px auto 0 auto;
+}
+.sMainbox{
+    width:46.88%;height:auto;border:0px solid #cfcfcf;box-shadow: 0 0 5px #d7d7d7;border-radius: 5px;position: absolute;left:50%;margin-left: -23.44%;background: #fff;display: none;overflow: hidden;
+}
+.sMainbox:first-child{
+    z-index: 95;display: block;
+}
+.mainBox>li{
+    width: 100%;height:auto;padding: 18px 25px;border-bottom: 1px solid #cfcfcf;
+}
+.sTitle{
+    width: 100%;height:auto;font-size:16px ;color: #222;font-weight: bold;
+}
+.sText{
+    width: 100%;height:auto;font-size:14px;color:#222;margin-top:14px;line-height: 24px;
+}
+.sMore{
+    width: 100%;height: auto;overflow: hidden;margin-top:14px
+}
+/*.sWeb{
+    width:auto;height:auto;font-size: 12px;color:#297c29;float: left;
+}*/
+.sFrom{
+    width:auto;height:auto;font-size: 12px;color:#297c29;float: left;
+
+}
+.sTime{
+    width:auto;height:auto;font-size: 12px;color:#297c29;float: left;margin-left: 40px;
+}
+.sImgbox{
+    width: 100%;height:auto;margin-top:14px;overflow: hidden;
+}
+.sImg{
+    width: 22%;height:86px;float: left;
+}
+.sImg>img{
+    width:100%
+}
+.imgWord{
+    width: 75%;height: auto;float: right;
+}
+
+.errorWord{
+    width: 46.88%;height:auto;margin:30px auto;font-size: 15px;color: #8e8e8e;text-align: left;display: none;
+}
+.wait{
+    width: 46.88%;height:auto;margin:30px auto;font-size: 15px;color: #8e8e8e;text-align: left;display: none;
+}
+.wait1{
+    width: 46.88%;height:auto;margin:30px auto;font-size: 15px;color: #8e8e8e;text-align: left;display: none;
+}
+.errorBox{
+    width: 46.88%;height:auto;margin:40px auto;display: none;
+}
+.errorIcon{
+    width: 32px;height:auto;
+}
+.errorIcon>img{
+    width: 100%;
+}
+.errorTitle{
+    width: 100%;height:auto;font-size:16px ;color: #535353;margin-top:18px;
+}
+.errorTitle>span{
+    font-size:16px ;color: #238bd1
+}
+.searchForm,.phoneErroricon,.phoneErrorword{
+    display: none;
+}
+
+
+
+/*手机版*/
+@media screen and (max-width: 992px) {
+.sForm{
+    display: none;
+}
+    .phoneSearchbox {
+        width: 100%;
+        height: 128px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 20px 30px;
+        position: relative;
+    }
+
+    .phoneInput {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 58px;
+        padding: 0 100px;
+        font-size: 36px;
+        color: #8e8e93
+    }
+
+    .phoneInput:focus {
+        outline: none;
+    }
+
+    .placeBox {
+        width: 50%;
+        height: 60%;
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        margin-left: -25%;
+    }
+
+    .placeaIcon {
+        width: 18%;
+        height: auto;
+        float: left;
+        padding: 10px 0;
+    }
+
+    .placeaIcon > img {
+        width: 60%;
+    }
+
+    .placeWord {
+        width: auto;
+        height: auto;
+        font-size: 46px;
+        color: #8e8e93;
+        float: left;
+        margin-left: 0px;
+        line-height: 80px;
+    }
+
+    .buttonIcon {
+        width: 8%;
+        height: auto;
+        position: absolute;
+        top: 40px;
+        left: 55px;
+        display: none;
+    }
+
+    .buttonIcon > img {
+        width: 60%;
+    }
+
+    .buttonClose {
+        width: 8%;
+        height: auto;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        display: none;
+    }
+
+    .buttonClose > img {
+        width: 60%;
+    }
+    .mainOutbox{
+        margin-top:0;
+    }
+    .sMainbox {
+        width: 100%;
+        border: 0;box-shadow: 0 0 0;margin-top:0;margin-left: -50%;
+    }
+    .searchForm{
+        width: 100%;height:auto;padding: 10px 15px;background: #ededed;position: relative;display: block;
+    }
+    ::-webkit-search-cancel-button {
+        display: none;
+    }
+
+    .searchInput{
+        width: 85%;height: 35px;border: 0;border-radius: 30px;font-size: 20px;color: #8e8e93;padding: 0 13% 0 2%;
+    }
+    .searchInput:focus{
+        outline: none;
+    }
+    .searchForm>div{
+        width: 13%;height: 40px;font-size:16px;color: #8e8e93;text-align: center;line-height: 35px;float: right;
+    }
+    .searchIcon {
+        width: 5%;
+        height: auto;
+        position: absolute;
+        top: 25%;
+        left: 6%;
+    }
+
+    .searchIcon > img {
+        width: 40%;
+    }
+
+    .searchClose {
+        width: 5%;
+        height: auto;
+        position: absolute;
+        top: 25%;
+        right: 15%;
+    }
+
+    .searchClose > img {
+        width: auto;
+    }
+    .sFrom{
+        margin-left: 0;
+    }
+    .sTime{
+        margin-left: 20px;
+    }
+    .phoneErroricon{
+width:35px;height: auto;margin:40% auto 0 auto;display: none;
+    }
+    .phoneErroricon>img{
+        width: 100%;
+    }
+    .phoneErrorword{
+        width: 100%;height: auto;font-size:16px;color:#bdbdbd;margin-top:20px;text-align: center;display: none;
+    }
+}

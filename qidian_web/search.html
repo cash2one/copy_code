@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>融合搜索</title>
+    <!--<link rel="stylesheet" href="css/indexP.css"/>-->
+    <link rel="stylesheet" href="css/search1.css"/>
+    <link rel="stylesheet" href="css/phone.css"/>
+    <link rel="stylesheet" href="css/111.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/indexP.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/bootstrap-pagy.min.js"></script>
+    <script src="js/newSearch2.js"></script>
+</head>
+<body>
+<div class="topBox">
+    <div class="nav">
+        <div class="logoBox">
+            <div class="logoBox1">
+                <img src="img/deep.png">
+            </div>
+            <div class="logoBox2">
+                <img src="img/logoWord.png">
+            </div>
+
+        </div>
+        <ul class="navBox">
+            <li><a href="callP.html" style="margin-right:0">联系我们
+                <div class="sanjiao" ></div>
+                <div class="underline" ></div></a></li>
+            <li><a href="joinP.html">加入我们
+                <div class="sanjiao" ></div>
+                <div class="underline" ></div>
+            </a></li>
+            <li><a href="bokeP.html">团队博客
+                <div class="sanjiao" ></div>
+                <div class="underline"></div>
+            </a></li>
+            <!-- <li><a href="localNews.html">应用案例
+                <div class="sanjiao"></div>
+                <div class="underline"></div>
+            </a></li> -->
+            <li><a href="serveP.html">我们的服务
+                <div class="sanjiao"></div>
+                <div class="underline"></div>
+            </a></li>
+            <li><a href="indexP.html">深源首页
+                <div class="sanjiao" style="opacity: 1"></div>
+                <div class="underline" style="opacity: 1"></div>
+            </a></li>
+        </ul>
+    </div>
+</div>
+<!--<div class="total" style="display: none"></div>-->
+<div class="topP" style="position: relative;z-index: 999">
+    <div class="logoP">
+        <img src="imgPhone/logoP.png">
+    </div>
+    <div class="btnP"></div>
+</div>
+<ul class="navP" style="top:50px;width:45%">
+    <li style="height: 45px"><a href="indexP.html">
+        <div class="iconP" style="width: 22px;height:22px">
+            <img src="imgPhone/icon1.png">
+        </div>
+        <div class="navWord" style="font-size: 15px">首页</div>
+    </a></li>
+    <li style="height: 45px"><a href="mainP.html">
+        <div class="iconP" style="width: 22px;height:22px">
+            <img src="imgPhone/icon2.png">
+        </div>
+        <div class="navWord" style="font-size: 15px">我们的服务</div>
+    </a></li>
+    <!-- <li style="height: 45px"><a href="localNews.html">
+        <div class="iconP" style="width: 22px;height:22px">
+            <img src="imgPhone/icon3.png">
+        </div>
+        <div class="navWord" style="font-size: 15px">应用案例</div>
+    </a></li> -->
+    <li style="height: 45px"><a href="bokeP.html">
+        <div class="iconP" style="width: 22px;height:22px">
+            <img src="imgPhone/icon5.png">
+        </div>
+        <div class="navWord" style="font-size: 15px">团队博客</div>
+    </a></li>
+    <li style="height: 45px"><a href="joinP.html">
+        <div class="iconP" style="width: 22px;height:22px">
+            <img src="imgPhone/icon6.png">
+        </div>
+        <div class="navWord" style="font-size: 15px">加入我们</div>
+    </a></li>
+    <li style="height: 45px"><a href="callP.html">
+        <div class="iconP" style="width: 22px;height:22px">
+            <img src="imgPhone/icon4.png">
+        </div>
+        <div class="navWord" style="font-size: 15px">联系我们</div>
+    </a></li>
+</ul>
+
+<form action="" class="sForm">
+    <input type="text" class="sInput" value=""/>
+    <div class="sButton">
+        <div id="test">
+            　　<img src="img/rotate.png" id="change"/>
+        </div>
+    </div>
+</form>
+<form action="" class="searchForm">
+    <input type="search" class="searchInput"/>
+    <div id="back">取消</div>
+    <!-- <div class="searchIcon">
+        <img src="imgPhone/phoneButton.png">
+    </div> -->
+    <div class="searchClose">
+        <img src="imgPhone/buttonClose.png">
+    </div>
+</form>
+<div class="phoneTest">
+    <!-- <img src="img/phoneRotate.png" id="phoneChange"> -->
+</div>
+<div class="phoneWait">实时搜索中，请耐心等待...</div>
+<div class="wait">搜索中，请稍后...</div>
+<div class="wait1">请稍后重试</div>
+<div class="mainOutbox">
+</div>
+<!--<ul class="sMainbox">-->
+    <!--<li>-->
+        <!--<a href="">-->
+        <!--<div class="sTitle">阿里旅游阿里旅游阿里旅游阿里旅游111</div>-->
+        <!--<div class="sText">阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游</div>-->
+        <!--<div class="sMore">-->
+            <!--<div class="sWeb">www.baidu.comfff</div>-->
+            <!--<div class="sFrom">新浪快照</div>-->
+            <!--<div class="sTime">2016-08-24</div>-->
+        <!--</div>-->
+        <!--</a>-->
+    <!--</li>-->
+    <!--<li>-->
+        <!--<div class="sTitle">阿里旅游阿里旅游阿里旅游阿里旅游</div>-->
+        <!--<div class="sImgbox">-->
+            <!--<div class="sImg">-->
+                <!--<img src="">-->
+            <!--</div>-->
+            <!--<div class="imgWord">-->
+                <!--<div class="sText" style="margin-top:0">阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游阿里旅游</div>-->
+                <!--<div class="sMore">-->
+                    <!--<div class="sWeb">www.baidu.comfff</div>-->
+                    <!--<div class="sFrom">新浪快照</div>-->
+                    <!--<div class="sTime">2016-08-24</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</li>-->
+<!--</ul>-->
+<!--<div class="buttonBox">-->
+    <!--<div class="buttonNum">1</div>-->
+    <!--<div class="buttonNum">2</div>-->
+    <!--<div class="buttonNum">3</div>-->
+    <!--<div class="next">下一页></div>-->
+<!--</div>-->
+<!--网页搜索无结果-->
+<div class="errorWord">深源搜索为您找到相关结果为0个</div>
+<div class="errorBox">
+    <div class="errorIcon">
+        <img src="img/errorIcon.png">
+    </div>
+    <div class="errorTitle">很抱歉，没有找到与“<span>打不打</span>”相关的网页</div>
+</div>
+
+<div class="phoneErroricon">
+    <img src="imgPhone/phoneError.png">
+</div>
+<div class="phoneErrorword">很抱歉，没有找到相关的网页</div>
+<div class="buttonBox pagination ">
+    <ul></ul>
+</div>
+
+</body>
+</html>
